@@ -1,0 +1,60 @@
+
+/* Configuració dels tituls */
+h1, h3{
+    color: #1E473A;
+}
+h2{
+    color: white;
+}
+h4{
+    color: #9AC135;
+}
+
+/* Configuració paragrafs */
+p {
+    color: black;
+}
+
+/* Configuració links (a) */
+a{
+    color: #9AC135;
+}
+
+/* Configuració Button */
+/* button {
+    background: rgb(0,151,178);
+background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
+color: white;
+border: inherit;
+padding: 5px 15px;
+border-radius: 50px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+} */
+
+/* Configuració inputs */
+input{
+    padding: 5px 10px;
+    margin: 10px;
+    background-color: none;
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+input[type="button"] {
+    background: rgb(0,151,178);
+background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
+color: white;
+border: inherit;
+padding: 5px 15px;
+border-radius: 50px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+} 
+
+#logout{
+    background: rgb(255,49,49);
+    background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
+}
