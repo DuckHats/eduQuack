@@ -18,6 +18,11 @@ p {
 /* Configuració links (a) */
 a{
     color: #9AC135;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
 }
 
 /* Configuració Button */
