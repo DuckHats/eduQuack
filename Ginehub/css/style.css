@@ -58,23 +58,35 @@ text-align: center;
 text-decoration: none;
 font-weight: bold;
 } 
-
+/* Id input type button logout */
 #logout{
     background: rgb(255,49,49);
     background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
 }
+/* Configuració general footer */
 footer{
     background-color: gray;
-    height: 300px;
     width: auto;
-    display: flex;
+    padding: 10px;
 }
+
+/* class del lateral esquerra pantalla login */
 .ginebro{
-    background-color: #9AC135;
-    border: red;
-    background: rgb(0,169,153);
-    background: linear-gradient(90deg, rgba(0,169,153,1) 0%, rgba(7,212,77,1) 57%, rgba(14,255,0,1) 100%);
+    display: flex;
+    float: left;
+    width: 49%;
+    border: solid 4px black;
+    background: rgb(0,151,178);
+    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
 }
+
+/* class del lateral dret pantalla login */
 .info{
     background-color: aqua;
+    display: flex;
+    float: left;
+    border: solid 4px black;
+    width: 49%;
+    height: 90;
 }
+
