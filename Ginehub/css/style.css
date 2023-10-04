@@ -1,3 +1,7 @@
+/* Configuració general del body */
+body{
+    margin: 0;
+}
 
 /* Configuració dels tituls */
 h1, h3{
@@ -36,7 +40,7 @@ border-radius: 50px;
 text-align: center;
 text-decoration: none;
 font-weight: bold;
-} */
+}  */
 
 /* Configuració inputs */
 input{
@@ -69,7 +73,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -86,8 +90,7 @@ main {
 #logologin {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    margin-top: 40vh;
 }
 
 .info {
@@ -100,18 +103,43 @@ main {
     justify-content: center;
 }
 
+.info > a{
+    font-size: small;
+    margin-top: -15px;
+}
+
+.info > a:hover{
+    color: #3f9177;
+}
+
+#forgot{
+    margin-left: -18vw;
+    color: gray;
+}
+
+#forgot:hover{
+    color: #3f9177;
+}
+
+.info > input{
+    width: 25vw;
+}
+
+.info > input[type="button"]{
+    width: 10vw;
+}
+
 footer {
     position: absolute;
     background-color: white;
     color: white;
     padding: 5px;
     padding-left: 5%;
-    width: 100%;
     bottom: 0px;
 }
 
-footer, p{
+/* footer, p{
     color: white;
-}
+} */
 
 
