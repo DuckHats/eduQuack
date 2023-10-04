@@ -63,3 +63,13 @@ font-weight: bold;
     background: rgb(255,49,49);
     background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
 }
+footer{
+    background-color: gray;
+    height: 300px;
+    width: auto;
+    display: flex;
+}
+.ginebro{
+    background-color: #9AC135;
+    border: red;
+}
