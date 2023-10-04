@@ -1,42 +1,51 @@
-# Projecte: Creació d'una app
+# Projecte: Desenvolupament d'una Aplicació
 
-## Plantejament del procés de creació
+## Introducció
 
-1. #### Revisió del Diagrama de Flux
-2. #### Requisits detallats
-3. #### Dissney de la interfaz d'usuari
-4. #### Tecnologia i plataformes
-5. #### Equip de desenvolupament
-6. #### Desenvolupament Iteratiu
-7. #### Probes
-8. #### Revisió del disseny
-9. #### Llançament i probes beta
-10. #### Llançament i promoció
-11. #### Resultat Final
-12. #### Conclusions del Projecte
+Aquest document detalla el nostre enfocament estructurat per al desenvolupament de l'aplicació. Des de la concepció fins al llançament, cada fase està planificada amb detall i executada amb precisió per aconseguir un producte excepcional.
 
-## Revisió del Diagrama de Flux
+## Index
 
-## Requisits detallats
+| Fase                           |  Fet i Acabat |
+|--------------------------------|---------------|
+| **Planificació i Anàlisi**     | [ * ]         |
+| - Revisió del Diagrama de Flux | [ * ]         |
+| - Definició dels Requisits     | [ * ]         |
+| **Disseny i Desenvolupament**  | [ * ]         |
+| - Disseny de la Interfície     | [ * ]         |
+| - Selecció de Tecnologies      | [   ]         |
+| **Implementació i Proves**     | [   ]         |
+| - Equip de Desenvolupament     | [   ]         |
+| - Desenvolupament Iteratiu     | [   ]         |
+| - Proves Rigoroses             | [   ]         |
+| **Avaluació i Llançament**     | [   ]         |
+| - Llançament Beta i Feedback   | [   ]         |
+| - Llançament i Màrqueting      | [   ]         |
+| **Avaluació Final**            | [   ]         |
 
-## Dissney de la interfaz d'usuari
+## Fases del Projecte
 
-## Tecnologia i plataformes
+### 1. **Planificació i Anàlisi**
+   - **Revisió del Diagrama de Flux:** Visualitzem el recorregut de l'usuari i els components del sistema.
+   - **Definició dels Requisits:** Detallem els requisits funcionals i no funcionals.
 
-## Equip de desenvolupament
+### 2. **Disseny i Desenvolupament**
+   - **Disseny de la Interfície:** Creem una interfície centrada en l'usuari per a una experiència atractiva.
+   - **Selecció de Tecnologies:** Triem tecnologies i plataformes compatibles i segures.
 
-## Desenvolupament Iteratiu
+### 3. **Implementació i Proves**
+   - **Equip de Desenvolupament:** Professionals qualificats treballen en cada fase.
+   - **Desenvolupament Iteratiu:** Milloram el producte amb feedback continu.
+   - **Proves Rigoroses:** Garantim funcionalitat, seguretat i rendiment òptim.
 
-## Probes
+### 4. **Avaluació i Llançament**
+   - **Llançament Beta i Feedback:** Recopilem comentaris dels usuaris per a les últimes millores.
+   - **Llançament i Màrqueting:** Implementem estratègies de màrqueting per augmentar la visibilitat.
 
-## Revisió del disseny
+### 5. **Avaluació Final i Conclusions**
+   - **Avaluació del Producte:** Assegurem que compleixi els objectius del projecte i les expectatives del client.
+   - **Conclusions:** Analitzem l'aprenentatge, els reptes superats i les àrees de millora per a futurs projectes.
 
-## Llançament i probes beta
-
-## Llançament i promoció
-
-## Resultat Final
-
-## Conclusions del Projecte
+Aquesta metodologia assegura una aplicació que no només compleix, sinó que supera les expectatives, proporcionant als usuaris una experiència excepcional i al client un producte de qualitat.
 
 
