@@ -72,4 +72,9 @@ footer{
 .ginebro{
     background-color: #9AC135;
     border: red;
+    background: rgb(0,169,153);
+    background: linear-gradient(90deg, rgba(0,169,153,1) 0%, rgba(7,212,77,1) 57%, rgba(14,255,0,1) 100%);
+}
+.info{
+    background-color: aqua;
 }
