@@ -1,8 +1,8 @@
-#Política de Privacitat:
+# Política de Privacitat:
 
 Aquesta Política de Privacitat descriu com GineHub recopila, utilitza i comparteix la informació personal dels usuaris ("vostè") del nostre lloc web i de la nostra aplicació.
 
-##Informació que Recopilem
+## Informació que Recopilem
 
 Podem recopilar la següent informació personal:
 
@@ -11,7 +11,7 @@ Informació sobre el dispositiu utilitzat per accedir a la nostra plataforma (ad
 Dades d'ús i interacció amb el nostre lloc web i aplicació.
 Com Utilitzem la Informació
 
-##Utilitzem la informació personal per a:
+## Utilitzem la informació personal per a:
 
 - Fournir els nostres serveis i millorar-los.
 - Personalitzar l'experiència de l'usuari i proporcionar continguts i anuncis adaptats.
@@ -20,10 +20,10 @@ Com Utilitzem la Informació
 
 - No compartim la informació personal amb tercers, llevat que sigui requerit per la llei o quan tenim el permís de l'usuari.
 
-##Seguretat
+## Seguretat
 
 Prendrem mesures raonables per protegir la informació personal dels usuaris contra pèrdues, abusos o alteracions.
 
-##Canvis en aquesta Política de Privacitat
+## Canvis en aquesta Política de Privacitat
 
 Podem actualitzar aquesta Política de Privacitat ocasionalment. Les actualitzacions es publicaran en aquesta pàgina.
