@@ -8,7 +8,7 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 | Fase                           |  Fet i Acabat |
 |--------------------------------|---------------|
-| **Planificació i Anàlisi**     | [X] Completada|
+| **Planificació i Anàlisi**     | [*] Completada|
 | - Revisió del Diagrama de Flux | [X] Completada|
 | - Definició dels Requisits     | [X] Completada|
 | **Disseny i Desenvolupament**  | [X] Completada|
