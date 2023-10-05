@@ -8,20 +8,20 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 | Fase                           |  Fet i Acabat |
 |--------------------------------|---------------|
-| **Planificació i Anàlisi**     | [ ] Completada|
-| - Revisió del Diagrama de Flux | [x] Completada|
-| - Definició dels Requisits     | [x] Completada|
-| **Disseny i Desenvolupament**  | [x] Completada|
-| - Disseny de la Interfície     | [x] Completada|
-| - Selecció de Tecnologies      | [ ] Pendent   |
-| **Implementació i Proves**     | [ ] Pendent   |
-| - Equip de Desenvolupament     | [ ] Pendent   |
-| - Desenvolupament Iteratiu     | [ ] Pendent   |
-| - Proves Rigoroses             | [ ] Pendent   |
-| **Avaluació i Llançament**     | [ ] Pendent   |
-| - Llançament Beta i Feedback   | [ ] Pendent   |
-| - Llançament i Màrqueting      | [ ] Pendent   |
-| **Avaluació Final**            | [ ] Pendent   |
+| **Planificació i Anàlisi**     | ✓ Completada |
+|  - Revisió del Diagrama de Flux | ✓ Completada |
+|  - Definició dels Requisits     | ✓ Completada |
+| **Disseny i Desenvolupament**  | ✓ Completada |
+|  - Disseny de la Interfície     | ✓ Completada |
+|  - Selecció de Tecnologies      | ❌ Pendent   |
+| **Implementació i Proves**     | ❌ Pendent   |
+|  - Equip de Desenvolupament     | ❌ Pendent   |
+|  - Desenvolupament Iteratiu     | ❌ Pendent   |
+|  - Proves Rigoroses             | ❌ Pendent   |
+| **Avaluació i Llançament**     | ❌ Pendent   |
+|  - Llançament Beta i Feedback   | ❌ Pendent   |
+|  - Llançament i Màrqueting      | ❌ Pendent   |
+| **Avaluació Final**            | ❌ Pendent   |
 
 ## Fases del Projecte
 
