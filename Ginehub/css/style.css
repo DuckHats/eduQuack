@@ -1,3 +1,5 @@
+/* Css general per a totes les pagines html del projecte Github*/
+
 /* Configuració general del body */
 body{
     margin: 0;
@@ -55,17 +57,28 @@ input[type="button"] {
     background: rgb(0,151,178);
 background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
 color: white;
-border: inherit;
+border: none;
 padding: 5px 15px;
 border-radius: 50px;
 text-align: center;
-text-decoration: none;
 font-weight: bold;
 } 
+
+input[type="button"]:hover{
+    background: rgb(0,151,178);
+background: linear-gradient(90deg, rgb(0, 102, 120) 0%, rgb(84, 146, 58) 100%);
+cursor: pointer;
+}
 /* Id input type button logout */
 #logout{
     background: rgb(255,49,49);
     background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
+}
+
+#logout:hover{
+    background: rgb(255,49,49);
+    background: linear-gradient(90deg, rgb(130, 25, 25) 0%, rgb(153, 86, 45) 100%);
+    cursor: pointer;
 }
 
 main {
@@ -78,7 +91,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
 }
-
+/* Part de css asignada a login.html */
 .ginebro {
     text-align: center;
     flex: 1;
@@ -141,5 +154,5 @@ footer {
 /* footer, p{
     color: white;
 } */
-
+/* Final configuració login.html    ---------------------------------------------------------------- */
 
