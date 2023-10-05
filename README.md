@@ -6,22 +6,22 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 ## Index
 
-| Fase                           |  Fet i Acabat |
-|--------------------------------|---------------|
-| **Planificació i Anàlisi**     | ✓ Completada |
+| Fase                            |  Fet i Acabat |
+|---------------------------------|---------------|
+| **Planificació i Anàlisi**      | ✓ Completada |
 |  - Revisió del Diagrama de Flux | ✓ Completada |
 |  - Definició dels Requisits     | ✓ Completada |
-| **Disseny i Desenvolupament**  | ✓ Completada |
+| **Disseny i Desenvolupament**   | ✓ Completada |
 |  - Disseny de la Interfície     | ✓ Completada |
 |  - Selecció de Tecnologies      | ❌ Pendent   |
-| **Implementació i Proves**     | ❌ Pendent   |
+| **Implementació i Proves**      | ❌ Pendent   |
 |  - Equip de Desenvolupament     | ❌ Pendent   |
 |  - Desenvolupament Iteratiu     | ❌ Pendent   |
 |  - Proves Rigoroses             | ❌ Pendent   |
-| **Avaluació i Llançament**     | ❌ Pendent   |
+| **Avaluació i Llançament**      | ❌  Pendent  |
 |  - Llançament Beta i Feedback   | ❌ Pendent   |
 |  - Llançament i Màrqueting      | ❌ Pendent   |
-| **Avaluació Final**            | ❌ Pendent   |
+| **Avaluació Final**             | ❌ Pendent   |
 
 <br>
 <br>
