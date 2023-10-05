@@ -156,3 +156,11 @@ footer {
 } */
 /* Final configuració login.html    ---------------------------------------------------------------- */
 
+/* Configuració css per a la pestanya register.html*/
+#headerregister{
+    background: rgb(0,151,178);
+    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
+    
+}
+
+/* Final configuració de la pestanya register.html  ------------------------------------------------ */
