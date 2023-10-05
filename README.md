@@ -23,6 +23,8 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 |  - Llançament i Màrqueting      | ❌ Pendent   |
 | **Avaluació Final**            | ❌ Pendent   |
 
+
+
 ## Fases del Projecte
 
 ### 1. **Planificació i Anàlisi**
