@@ -6,9 +6,14 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 ## Index
 
+- [x] Tarea completada
+- [ ] Tarea pendiente
+- [x] Otra tarea completada
+
+
 | Fase                           |  Fet i Acabat |
 |--------------------------------|---------------|
-| **Planificació i Anàlisi**     | [*]         |
+| **Planificació i Anàlisi**     | [ * ]         |
 | - Revisió del Diagrama de Flux | [ * ]         |
 | - Definició dels Requisits     | [ x ]         |
 | **Disseny i Desenvolupament**  | [ x ]         |
