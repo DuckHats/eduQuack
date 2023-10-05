@@ -15,8 +15,8 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 | Fase                           |  Fet i Acabat |
 |--------------------------------|---------------|
-| **Planificació i Anàlisi**     | [x]         |
-| - Revisió del Diagrama de Flux | [x]         |
+| **Planificació i Anàlisi**     | &#9745         |
+| - Revisió del Diagrama de Flux | &#9744      |
 | - Definició dels Requisits     | [x]         |
 | **Disseny i Desenvolupament**  | [x]         |
 | - Disseny de la Interfície     | [x]         |
