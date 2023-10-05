@@ -6,29 +6,22 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 
 ## Index
 
-| Tarea                  | Estado       |
-|------------------------|--------------|
-| Tarea 1                | [x] Completada |
-| Tarea 2                | [ ] Pendiente  |
-| Tarea 3                | [x] Completada |
-
-
 | Fase                           |  Fet i Acabat |
 |--------------------------------|---------------|
-| **Planificació i Anàlisi**     | &#9745         |
-| - Revisió del Diagrama de Flux | &#9744      |
-| - Definició dels Requisits     | [x]         |
-| **Disseny i Desenvolupament**  | [x]         |
-| - Disseny de la Interfície     | [x]         |
-| - Selecció de Tecnologies      | [ ]         |
-| **Implementació i Proves**     | [ ]         |
-| - Equip de Desenvolupament     | [ ]         |
-| - Desenvolupament Iteratiu     | [ ]         |
-| - Proves Rigoroses             | [ ]         |
-| **Avaluació i Llançament**     | [ ]         |
-| - Llançament Beta i Feedback   | [ ]         |
-| - Llançament i Màrqueting      | [ ]         |
-| **Avaluació Final**            | [ ]         |
+| **Planificació i Anàlisi**     | [x] Completada|
+| - Revisió del Diagrama de Flux | [x] Completada|
+| - Definició dels Requisits     | [x] Completada|
+| **Disseny i Desenvolupament**  | [x] Completada|
+| - Disseny de la Interfície     | [x] Completada|
+| - Selecció de Tecnologies      | [ ] Pendent   |
+| **Implementació i Proves**     | [ ] Pendent   |
+| - Equip de Desenvolupament     | [ ] Pendent   |
+| - Desenvolupament Iteratiu     | [ ] Pendent   |
+| - Proves Rigoroses             | [ ] Pendent   |
+| **Avaluació i Llançament**     | [ ] Pendent   |
+| - Llançament Beta i Feedback   | [ ] Pendent   |
+| - Llançament i Màrqueting      | [ ] Pendent   |
+| **Avaluació Final**            | [ ] Pendent   |
 
 ## Fases del Projecte
 
