@@ -58,7 +58,7 @@ input[type="button"] {
 background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
 color: white;
 border: none;
-padding: 5px 15px;
+padding: 10px 15px;
 border-radius: 50px;
 text-align: center;
 font-weight: bold;
