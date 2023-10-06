@@ -82,17 +82,17 @@ cursor: pointer;
     cursor: pointer;
 }
 
-main {
+/* Part de css asignada a login.html */
+
+.loginmain {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
-/* Part de css asignada a login.html */
+
 .ginebro {
     text-align: center;
     flex: 1;
@@ -158,24 +158,39 @@ footer {
 /* Final configuració login.html    ---------------------------------------------------------------- */
 
 /* Configuració css per a la pestanya register.html*/
-#headerregister{
+#headerregister {
     background: rgb(0,151,178);
-    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);    
+    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
+    display: flex; /* Usamos flexbox para alinear verticalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 100px; /* Establece una altura fija para el header (ajusta según tus necesidades) */
 }
+
 #headerregister > h1 {
     color: white;
-    display: inline-block;
-    margin-left: 40vw;
-    margin-bottom: 10vh;
+    margin-left: 30vw; /* Ajusta el margen según tus preferencias */
 }
+
 #headerregister > img {
-    margin-top: 10vh;
-    margin-left: 10vw;
-
+    margin-left: 5vw; /* Ajusta el margen según tus preferencias */
 }
 
 
+.registermain {
+    text-align: center; /* Esto centrará el contenido de .registermain horizontalmente */
+    padding: 7vw; /* Añade un poco de espacio alrededor del contenido */
+}
 
+.registermain table {
+    width: 80%;
+    margin: 0 auto; /* Esto centrará la tabla horizontalmente */
+}
 
+.registermain td {
+    padding-bottom: 10vh;
+}
 
+.registermain table input{
+    width: 25vw;
+}
 /* Final configuració de la pestanya register.html  ------------------------------------------------ */
