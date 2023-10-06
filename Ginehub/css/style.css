@@ -193,5 +193,13 @@ footer {
 .registermain table input{
     width: 25vw;
 }
+
+.registermain > a{
+    font-size: small;
+}
+
+.registermain > a:hover{
+    color: #3f9177;
+}
 /* Final configuració de la pestanya register.html  ------------------------------------------------ */
 
