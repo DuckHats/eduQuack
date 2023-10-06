@@ -21,6 +21,12 @@ p {
     color: black;
 }
 
+/* Configuració de les llistes */
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
 /* Configuració links (a) */
 a{
     color: #9AC135;
@@ -150,11 +156,14 @@ footer {
     padding: 5px;
     padding-left: 5%;
     bottom: 0px;
+    width: 94.5vw;
+    border-top: #1E473A solid 1px;
 }
 
-/* footer, p{
-    color: white;
-} */
+ footer > p{
+    display: inline-block;
+    margin-left: 50vw;
+} 
 /* Final configuració login.html    ---------------------------------------------------------------- */
 
 /* Configuració css per a la pestanya register.html*/
@@ -203,3 +212,34 @@ footer {
 }
 /* Final configuració de la pestanya register.html  ------------------------------------------------ */
 
+/* Configuració index.html */
+
+menu{
+    border-bottom: #1E473A solid 2px;
+    height: 10vh;
+}
+
+menu > ul > li{
+    display: inline-block;
+    margin-left: 5vw;
+
+}
+
+menu > ul > li > a{
+   color: #1E473A;
+}
+
+menu > ul > li > a > h3{
+    margin-top: -10vh;
+    padding-top: -10px;
+}
+
+menu > ul > li > a > h3:hover{
+    color: #3f9177;
+ }
+
+ .negrita{
+    color: #9AC135;
+ }
+
+/* Final configuració de la pestanya index.html ---------------------------------------------------- */
