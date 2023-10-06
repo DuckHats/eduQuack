@@ -61,6 +61,7 @@ border: none;
 padding: 10px 15px;
 border-radius: 50px;
 text-align: center;
+
 font-weight: bold;
 } 
 
@@ -88,7 +89,7 @@ main {
     justify-content: center;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 /* Part de css asignada a login.html */
@@ -159,8 +160,22 @@ footer {
 /* Configuració css per a la pestanya register.html*/
 #headerregister{
     background: rgb(0,151,178);
-    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
-    
+    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);    
 }
+#headerregister > h1 {
+    color: white;
+    display: inline-block;
+    margin-left: 40vw;
+    margin-bottom: 10vh;
+}
+#headerregister > img {
+    margin-top: 10vh;
+    margin-left: 10vw;
+
+}
+
+
+
+
 
 /* Final configuració de la pestanya register.html  ------------------------------------------------ */
