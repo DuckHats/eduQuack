@@ -173,8 +173,8 @@ footer {
 
 #headerregister > img {
     margin-left: 5vw; /* Ajusta el margen según tus preferencias */
+    width: 20vw;
 }
-
 
 .registermain {
     text-align: center; /* Esto centrará el contenido de .registermain horizontalmente */
@@ -194,3 +194,4 @@ footer {
     width: 25vw;
 }
 /* Final configuració de la pestanya register.html  ------------------------------------------------ */
+
