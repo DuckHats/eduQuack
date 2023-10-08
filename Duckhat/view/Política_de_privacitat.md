@@ -1,6 +1,6 @@
 # Política de Privacitat:
 
-Aquesta Política de Privacitat descriu com GineHub recopila, utilitza i comparteix la informació personal dels usuaris ("vostè") del nostre lloc web i de la nostra aplicació.
+Aquesta Política de Privacitat descriu com Duckhat recopila, utilitza i comparteix la informació personal dels usuaris ("vostè") del nostre lloc web i de la nostra aplicació.
 
 ## Informació que Recopilem
 
