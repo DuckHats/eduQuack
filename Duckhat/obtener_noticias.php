@@ -1,6 +1,13 @@
 <?php
 session_start();
-include('config.php'); // Incluye tu archivo de configuración de la base de datos
+include('config.php');
+
+// Verificar si el usuario tiene una sesión válida
+if (!isset($_SESSION['email']) || !isset($_SESSION['curso_id'])) {
+    // Si no hay una sesión válida, redirigir al usuario a la página de login
+    header("Location: login.html");
+    exit();
+}
 
 // Conectar a la base de datos
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

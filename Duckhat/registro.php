@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,14 +19,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Guardar los datos en la base de datos
-    $sql = "INSERT INTO usuarios (username, email, fecha_nacimiento, password) VALUES ('$username', '$email', '$fecha_nacimiento', '$password')";
+    $sql = "INSERT INTO usuarios (username, email, fecha_nacimiento, password, curso_id) VALUES ('$username', '$email', '$fecha_nacimiento', '$password', '$cursoId')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Usuario registrado correctamente";
-        header("Location: login.html");
+        // Inicializa la sesión y almacena datos del usuario
+        $_SESSION['email'] = $email;
+        $_SESSION['curso_id'] = $cursoId;
+
+        // Redirige al usuario a la página de noticias después del registro exitoso
+        header("Location: index.html");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Si hay un error en la consulta SQL, redirige a la página de registro con un mensaje de error
         header("Location: registro.html?error=incorrecto");
         exit();
     }

@@ -1,11 +1,11 @@
 <?php
 session_start();
-include('config.php'); // Incluye tu archivo de configuración de la base de datos
+include('config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener datos del formulario (suponiendo que tienes campos 'email' y 'password')
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    // Obtener y validar datos del formulario
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     // Conectar a la base de datos
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['curso_id'] = $row['curso_id']; // Suponiendo que hay un campo 'curso_id' en tu tabla de usuarios
+
             // Redirigir al usuario a la página de noticias
             header("Location: news.html");
             exit();
