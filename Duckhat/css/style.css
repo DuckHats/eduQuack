@@ -310,5 +310,9 @@ menu > ul > li > a > h3:hover{
     width: 12vw;
 }
 
+#infoconfig, img{
+    width: 150px;
+    height: 150px;
+}
 
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
