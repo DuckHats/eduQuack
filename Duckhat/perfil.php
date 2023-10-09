@@ -20,14 +20,10 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.html");
     exit();
 }
-
-// Resto del contenido de perfil.php
 // Puedes acceder a $_SESSION['user_id'] y otras variables de sesión aquí
 
 // Ejemplo: Obtener el ID del usuario desde la sesión
 $user_id = $_SESSION['user_id'];
-
-// Aquí puedes realizar operaciones adicionales basadas en la sesión del usuario
 ?>
     <!-- Barra de navegación superior -->
     <menu>
@@ -63,7 +59,7 @@ $user_id = $_SESSION['user_id'];
                 <li>
                     <h3>Username</h3>
                     <input type="text" value="<?php echo $username; ?>">
-                    <p>ID de usuario: <span id="userId"></span></p>
+                    <p>ID de usuario: "<?php echo $user_id; ?>"</p>
                 </li>
                 <li>
                     <h3>Nom complet</h3>
