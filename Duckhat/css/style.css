@@ -219,6 +219,11 @@ menu{
     height: 10vh;
 }
 
+menu > ul{
+    margin-top: -6vh;
+    height: 20px;
+}
+
 menu > ul > li{
     display: inline-block;
     margin-left: 5vw;
@@ -238,8 +243,20 @@ menu > ul > li > a > h3:hover{
     color: #3f9177;
  }
 
+ menu > img{
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+ }
+
  .negrita{
     color: #9AC135;
+ }
+
+ #conficon{
+    width: 25px;
+    height: 25px;
+    margin-left: 50vw;
  }
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
