@@ -63,6 +63,7 @@ $user_id = $_SESSION['user_id'];
                 <li>
                     <h3>Username</h3>
                     <input type="text" value="<?php echo $username; ?>">
+                    <p>ID de usuario: <span id="userId"></span></p>
                 </li>
                 <li>
                     <h3>Nom complet</h3>
