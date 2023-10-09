@@ -260,3 +260,46 @@ menu > ul > li > a > h3:hover{
  }
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
+
+/* Inici configuració de la pestanya config.html */
+
+#sidebarconf{
+    width: 25vw;
+    height: 70vh;
+    display: flex;
+    float: left;
+
+}
+
+#infoconf{
+    width: 99vw;
+    height: 70vh;
+
+}
+
+#sidebarconf > ul{
+    width: 17vw;
+    margin-left: 2vw;
+    text-align: center;
+    border-right: #1E473A solid 2px;
+
+}
+
+#sidebarconf > ul > li{
+    padding: 25% 10%;
+    border-bottom: #1E473A solid 1px;
+    border-top: #1E473A solid 1px;
+    width: 15vw;
+    margin-left: -2.3vw;
+    font-size: large;
+}
+
+#sidebarconf > ul > li > a{
+    color: #1E473A;
+}
+
+#sidebarconf > ul > li > a:hover{
+    color: #3f9177;
+}
+
+/* Final configuració de la pestanya config.html --------------------------------------------------- */
