@@ -1,330 +1,371 @@
-/* Css general per a totes les pagines html del projecte Github*/
+/* Css general per a totes les pagines html del projecte Github */
+/* Estilos generales para todas las páginas HTML del proyecto GitHub */
 
 /* Css pels errors */
+/* Estilos para mensajes de error */
 .mensaje-error {
-    background-color: #ffcccc;
-    color: #ff0000;
-    padding: 10px;
-    text-align: center;
+    background-color: #ffcccc; /* Color de fondo del mensaje de error */
+    color: #ff0000; /* Color del texto del mensaje de error */
+    padding: 10px; /* Relleno alrededor del mensaje de error */
+    text-align: center; /* Alineación del texto al centro */
 }
 
-
 /* Configuració general del body */
-body{
-    margin: 0;
+/* Configuración general del elemento 'body' (cuerpo) */
+body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo del documento */
 }
 
 /* Configuració dels tituls */
-h1, h3{
-    color: #1E473A;
+/* Configuración para los títulos */
+h1, h3 {
+    color: #1E473A; /* Color del texto para los encabezados h1 y h3 */
 }
-h2{
-    color: white;
+h2 {
+    color: white; /* Color del texto para los encabezados h2 */
 }
-h4{
-    color: #9AC135;
+h4 {
+    color: #9AC135; /* Color del texto para los encabezados h4 */
 }
 
 /* Configuració paragrafs */
+/* Configuración para los párrafos */
 p {
-    color: black;
+    color: black; /* Color del texto para los párrafos */
 }
 
 /* Configuració de les llistes */
-li{
-    text-decoration: none;
-    list-style: none;
+/* Configuración para las listas */
+li {
+    text-decoration: none; /* Elimina la decoración de texto para las listas */
+    list-style: none; /* Elimina los marcadores/bolitas de las listas */
 }
 
 /* Configuració links (a) */
-a{
-    color: #9AC135;
-    text-decoration: none;
+/* Configuración para los enlaces (a) */
+a {
+    color: #9AC135; /* Color de los enlaces */
+    text-decoration: none; /* Elimina la decoración de texto para los enlaces */
 }
 
-a:hover{
-    cursor: pointer;
+a:hover {
+    cursor: pointer; /* Cambia el cursor del mouse a una mano cuando se pasa sobre los enlaces */
 }
 
 /* Configuració submit */
-/* submit {
-    background: rgb(0,151,178);
-background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
-color: white;
-border: inherit;
-padding: 5px 15px;
-border-radius: 50px;
-text-align: center;
-text-decoration: none;
-font-weight: bold;
-}  */
+/* Estilos para los botones de envío (submit) (comentado, no tiene efecto) */
 
 /* Configuració inputs */
-input{
-    padding: 5px 10px;
-    margin: 10px;
-    background-color: none;
-    border: none;
-    border-bottom: solid 1px black;
+/* Configuración para los campos de entrada (inputs) */
+input {
+    padding: 5px 10px; /* Relleno alrededor de los campos de entrada */
+    margin: 10px; /* Márgenes para los campos de entrada */
+    background-color: none; /* Color de fondo de los campos de entrada a ninguno */
+    border: none; /* Elimina el borde de los campos de entrada */
+    border-bottom: solid 1px black; /* Borde inferior sólido de 1px para los campos de entrada */
 }
 
 input[type="submit"] {
-    background: rgb(0,151,178);
-background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
-color: white;
-border: none;
-padding: 10px 15px;
-border-radius: 50px;
-text-align: center;
-
-font-weight: bold;
-} 
-
-input[type="submit"]:hover{
-    background: rgb(0,151,178);
-background: linear-gradient(90deg, rgb(0, 102, 120) 0%, rgb(84, 146, 58) 100%);
-cursor: pointer;
+    /* Estilos para los botones de envío específicos (type="submit") */
+    background: rgb(0, 151, 178);
+    background: linear-gradient(90deg, rgba(0, 151, 178, 1) 0%, rgba(126, 217, 87, 1) 100%);
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde */
+    padding: 10px 15px; /* Relleno alrededor del botón de envío */
+    border-radius: 50px; /* Radio de borde para que el botón sea redondeado */
+    text-align: center; /* Alineación del texto al centro */
+    font-weight: bold; /* Peso de la fuente en negrita */
 }
+
+input[type="submit"]:hover {
+    /* Estilos para los botones de envío cuando se pasa el mouse sobre ellos */
+    background: rgb(0, 151, 178);
+    background: linear-gradient(90deg, rgb(0, 102, 120) 0%, rgb(84, 146, 58) 100%);
+    cursor: pointer; /* Cambia el cursor del mouse a un puntero al pasar sobre el botón */
+}
+
 /* Id input type submit logout */
-#logout{
-    background: rgb(255,49,49);
-    background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
+/* Estilos para el botón de cierre de sesión con el ID "logout" */
+#logout {
+    background: rgb(255, 49, 49);
+    background: linear-gradient(90deg, rgba(255, 49, 49, 1) 0%, rgba(255, 145, 77, 1) 100%);
 }
 
-#logout:hover{
-    background: rgb(255,49,49);
+#logout:hover {
+    /* Estilos para el botón de cierre de sesión cuando se pasa el mouse sobre él */
+    background: rgb(255, 49, 49);
     background: linear-gradient(90deg, rgb(130, 25, 25) 0%, rgb(153, 86, 45) 100%);
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor del mouse a un puntero al pasar sobre el botón */
 }
 
 /* Part de css asignada a login.html */
 
+/* Estilos para la página de inicio de sesión en login.html */
 .loginmain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    height: 100vh; /* Establece la altura al 100% de la ventana */
+    display: flex; /* Doble declaración (posiblemente un error) */
+    justify-content: space-between; /* Espacio entre elementos flexibles */
 }
 
 .ginebro {
-    text-align: center;
-    flex: 1;
-    height: 100%;
-    background: rgb(0,151,178);
-    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
+    /* Estilos para un elemento con clase "ginebro" en login.html */
+    text-align: center; /* Alineación del texto al centro */
+    flex: 1; /* Flexbox, utiliza 1 unidad de espacio flexible */
+    height: 100%; /* Altura al 100% */
+    background: rgb(0, 151, 178); /* Fondo degradado */
+    background: linear-gradient(90deg, rgba(0, 151, 178, 1) 0%, rgba(126, 217, 87, 1) 100%);
 }
 
 #logologin {
-    max-width: 100%;
-    height: auto;
-    margin-top: 40vh;
+    /* Estilos para un elemento con ID "logologin" en login.html */
+    max-width: 100%; /* Ancho máximo del elemento */
+    height: auto; /* Altura automática (ajustada según el contenido) */
+    margin-top: 40vh; /* Margen superior (40% de la altura de la ventana) */
 }
 
 .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
+    /* Estilos para un elemento con clase "info" en login.html */
+    flex: 1; /* Flexbox, utiliza 1 unidad de espacio flexible */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Dirección de columna para los elementos flexibles */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 10px; /* Espacio entre elementos secundarios */
+    height: 100%; /* Altura al 100% */
+    justify-content: center; /* Centra verticalmente los elementos */
+    text-align: center; /* Alineación del texto al centro */
 }
 
-.info > a{
-    font-size: small;
-    margin-top: -15px;
+.info > a {
+    /* Estilos para enlaces dentro de un elemento con clase "info" */
+    font-size: small; /* Tamaño de fuente pequeño */
+    margin-top: -15px; /* Margen superior negativo */
 }
 
-.info > a:hover{
-    color: #3f9177;
+.info > a:hover {
+    /* Estilos para enlaces dentro de un elemento con clase "info" cuando se pasa el mouse sobre ellos */
+    color: #3f9177; /* Cambia el color del texto al pasar el mouse */
 }
 
-#forgot{
-    margin-left: -15vw;
-    color: gray;
-    font-size: smaller;
+#forgot {
+    /* Estilos para un elemento con ID "forgot" en login.html */
+    margin-left: -15vw; /* Margen izquierdo negativo */
+    color: gray; /* Color de texto gris */
+    font-size: smaller; /* Tamaño de fuente más pequeño */
 }
 
-#forgot:hover{
-    color: #3f9177;
+#forgot:hover {
+    /* Estilos para un elemento con ID "forgot" cuando se pasa el mouse sobre él */
+    color: #3f9177; /* Cambia el color del texto al pasar el mouse */
 }
 
-.info > input{
-    width: 25vw;
+.info > input {
+    /* Estilos para campos de entrada dentro de un elemento con clase "info" */
+    width: 25vw; /* Ancho del campo de entrada */
 }
 
-.info input[type="submit"]{
-    width: 10vw;
-
+.info input[type="submit"] {
+    /* Estilos para botones de envío dentro de un elemento con clase "info" */
+    width: 10vw; /* Ancho del botón de envío */
 }
 
 footer {
-    position: absolute;
-    background-color: white;
-    color: white;
-    padding: 5px;
-    padding-left: 5%;
-    bottom: 0px;
-    width: 94.5vw;
-    border-top: #1E473A solid 1px;
+    /* Estilos para el pie de página */
+    position: absolute; /* Posición absoluta */
+    background-color: white; /* Color de fondo blanco */
+    color: white; /* Color del texto blanco */
+    padding: 5px; /* Relleno alrededor del pie de página */
+    padding-left: 5%; /* Relleno izquierdo */
+    bottom: 0px; /* Fijar al fondo de la ventana */
+    width: 94.5vw; /* Ancho del pie de página */
+    border-top: #1E473A solid 1px; /* Borde superior sólido */
 }
 
- footer > p{
-    display: inline-block;
-    margin-left: 50vw;
-} 
-/* Final configuració login.html    ---------------------------------------------------------------- */
+footer > p {
+    /* Estilos para párrafos dentro del pie de página */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-left: 50vw; /* Margen izquierdo (50% del ancho de la ventana) */
+}
 
-/* Configuració css per a la pestanya register.html*/
+/* Final configuració login.html ---------------------------------------------------------------- */
+
+/* Configuració css per a la pestanya register.html */
+/* Estilos CSS para la página register.html */
+
 #headerregister {
-    background: rgb(0,151,178);
-    background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
-    display: flex; /* Usamos flexbox para alinear verticalmente los elementos */
+    /* Estilos para el encabezado con ID "headerregister" */
+    background: rgb(0, 151, 178); /* Fondo degradado */
+    background: linear-gradient(90deg, rgba(0, 151, 178, 1) 0%, rgba(126, 217, 87, 1) 100%);
+    display: flex; /* Usa flexbox para organizar los elementos */
     align-items: center; /* Centra verticalmente los elementos */
-    height: 100px; /* Establece una altura fija para el header (ajusta según tus necesidades) */
+    height: 100px; /* Altura del encabezado */
 }
 
 #headerregister > h1 {
-    color: white;
-    margin-left: 30vw; /* Ajusta el margen según tus preferencias */
+    /* Estilos para el encabezado h1 dentro del encabezado con ID "headerregister" */
+    color: white; /* Color del texto blanco */
+    margin-left: 30vw; /* Margen izquierdo (30% del ancho de la ventana) */
 }
 
 #headerregister > img {
-    margin-left: 5vw; /* Ajusta el margen según tus preferencias */
-    width: 20vw;
+    /* Estilos para una imagen dentro del encabezado con ID "headerregister" */
+    margin-left: 5vw; /* Margen izquierdo (5% del ancho de la ventana) */
+    width: 20vw; /* Ancho de la imagen */
 }
 
 .registermain {
-    text-align: center; /* Esto centrará el contenido de .registermain horizontalmente */
-    padding: 7vw; /* Añade un poco de espacio alrededor del contenido */
+    /* Estilos para la sección principal con clase "registermain" */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 7vw; /* Relleno alrededor del contenido principal */
 }
 
 .registermain table {
-    width: 80%;
-    margin: 0 auto; /* Esto centrará la tabla horizontalmente */
+    /* Estilos para las tablas dentro de la sección principal */
+    width: 80%; /* Ancho de la tabla */
+    margin: 0 auto; /* Centrar horizontalmente la tabla */
 }
 
 .registermain td {
-    padding-bottom: 10vh;
+    /* Estilos para las celdas de la tabla dentro de la sección principal */
+    padding-bottom: 10vh; /* Espacio inferior entre celdas */
 }
 
-.registermain table input{
-    width: 25vw;
+.registermain table input {
+    /* Estilos para los campos de entrada dentro de la tabla */
+    width: 25vw; /* Ancho de los campos de entrada */
 }
 
-.registermain > a{
-    font-size: small;
+.registermain > a {
+    /* Estilos para enlaces dentro de la sección principal */
+    font-size: small; /* Tamaño de fuente pequeño */
 }
 
-.registermain > a:hover{
-    color: #3f9177;
+.registermain > a:hover {
+    /* Estilos para enlaces dentro de la sección principal cuando se pasa el mouse sobre ellos */
+    color: #3f9177; /* Cambia el color del texto al pasar el mouse */
 }
-/* Final configuració de la pestanya register.html  ------------------------------------------------ */
+
+/* Final configuració de la pestanya register.html ------------------------------------------------ */
 
 /* Configuració index.html */
+/* Estilos CSS para la página index.html */
 
-menu{
-    border-bottom: #1E473A solid 2px;
-    height: 10vh;
+menu {
+    /* Estilos para un elemento 'menu' */
+    border-bottom: #1E473A solid 2px; /* Borde inferior sólido de 2px */
+    height: 10vh; /* Altura del menú */
 }
 
-menu > ul{
-    margin-top: -6vh;
-    height: 20px;
+menu > ul {
+    /* Estilos para una lista no ordenada dentro del menú */
+    margin-top: -6vh; /* Margen superior negativo */
+    height: 20px; /* Altura de la lista no ordenada */
 }
 
-menu > ul > li{
-    display: inline-block;
-    margin-left: 5vw;
-
+menu > ul > li {
+    /* Estilos para elementos de lista dentro de la lista no ordenada */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-left: 5vw; /* Margen izquierdo (5% del ancho de la ventana) */
 }
 
-menu > ul > li > a{
-   color: #1E473A;
+menu > ul > li > a {
+    /* Estilos para enlaces dentro de elementos de lista */
+    color: #1E473A; /* Color del texto */
 }
 
-menu > ul > li > a > h3{
-    margin-top: -10vh;
-    padding-top: -10px;
+menu > ul > li > a > h3 {
+    /* Estilos para encabezados h3 dentro de enlaces */
+    margin-top: -10vh; /* Margen superior negativo */
+    padding-top: -10px; /* Relleno superior negativo (esto no tiene efecto) */
 }
 
-menu > ul > li > a > h3:hover{
-    color: #3f9177;
- }
+menu > ul > li > a > h3:hover {
+    /* Estilos para encabezados h3 dentro de enlaces cuando se pasa el mouse sobre ellos */
+    color: #3f9177; /* Cambia el color del texto al pasar el mouse */
+}
 
- menu > img{
-    width: 60px;
-    height: 50px;
-    display: inline-block;
- }
+menu > img {
+    /* Estilos para imágenes dentro del menú */
+    width: 60px; /* Ancho de la imagen */
+    height: 50px; /* Altura de la imagen */
+    display: inline-block; /* Mostrar como bloque en línea */
+}
 
- .negrita{
-    color: #9AC135;
- }
+.negrita {
+    /* Estilos para elementos con clase "negrita" */
+    color: #9AC135; /* Color del texto */
+}
 
- #conficon{
-    width: 25px;
-    height: 25px;
-    margin-left: 55vw;
- }
+#conficon {
+    /* Estilos para un elemento con ID "conficon" */
+    width: 25px; /* Ancho del elemento */
+    height: 25px; /* Altura del elemento */
+    margin-left: 55vw; /* Margen izquierdo (55% del ancho de la ventana) */
+}
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
 
 /* Inici configuració de la pestanya config.html */
+/* Estilos CSS para la página config.html */
 
-#sidebarconf{
-    width: 25vw;
-    height: 70vh;
-    display: flex;
-    float: left;
-
+#sidebarconf {
+    /* Estilos para un elemento con ID "sidebarconf" */
+    width: 25vw; /* Ancho del elemento */
+    height: 70vh; /* Altura del elemento */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    float: left; /* Flotar a la izquierda */
 }
 
-#infoconf{
-    width: 99vw;
-    height: 70vh;
-
+#infoconf {
+    /* Estilos para un elemento con ID "infoconf" */
+    width: 99vw; /* Ancho del elemento */
+    height: 70vh; /* Altura del elemento */
 }
 
-#sidebarconf > ul{
-    width: 17vw;
-    margin-left: 2vw;
-    text-align: center;
-    border-right: #1E473A solid 2px;
-
+#sidebarconf > ul {
+    /* Estilos para una lista no ordenada dentro de "sidebarconf" */
+    width: 17vw; /* Ancho de la lista no ordenada */
+    margin-left: 2vw; /* Margen izquierdo (2% del ancho de la ventana) */
+    text-align: center; /* Alineación del texto al centro */
+    border-right: #1E473A solid 2px; /* Borde derecho sólido de 2px */
 }
 
-#sidebarconf > ul > li{
-    padding: 25% 10%;
-    border-bottom: #1E473A solid 1px;
-    border-top: #1E473A solid 1px;
-    width: 15vw;
-    margin-left: -2.3vw;
-    font-size: large;
+#sidebarconf > ul > li {
+    /* Estilos para elementos de lista dentro de la lista no ordenada */
+    padding: 25% 10%; /* Relleno arriba y abajo, margen izquierdo y derecho */
+    border-bottom: #1E473A solid 1px; /* Borde inferior sólido de 1px */
+    border-top: #1E473A solid 1px; /* Borde superior sólido de 1px */
+    width: 15vw; /* Ancho del elemento de la lista */
+    margin-left: -2.3vw; /* Margen izquierdo negativo (ajuste visual) */
+    font-size: large; /* Tamaño de fuente grande */
 }
 
-#sidebarconf > ul > li > a{
-    color: #1E473A;
+#sidebarconf > ul > li > a {
+    /* Estilos para enlaces dentro de elementos de lista */
+    color: #1E473A; /* Color del texto */
 }
 
-#sidebarconf > ul > li > a:hover{
-    color: #3f9177;
+#sidebarconf > ul > li > a:hover {
+    /* Estilos para enlaces dentro de elementos de lista cuando se pasa el mouse sobre ellos */
+    color: #3f9177; /* Cambia el color del texto al pasar el mouse */
 }
 
-#infoconfig, input{
-    width: 25vw;
+#infoconfig, input {
+    /* Estilos para elementos con ID "infoconfig" y campos de entrada */
+    width: 25vw; /* Ancho de los elementos */
 }
 
-#infoconf, input[type="submit"]{
-    width: 12vw;
+#infoconf, input[type="submit"] {
+    /* Estilos para elementos con ID "infoconf" y botones de envío */
+    width: 12vw; /* Ancho de los elementos */
 }
 
-#infoconf img{
-    width: 100px;
-    height: 100px;
+#infoconf img {
+    /* Estilos para imágenes dentro de "infoconf" */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Altura de la imagen */
 }
 
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
