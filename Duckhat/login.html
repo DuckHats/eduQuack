@@ -12,10 +12,10 @@
             const error = params.get('error');
 
             if (error === 'incorrecto') {
-                const alertDiv = document.createElement('div');
-                alertDiv.className = 'alerta-roja';
-                alertDiv.textContent = 'Datos introducidos incorrectos. Por favor, inténtalo de nuevo.';
-                document.body.insertBefore(alertDiv, document.body.firstChild);
+                const mensajeError = document.createElement('div');
+                mensajeError.className = 'mensaje-error';
+                mensajeError.textContent = '¡Datos de inicio de sesión incorrectos! Por favor, inténtalo de nuevo.';
+                document.body.insertBefore(mensajeError, document.body.firstChild);
             }
         });
     </script>

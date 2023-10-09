@@ -1,5 +1,14 @@
 /* Css general per a totes les pagines html del projecte Github*/
 
+/* Css pels errors */
+.mensaje-error {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    text-align: center;
+}
+
+
 /* Configuració general del body */
 body{
     margin: 0;
