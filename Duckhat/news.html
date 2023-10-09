@@ -9,15 +9,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Obtiene el curso_id de la sesión del usuario
-            var cursoId = <?php echo isset($_SESSION['curso_id']) ? $_SESSION['curso_id'] : 'null'; ?>;
-
-            // Función para cargar noticias según el curso_id usando AJAX
-            function cargarNoticias(cursoId) {
+            // Función para cargar noticias usando AJAX
+            function cargarNoticias() {
                 $.ajax({
                     url: 'obtener_noticias.php', // Archivo PHP que devuelve noticias basadas en curso_id
                     method: 'POST',
-                    data: { curso_id: cursoId },
                     dataType: 'json',
                     success: function(response) {
                         // Llena dinámicamente las noticias en el contenedor
@@ -33,14 +29,13 @@
                         });
                     },
                     error: function(xhr, status, error) {
-                        // Maneja errores si es necesario
-                        console.error(error);
+                        console.error("Error en la solicitud AJAX:", xhr.responseText);
                     }
                 });
             }
 
             // Llama a la función para cargar noticias cuando la página se carga
-            cargarNoticias(cursoId);
+            cargarNoticias();
         });
     </script>
 </head>
@@ -55,13 +50,13 @@
         </ul>
     </menu>
     <main>
-
+        <div id="noticias-container"></div>
     </main>
     
     <footer>
         <a href="../Duckhat/Legal/License.pdf">Tots els drets reservats a Duckhat</a>
-   <p>Contactens al correu <a>example@ginebro.cat</a></p>
-   </footer>
+        <p>Contactens al correu <a>example@ginebro.cat</a></p>
+    </footer>
     
 </body>
 </html>
