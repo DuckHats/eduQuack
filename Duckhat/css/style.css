@@ -306,13 +306,14 @@ menu > ul > li > a > h3:hover{
     width: 25vw;
 }
 
-#infoconfig, input[type="button"]{
+#infoconf, input[type="button"]{
     width: 12vw;
 }
 
-#infoconfig, img{
-    width: 150px;
-    height: 150px;
+#infoconf img{
+    width: 100px;
+    height: 100px;
 }
+
 
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
