@@ -5,6 +5,13 @@ session_start();
 // Incluye el archivo de configuración de la base de datos
 include('config.php');
 
+if (!isset($_SESSION['user_id'])) {
+    // Si no ha iniciado sesión, redirige al usuario a la página de inicio de sesión
+    header("Location: login.html");
+    exit();
+}
+$user_id = $_SESSION['user_id'];
+
 // Verifica si el usuario tiene una sesión válida
 if (!isset($_SESSION['email']) || !isset($_SESSION['curso_id'])) {
     // Si no hay una sesión válida, redirige al usuario a la página de login

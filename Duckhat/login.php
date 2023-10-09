@@ -2,6 +2,9 @@
 // Incluye el archivo de configuración de la base de datos
 include('config.php');
 
+// Inicia la sesión
+session_start();
+
 // Verifica si el formulario ha sido enviado con el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtiene los datos del formulario (correo electrónico y contraseña)
@@ -27,7 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica si la contraseña proporcionada coincide con la almacenada en la base de datos
         if (password_verify($password, $row['password'])) {
-            // Inicio de sesión exitoso, redirige al usuario a la página de bienvenida (index.html)
+            // Almacena el ID del usuario en la sesión para mantenerlo conectado
+            $_SESSION['user_id'] = $row['id'];
+
+            // Redirige al usuario a la página de bienvenida (index.html)
             header("Location: index.html");
             exit();
         } else {
