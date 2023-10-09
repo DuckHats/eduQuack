@@ -22,8 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            // Inicio de sesión exitoso, almacena el curso_id en la sesión
-            $_SESSION['curso_id'] = $row['curso_id'];
+            // Inicio de sesión exitoso, almacena la información del usuario en la sesión
+            $_SESSION['usuario_id'] = $row['id'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['curso_id'] = $row['curso_id']; // Suponiendo que hay un campo 'curso_id' en tu tabla de usuarios
             // Redirigir al usuario a la página de noticias
             header("Location: news.html");
             exit();
