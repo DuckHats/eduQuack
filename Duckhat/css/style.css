@@ -130,6 +130,7 @@ cursor: pointer;
     gap: 10px;
     height: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 .info > a{
@@ -142,8 +143,9 @@ cursor: pointer;
 }
 
 #forgot{
-    margin-left: -18vw;
+    margin-left: -15vw;
     color: gray;
+    font-size: smaller;
 }
 
 #forgot:hover{
@@ -154,8 +156,9 @@ cursor: pointer;
     width: 25vw;
 }
 
-.info > input[type="submit"]{
+.info input[type="submit"]{
     width: 10vw;
+
 }
 
 footer {
