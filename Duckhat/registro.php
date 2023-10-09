@@ -5,6 +5,23 @@ session_start();
 // Incluye el archivo de configuración de la base de datos
 include('config.php');
 
+// Verifica si el usuario ya tiene un ID de usuario
+if (!isset($_SESSION['user_id'])) {
+    // Genera un ID de usuario único (por ejemplo, usando una función como uniqid())
+    $user_id = uniqid();
+
+    // Almacena el ID de usuario en la sesión
+    $_SESSION['user_id'] = $user_id;
+
+    // Redirige al usuario a la página de bienvenida después de registrarse
+    header("Location: login.html");
+    exit();
+}
+
+// Si el usuario ya tiene un ID, redirige al usuario a la página de bienvenida
+header("Location: index.html");
+exit();
+
 // Verifica si el formulario ha sido enviado con el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtiene los datos del formulario (nombre de usuario, correo electrónico, fecha de nacimiento, contraseña y curso)
