@@ -21,8 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            // Inicio de sesión exitoso, redirigir al usuario a la página de bienvenida
-            header("Location: index.html");
+            // Inicio de sesión exitoso, guardar el curso_id en una variable de sesión
+            session_start();
+            $_SESSION['curso_id'] = $row['curso_id'];
+
+            // Redirigir al usuario a la página de noticias
+            header("Location: news.html");
             exit();
         } else {
             // Contraseña incorrecta, redirigir de vuelta a la página de inicio de sesión con un mensaje de error

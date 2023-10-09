@@ -44,6 +44,16 @@
             <form action="registro.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
                 <tr>
                     <td><input type="text" name="username" placeholder="Introduce tu nombre de usuario" required></td>
+                    <td><label for="nivel_educativo">Nivel Educativo:</label>
+                        <select id="nivel_educativo" name="curso_id" required>
+                            <option value="1ESO">1r_ESO</option>
+                            <option value="2ESO">2n_ESO</option>
+                            <option value="3ESO">3r_ESO</option>
+                            <option value="4ESO">4t_ESO</option>
+                            <option value="CicloMedio">Cicle_Mitjà</option>
+                            <option value="CicloSuperior">Cicle_Superior</option>
+                            <option value="Bachillerato">Batchillerat</option>
+                        </select></td>
                 </tr>
                 <tr>
                     <td><input type="email" name="email" placeholder="Introduce tu correo electrónico" required></td>
