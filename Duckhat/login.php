@@ -56,6 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Redirect user to welcome page
                             header("location: index.php");
+                            exit();
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
@@ -71,6 +72,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Close statement
             mysqli_stmt_close($stmt);
+        } else {
+            echo "Oops! Something went wrong with the SQL statement.";
         }
     }
     
