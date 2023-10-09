@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener datos del formulario
     $username = $_POST['email'];
     $email = $_POST['email'];
-    $fecha_nacimiento = $_POST['date'];
+    $fecha_nacimiento = $_POST['fecha_nacimiento'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Cifra la contraseña
 
     // Conectar a la base de datos
