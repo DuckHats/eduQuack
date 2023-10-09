@@ -14,7 +14,7 @@
             <li><a href="index.html"><h3>Menú</h3></a></li>
             <li><a href="teams.html"><h3>Grups</h3></a></li>
             <li><a href="news.html"><h3>Notícies</h3></a></li>
-            <li><a href="config.html"><img id="conficon" src="images/userselec.png"></a></li>
+            <li><a href="perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
         </ul> 
     </menu>
 
@@ -52,7 +52,7 @@
             <input type="password" placeholder="Nova contrasenya">
             <input type="password" placeholder="Confirma la nova contrasenya">
 
-            <input type="submit" onclick="window.location.href = 'config.html';" value="Actualitzar">
+            <input type="submit" onclick="window.location.href = 'perfil.php';" value="Actualitzar">
             <input id="logout" type="submit" onclick="window.location.href = 'login.html';" value="Logout">
             <img src="images/qr.png" alt="Qr">
         </div>
