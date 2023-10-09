@@ -30,15 +30,30 @@
         <div id="infoconf">
             <table>
                 <tr>
-                    <td><input type="email" placeholder="Introdueix el teu email"></li></td>
-                    <td><input type="date" placeholder="Introdueix la teva data de neixement"></td>
+                    <td>
+                        <ul>
+                            <li>
+                                <h3>Username</h3>
+                                <input type="text" value="$username">
+                            </li>
+                            <li>
+                                <h3>Nom complet</h3>
+                                <input type="text" value="$name">
+                            </li>
+                            <li>
+                                <h3>Número telefònic</h3>
+                                <input type="tel" value="$phone">
+                            </li>
+                        </ul>
+                    </td>
                 </tr>
                 <tr>
-                    <td><input type="password" placeholder="Introdueix la contrasenya"></td>
-                    <td><input type="password" placeholder="Torna a introduir la contrasenya"></td>
+                    <td>
+                        <input type="button" onclick="window.location.href = 'config.html';" value="Actualitzar">
+                        <input id="logout" type="button" onclick="window.location.href = 'login.html';" value="Logout">
+                    </td>
                 </tr>
             </table>
-            <input type="button" onclick="window.location.href = 'Register.html';" value="Registrar-se">
         </div>
     </main>
     

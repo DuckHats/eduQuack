@@ -302,4 +302,13 @@ menu > ul > li > a > h3:hover{
     color: #3f9177;
 }
 
+#infoconfig, input{
+    width: 25vw;
+}
+
+#infoconfig, input[type="button"]{
+    width: 12vw;
+}
+
+
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
