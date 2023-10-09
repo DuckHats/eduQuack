@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consultar la base de datos para verificar las credenciales
-    $sql = "SELECT id, email, password, curso_id FROM usuarios WHERE email='$email'";
+    $sql = "SELECT * FROM usuarios WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
@@ -27,17 +27,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $row['email'];
             $_SESSION['curso_id'] = $row['curso_id']; // Suponiendo que hay un campo 'curso_id' en tu tabla de usuarios
 
-            // Redirigir al usuario a la página de noticias
-            header("Location: index.html");
+            // Redirigir al usuario a la página de noticias después del inicio de sesión exitoso
+            header("Location: news.html");
             exit();
         } else {
             // Contraseña incorrecta, redirigir de vuelta a la página de inicio de sesión con un mensaje de error
-            header("Location: login.html?error=contrasena");
+            header("Location: login.html?error=incorrecto");
             exit();
         }
     } else {
         // Usuario no encontrado, redirigir de vuelta a la página de inicio de sesión con un mensaje de error
-        header("Location: login.html?error=usuario");
+        header("Location: login.html?error=incorrecto");
         exit();
     }
 
