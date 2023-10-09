@@ -19,6 +19,19 @@
             return true;
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const error = params.get('error');
+
+            if (error === 'incorrecto') {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alerta-roja';
+                alertDiv.textContent = 'Datos introducidos incorrectos. Por favor, inténtalo de nuevo.';
+                document.body.insertBefore(alertDiv, document.body.firstChild);
+            }
+        });
+    </script>
 </head>
 <body>
     <header id="headerregister">

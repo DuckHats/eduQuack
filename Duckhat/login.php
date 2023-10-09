@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
             // Inicio de sesión exitoso, redirigir al usuario a la página de bienvenida
-            header("Location: bienvenido.php");
+            header("Location: index.html");
             exit();
         } else {
             // Contraseña incorrecta, redirigir de vuelta a la página de inicio de sesión con un mensaje de error

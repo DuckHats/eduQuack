@@ -21,8 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Usuario registrado correctamente";
+        header("Location: login.html");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
+        header("Location: registro.html?error=incorrecto");
+        exit();
     }
 
     // Cerrar la conexión
