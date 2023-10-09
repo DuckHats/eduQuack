@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php'); // Incluye tu archivo de configuración de la base de datos
 
 // Conectar a la base de datos
@@ -9,8 +10,10 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consulta SQL para obtener noticias basadas en curso_id (reemplaza 'curso1' con el valor correcto)
-$cursoId = 'curso1'; // Valor de ejemplo, reemplázalo con el valor real del curso del usuario
+// Obtén el curso_id del usuario de la sesión
+$cursoId = $_SESSION['curso_id'];
+
+// Consulta SQL para obtener noticias basadas en curso_id
 $sql = "SELECT * FROM noticias WHERE curso_id = '$cursoId'";
 
 $result = $conn->query($sql);
