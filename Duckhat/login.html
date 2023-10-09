@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <!-- Configuración de la codificación de caracteres y el tamaño de la ventana de visualización -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página y enlace al icono en la pestaña del navegador -->
     <title>Login | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
-    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Script JavaScript para manejar errores de inicio de sesión -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtiene los parámetros de la URL (en este caso, el error de inicio de sesión)
+        document.addEventListener('DOMContentLoaded', function () {
             const params = new URLSearchParams(window.location.search);
             const error = params.get('error');
 
-            // Si hay un error de inicio de sesión, muestra un mensaje de error en la página
             if (error === 'incorrecto') {
                 const mensajeError = document.createElement('div');
                 mensajeError.className = 'mensaje-error';
@@ -26,36 +20,24 @@
         });
     </script>
 </head>
+
 <body>
-    <!-- Contenedor principal de la página -->
     <main class="loginmain">
-        <!-- Logotipo de la página de inicio de sesión -->
         <div class="ginebro">
             <img id="logologin" src="../Duckhat/images/ginebro-logo-blanc-742059845.png">
         </div>
 
-        <!-- Formulario de inicio de sesión -->
         <div class="info">
             <h1>Login</h1>
-            <form action="login.php" method="post">
-                <!-- Campos para ingresar correo electrónico y contraseña -->
+            <form action="index.php" method="post">
                 <input type="email" name="email" placeholder="Introduce tu email" required><br>
                 <input type="password" name="password" placeholder="Introduce tu contraseña" required><br>
-                <!-- Enlace para restablecer la contraseña olvidada y botón para enviar el formulario -->
                 <a id="forgot" href="rpassword.html">¿Olvidaste tu contraseña?</a><br>
-                <!-- <script src="./scripts/login.js"></script> -->
                 <input type="submit" value="Iniciar sesión">
             </form>
-            <!-- Enlace para redirigir a la página de registro -->
             <a href="register.html">Crear cuenta</a>
         </div>
     </main>
-    <!-- Pie de página (comentado para su desactivación) -->
-    <!--
-    <footer>
-        <a href="../Duckhat/Legal/License.pdf">Todos los derechos reservados a Duckhat</a>
-        <p>Contacta con nosotros en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
-    </footer>
-    -->
 </body>
+
 </html>

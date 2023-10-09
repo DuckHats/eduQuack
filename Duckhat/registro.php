@@ -1,63 +1,77 @@
 <?php
-// Inicia una nueva sesión o reanuda la sesión existente
-session_start();
-
-// Incluye el archivo de configuración de la base de datos
-include('config.php');
-
-// Verifica si el usuario ya tiene un ID de usuario
-if (!isset($_SESSION['user_id'])) {
-    // Genera un ID de usuario único (por ejemplo, usando una función como uniqid())
-    $user_id = uniqid();
-
-    // Almacena el ID de usuario en la sesión
-    $_SESSION['user_id'] = $user_id;
-
-    // Redirige al usuario a la página de bienvenida después de registrarse
-    header("Location: login.html");
-    exit();
-}
-
-// Si el usuario ya tiene un ID, redirige al usuario a la página de bienvenida
-header("Location: index.html");
-exit();
+// Include config file
+require_once "config.php";
 
 // Verifica si el formulario ha sido enviado con el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtiene los datos del formulario (nombre de usuario, correo electrónico, fecha de nacimiento, contraseña y curso)
-    $username = $_POST['email'];
-    $email = $_POST['email'];
-    $fecha_nacimiento = $_POST['fecha_nacimiento'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Cifra la contraseña usando el algoritmo bcrypt
+    // Obtiene los datos del formulario
+    $username = $_POST['username'];
     $cursoId = $_POST['curso_id'];
+    $email = $_POST['email'];
+    $fechaNacimiento = $_POST['fecha_nacimiento'];
+    $password = $_POST['password'];
 
-    // Conectar a la base de datos usando los datos de configuración
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    // Prepara la consulta SQL para verificar si el nombre de usuario ya está en uso
+    $sql = "SELECT id FROM users WHERE username = ?";
+    
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Vincula las variables a la declaración preparada como parámetros
+        mysqli_stmt_bind_param($stmt, "s", $param_username);
+        
+        // Establece los parámetros
+        $param_username = $username;
+        
+        // Intenta ejecutar la declaración preparada
+        if(mysqli_stmt_execute($stmt)){
+            // Almacena el resultado
+            mysqli_stmt_store_result($stmt);
+            
+            if(mysqli_stmt_num_rows($stmt) == 1){
+                // Nombre de usuario ya en uso, muestra un mensaje de error
+                header("Location: register.html?error=usuarioexistente");
+                exit();
+            } else{
+                // Nombre de usuario no está en uso, procede a registrar el usuario
+                // Prepara la declaración SQL para insertar datos en la tabla users
+                $sql = "INSERT INTO users (username, curso_id, email, fecha_nacimiento, password) VALUES (?, ?, ?, ?, ?)";
+                 
+                if($stmt = mysqli_prepare($link, $sql)){
+                    // Vincula las variables a la declaración preparada como parámetros
+                    mysqli_stmt_bind_param($stmt, "sssss", $param_username, $param_cursoId, $param_email, $param_fechaNacimiento, $param_password);
+                    
+                    // Establece los parámetros
+                    $param_username = $username;
+                    $param_cursoId = $cursoId;
+                    $param_email = $email;
+                    $param_fechaNacimiento = $fechaNacimiento;
+                    $param_password = password_hash($password, PASSWORD_DEFAULT); // Crea un hash de contraseña
+                    
+                    // Intenta ejecutar la declaración preparada
+                    if(mysqli_stmt_execute($stmt)){
+                        // Registro exitoso, redirige al usuario a la página de inicio de sesión
+                        header("Location: login.html");
+                        exit();
+                    } else{
+                        // Error al registrar el usuario, muestra un mensaje de error
+                        header("Location: register.html?error=registrofallido");
+                        exit();
+                    }
 
-    // Verificar la conexión a la base de datos
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
+                    // Cierra la declaración
+                    mysqli_stmt_close($stmt);
+                }
+            }
+        } else{
+            // Error en la declaración preparada, muestra un mensaje de error
+            header("Location: register.html?error=errordeconsulta");
+            exit();
+        }
+
+        // Cierra la declaración
+        // mysqli_stmt_close($stmt);
     }
-
-    // Guardar los datos en la base de datos mediante una consulta SQL
-    $sql = "INSERT INTO usuarios (username, email, fecha_nacimiento, password, curso_id) VALUES ('$username', '$email', '$fecha_nacimiento', '$password', '$cursoId')";
-
-    // Ejecutar la consulta SQL y verificar si se ejecuta correctamente
-    if ($conn->query($sql) === TRUE) {
-        // Inicializa la sesión y almacena datos del usuario
-        $_SESSION['email'] = $email;
-        $_SESSION['curso_id'] = $cursoId;
-
-        // Redirige al usuario a la página de inicio después del registro exitoso
-        header("Location: index.html");
-        exit();
-    } else {
-        // Si hay un error en la consulta SQL, redirige a la página de registro con un mensaje de error
-        header("Location: registro.html?error=incorrecto");
-        exit();
-    }
-
-    // Cierra la conexión a la base de datos
-    $conn->close();
+    
+    // Cierra la conexión
+    mysqli_close($link);
 }
 ?>

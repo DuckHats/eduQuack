@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Configuración de la codificación de caracteres y el tamaño de la ventana de visualización -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página y enlace al icono en la pestaña del navegador -->
     <title>Register | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
-    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Script para validar la coincidencia de contraseñas -->
     <script>
         function validarFormulario() {
             var password = document.forms["registroForm"]["password"].value;
@@ -22,72 +18,61 @@
 
             return true;
         }
-    </script>
-    <!-- Script para mostrar un mensaje de error si hay un problema con los datos ingresados -->
-    <script>
+
         document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const error = params.get('error');
 
             if (error === 'incorrecto') {
-                // Crea un elemento div para mostrar una alerta roja con el mensaje de error
+                mostrarMensajeError("Datos introducidos incorrectos. Por favor, inténtalo de nuevo.");
+            }
+
+            function mostrarMensajeError(mensaje) {
                 const alertDiv = document.createElement('div');
                 alertDiv.className = 'alerta-roja';
-                alertDiv.textContent = 'Datos introducidos incorrectos. Por favor, inténtalo de nuevo.';
-                // Inserta el mensaje de error en la parte superior del cuerpo del documento
+                alertDiv.textContent = mensaje;
                 document.body.insertBefore(alertDiv, document.body.firstChild);
             }
         });
     </script>
 </head>
 <body>
-    <!-- Encabezado de la página de registro -->
     <header id="headerregister">
-        <!-- Logo del sitio web -->
         <img src="../Duckhat/images/ginebro-logo-blanc-742059845.png">
-        <!-- Título de la página -->
         <h1>Crear un compte nou</h1>
     </header>
 
-    <!-- Contenido principal de la página de registro -->
     <main class="registermain">
-        <!-- Tabla para organizar los campos del formulario de registro -->
-        <table>
-            <!-- Formulario de registro con campos para el nombre de usuario, correo electrónico, fecha de nacimiento y contraseña -->
-            <form action="registro.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
-                <tr>
-                    <!-- Campo para ingresar el nombre de usuario -->
-                    <td><input type="text" name="username" placeholder="Introduce tu nombre de usuario" required></td>
-                    <!-- Menú desplegable para seleccionar el curso -->
-                    <td><label for="nivel_educativo">Curs:</label>
-                        <select id="nivel_educativo" name="curso_id" required>
-                            <option value="1ESO">1r_ESO</option>
-                            <option value="2ESO">2n_ESO</option>
-                            <option value="3ESO">3r_ESO</option>
-                            <option value="4ESO">4t_ESO</option>
-                            <option value="CicloMedio">Cicle_Mitjà</option>
-                            <option value="CicloSuperior">Cicle_Superior</option>
-                            <option value="Bachillerato">Batchillerat</option>
-                        </select></td>
-                </tr>
-                <tr>
-                    <!-- Campo para ingresar la dirección de correo electrónico -->
-                    <td><input type="email" name="email" placeholder="Introduce tu correo electrónico" required></td>
-                    <!-- Campo para ingresar la fecha de nacimiento -->
-                    <td><input type="date" name="fecha_nacimiento" required pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD"></td>
-                </tr>
-                <tr>
-                    <!-- Campo para ingresar la contraseña -->
-                    <td><input type="password" name="password" placeholder="Introduce la contraseña" required></td>
-                    <!-- Campo para confirmar la contraseña ingresada -->
-                    <td><input type="password" name="confirm_password" placeholder="Confirma la contraseña" required></td>
-                </tr>
-        </table>
-        <!-- Botón para enviar el formulario de registro -->
-        <input type="submit" value="Registrar-se">
+        <form action="registro.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="form-group">
+                <select id="nivel_educativo" name="curso_id" required>
+                    <option value="1ESO">1r_ESO</option>
+                    <option value="2ESO">2n_ESO</option>
+                    <option value="3ESO">3r_ESO</option>
+                    <option value="4ESO">4t_ESO</option>
+                    <option value="CicloMedio">Cicle_Mitjà</option>
+                    <option value="CicloSuperior">Cicle_Superior</option>
+                    <option value="Bachillerato">Batchillerat</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <input type="date" name="fecha_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
+            </div>
+            <input type="submit" value="Registrar-se">
         </form>
         <br>
-        <!-- Enlace para redirigir a la página de inicio de sesión -->
         <a href="login.html">Login</a>
     </main>
 </body>
