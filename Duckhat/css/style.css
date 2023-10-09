@@ -37,8 +37,8 @@ a:hover{
     cursor: pointer;
 }
 
-/* Configuració Button */
-/* button {
+/* Configuració submit */
+/* submit {
     background: rgb(0,151,178);
 background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
 color: white;
@@ -59,7 +59,7 @@ input{
     border-bottom: solid 1px black;
 }
 
-input[type="button"] {
+input[type="submit"] {
     background: rgb(0,151,178);
 background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%);
 color: white;
@@ -71,12 +71,12 @@ text-align: center;
 font-weight: bold;
 } 
 
-input[type="button"]:hover{
+input[type="submit"]:hover{
     background: rgb(0,151,178);
 background: linear-gradient(90deg, rgb(0, 102, 120) 0%, rgb(84, 146, 58) 100%);
 cursor: pointer;
 }
-/* Id input type button logout */
+/* Id input type submit logout */
 #logout{
     background: rgb(255,49,49);
     background: linear-gradient(90deg, rgba(255,49,49,1) 0%, rgba(255,145,77,1) 100%);
@@ -145,7 +145,7 @@ cursor: pointer;
     width: 25vw;
 }
 
-.info > input[type="button"]{
+.info > input[type="submit"]{
     width: 10vw;
 }
 
@@ -306,7 +306,7 @@ menu > ul > li > a > h3:hover{
     width: 25vw;
 }
 
-#infoconf, input[type="button"]{
+#infoconf, input[type="submit"]{
     width: 12vw;
 }
 

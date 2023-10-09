@@ -6,6 +6,19 @@
     <title>Register | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function validarFormulario() {
+            var password = document.forms["registroForm"]["password"].value;
+            var confirmarPassword = document.forms["registroForm"]["confirm_password"].value;
+
+            if (password !== confirmarPassword) {
+                alert("Las contraseñas no coinciden.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </head>
 <body>
     <header id="headerregister">
@@ -15,21 +28,24 @@
 
     <main class="registermain">
         <table>
-            <form action="registro.php" method="post">
-            <tr>
-                <td><input type="email" placeholder="Introdueix el teu email"></li></td>
-                <td><input type="date" placeholder="Introdueix la teva data de neixement"></td>
-            </tr>
-            <tr>
-                <td><input type="password" placeholder="Introdueix la contrasenya"></td>
-                <td><input type="password" placeholder="Torna a introduir la contrasenya"></td>
-            </tr>
-            </form>
+            <form action="registro.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
+                <tr>
+                    <td><input type="text" name="username" placeholder="Introduce tu nombre de usuario" required></td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="email" placeholder="Introduce tu correo electrónico" required></td>
+                    <td><input type="date" name="birthdate" required></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" placeholder="Introduce la contraseña" required></td>
+                    <td><input type="password" name="confirm_password" placeholder="Confirma la contraseña" required></td>
+                </tr>
         </table>
-        <input type="button" onclick="window.location.href = 'Register.html';" value="Registrar-se">
+        <input type="submit" value="Registrar-se">
+        </form>
         <br>
         <a href="login.html">Login</a>
     </main>
-    
+
 </body>
 </html>

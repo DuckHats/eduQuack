@@ -1,11 +1,9 @@
 <?php
-include('config.php'); // Incluye el archivo de configuración de la base de datos
-
-session_start();
+include('config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener datos del formulario
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Conectar a la base de datos
@@ -16,21 +14,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    // Verificar las credenciales en la base de datos
-    $sql = "SELECT * FROM usuarios WHERE username='$username'";
+    // Consultar la base de datos para verificar las credenciales
+    $sql = "SELECT * FROM usuarios WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $username;
-            header("Location: bienvenido.php"); // Redirige a la página de bienvenida después del inicio de sesión exitoso
+            // Inicio de sesión exitoso, redirigir al usuario a la página de bienvenida
+            header("Location: bienvenido.php");
             exit();
         } else {
-            echo "Nombre de usuario o contraseña incorrectos";
+            // Contraseña incorrecta, redirigir de vuelta a la página de inicio de sesión con un mensaje de error
+            header("Location: login.html?error=contrasena");
+            exit();
         }
     } else {
-        echo "Nombre de usuario o contraseña incorrectos";
+        // Usuario no encontrado, redirigir de vuelta a la página de inicio de sesión con un mensaje de error
+        header("Location: login.html?error=usuario");
+        exit();
     }
 
     // Cerrar la conexión

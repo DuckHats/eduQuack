@@ -15,20 +15,18 @@
 
         <div class="info">
             <h1>Login</h1>
-            <br>
-            <br>
-            <form action="login.php" method="post"></form>
-                <input type="email" placeholder="Introdueix el teu email">
-                <input type="password" placeholder="Introdueix la contrasenya">
-                <a id="forgot" href="rpassword.html">Forgot password?</a>
-                <input type="button" onclick="window.location.href = 'index.html';" value="Iniciar sesió">
+            <form action="login.php" method="post">
+                <input type="email" name="email" placeholder="Introduce tu email" required><br>
+                <input type="password" name="password" placeholder="Introduce tu contraseña" required><br>
+                <a id="forgot" href="rpassword.html">¿Olvidaste tu contraseña?</a><br>
+                <input type="submit" value="Iniciar sesión">
             </form>
-            <a href="register.html">Create account</a>
+            <a href="register.html">Crear cuenta</a>
         </div>
     </main>
-<!-- <footer>
-         <a href="../Duckhat/Legal/License.pdf">Tots els drets reservats a Duckhat</a>
-    <p>Contactens al correu <a>example@ginebro.cat</a></p>
+    <!-- <footer>
+        <a href="../Duckhat/Legal/License.pdf">Todos los derechos reservados a Duckhat</a>
+        <p>Contacta con nosotros en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
     </footer> -->
 </body>
 </html>
