@@ -2,12 +2,12 @@
 session_start();
 include('config.php');
 
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['email']) || !isset($_SESSION['curso_id'])) {
+if (!isset($_SESSION["username"])) {
     header("Location: login.html");
     exit();
 }
 
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);

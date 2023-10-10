@@ -13,9 +13,9 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
 |  - Definició dels Requisits     | ✅ Completada|
 | **Disseny i Desenvolupament**   | ✅ Completada|
 |  - Disseny de la Interfície     | ✅ Completada|
-|  - Selecció de Tecnologies      | ❌ Pendent   |
-| **Implementació i Proves**      | ❌ Pendent   |
-|  - Equip de Desenvolupament     | ❌ Pendent   |
+|  - Selecció de Tecnologies      | ✅ Completada|
+| **Implementació i Proves**      | ✅ Completada|
+|  - Equip de Desenvolupament     | ✅ Completada|
 |  - Desenvolupament Iteratiu     | ❌ Pendent   |
 |  - Proves Rigoroses             | ❌ Pendent   |
 | **Avaluació i Llançament**      | ❌  Pendent  |
