@@ -1,40 +1,33 @@
 <?php
-// Datos de conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "1234";
-$database = "users";
-
-// Crear una conexión a la base de datos
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener datos del formulario (teniendo en cuenta las validaciones)
-    // ...
+    require_once "config.php"; // Reemplaza "config.php" con el nombre de tu archivo de configuración de la base de datos
 
-    // Preparar la consulta SQL
-    $stmt = $conn->prepare("INSERT INTO usuarios (username, curso_id, name, email, password, fecha_nacimiento) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $username, $curso_id, $name, $email, $hashed_password, $fecha_nacimiento);
+    $username = $_POST["username"];
+    $curso = $_POST["curso"];
+    $full_name = $_POST["full_name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $edad = $_POST["edad"];
 
-    // Ejecutar la consulta
-    if ($stmt->execute()) {
-        // Registro exitoso, redirigir al usuario a la página de login
-        $_SESSION["loggedin"] = true;
-        $_SESSION["username"] = $email; // Asegúrate de tener la variable $username definida en este punto
-        header("Location: index.php");
-        exit();
-    } else {
-        // Error en la inserción
-        echo "Error al registrar el usuario: " . $stmt->error;
+    // Hash de la contraseña
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insertar datos en la base de datos
+    $sql = "INSERT INTO usuarios (username, curso, full_name, email, password, edad) VALUES (?, ?, ?, ?, ?, ?)";
+    if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->bind_param("sssssi", $username, $curso, $full_name, $email, $hashed_password, $edad);
+
+        if ($stmt->execute()) {
+            header("location: login.html");
+        } else {
+            echo "Error al registrar el usuario.";
+        }
+
+        $stmt->close();
     }
 
-    // Cerrar la conexión y la declaración
-    $stmt->close();
-    $conn->close();
+    $mysqli->close();
 }
 ?>

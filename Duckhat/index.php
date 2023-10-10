@@ -1,19 +1,17 @@
 <?php
-// Initialize the session
 session_start();
 
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
+    header("location: login.html");
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
@@ -25,8 +23,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <img src="images/ginebro-logo (1).png">
         <ul>
             <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
-            <li><a href="teams.html"><h3>Grups</h3></a></li>
-            <li><a href="news.html"><h3>Notícies</h3></a></li>
+            <li><a href="teams.html"><h3>Grupos</h3></a></li>
+            <li><a href="news.html"><h3>Noticias</h3></a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>  
     </menu>

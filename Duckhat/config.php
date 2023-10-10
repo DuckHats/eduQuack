@@ -1,16 +1,12 @@
 <?php
-// Configuración de la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "1234";
-$database = "users";
+define('DB_SERVER', 'localhost'); // Reemplaza 'nombre_del_servidor' con el nombre de tu servidor de base de datos
+define('DB_USERNAME', 'root'); // Reemplaza 'nombre_de_usuario' con tu nombre de usuario de MySQL
+define('DB_PASSWORD', '1234'); // Reemplaza 'contraseña' con tu contraseña de MySQL
+define('DB_DATABASE', 'users'); // Reemplaza 'usuarios' con el nombre de tu base de datos
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    // Configurar PDO para manejar errores en el modo excepción
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // No necesitas imprimir "Conexión establecida correctamente" aquí
-} catch(PDOException $e) {
-    echo "Error de conexión: " . $e->getMessage();
+$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+if($mysqli === false){
+    die("ERROR: No se pudo conectar a la base de datos. " . $mysqli->connect_error);
 }
 ?>

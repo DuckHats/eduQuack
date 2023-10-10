@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header id="headerregister">
         <img src="../Duckhat/images/ginebro-logo-blanc-742059845.png">
-        <h1>Crear un compte nou</h1>
+        <h1>Crear una cuenta nueva</h1>
     </header>
 
     <main class="registermain">
-        <form action="register.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
+        <form action="register.php" method="post">
             <div class="form-group">
                 <input type="text" name="username" placeholder="Nombre de usuario" required>
             </div>
             <div class="form-group">
-                <select id="nivel_educativo" name="curso_id" required>
+                <select id="nivel_educativo" name="curso" required>
                     <option value="1ESO">1r_ESO</option>
-                    <option value="2ESO">2n_ESO</option>
-                    <option value="3ESO">3r_ESO</option>
-                    <option value="4ESO">4t_ESO</option>
-                    <option value="CicloMedio">Cicle_Mitjà</option>
-                    <option value="CicloSuperior">Cicle_Superior</option>
-                    <option value="Bachillerato">Batchillerat</option>
+                    <!-- Agrega las opciones para otros cursos aquí -->
                 </select>
             </div>
             <div class="form-group">
-                <input type="text" name="name" placeholder="Nom Complet" required>
+                <input type="text" name="full_name" placeholder="Nombre Completo" required>
             </div>
             <div class="form-group">
                 <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -42,13 +38,14 @@
                 <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
             </div>
             <div class="form-group">
-                <input type="date" name="fecha_nacimiento" required>
+                <input type="date" name="edad" required>
             </div>
-                        
-            <input type="submit" name="submit" value="Registrar-se">
+
+            <input type="submit" name="submit" value="Registrar">
             <br>
-            <a href="login.php">Login</a>
+            <a href="login.html">Login</a>
         </form>
     </main>
 </body>
+
 </html>

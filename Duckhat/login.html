@@ -6,19 +6,6 @@
     <title>Login | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const params = new URLSearchParams(window.location.search);
-            const error = params.get('error');
-
-            if (error === 'incorrecto') {
-                const mensajeError = document.createElement('div');
-                mensajeError.className = 'mensaje-error';
-                mensajeError.textContent = '¡Datos de inicio de sesión incorrectos! Por favor, inténtalo de nuevo.';
-                document.body.insertBefore(mensajeError, document.body.firstChild);
-            }
-        });
-    </script>
 </head>
 
 <body>
