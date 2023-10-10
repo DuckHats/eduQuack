@@ -78,7 +78,7 @@
             <input type="password" placeholder="Nova contrasenya">
             <input type="password" placeholder="Confirma la nova contrasenya"> -->
 
-            <input type="submit" onclick="window.location.href = 'perfil.php';" value="Actualitzar">
+            <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
             <input id="logout" type="submit" onclick="window.location.href = 'logout.php';" value="Logout">
             <img src="images/qr.png" alt="Qr">
             </form>
