@@ -10,8 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Consulta SQL para actualizar los valores
     $sql = "UPDATE usuarios SET username = ?, full_name = ?, email = ? WHERE id = ?";
     if ($stmt = $mysqli->prepare($sql)) {
-        $stmt->bind_param("sssi", $username, $full_name, $email, $id);
-        echo "Pr if";
+        $stmt->bind_param("sssi", $username, $full_name, $email);
+        $var_dump($stmt);
+        // echo "Pr if";
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
             // header("Location: perfil.php");

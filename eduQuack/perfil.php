@@ -22,7 +22,7 @@
     $id = $_SESSION['id'];
     $sql = "SELECT username, email, full_name FROM usuarios WHERE id = '$id'";
     $result = $mysqli->query($sql);
-
+    //Guardar la informació en variables
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         $username = $user['username'];
