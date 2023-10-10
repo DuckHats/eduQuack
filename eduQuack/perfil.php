@@ -13,15 +13,13 @@
 session_start();
 
 // Comprueba si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no ha iniciado sesión, redirige al usuario a la página de inicio de sesión
-    header("Location: login.html");
-    exit();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.html");
+    exit;
 }
-
 // Suponiendo que tienes variables de sesión para los datos del usuario
 $username = $_SESSION['username'];
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 $nombreCompleto = $_SESSION['nombre_completo'];
 $numeroTelefonico = $_SESSION['numero_telefonico'];
 $email = $_SESSION['email'];
@@ -47,6 +45,7 @@ $email = $_SESSION['email'];
         
         <div id="infoconf">
             <h2 id="perfil">Perfil</h2>
+            <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
             <ul>
                 <li>
                     <h3>Username</h3>

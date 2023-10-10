@@ -30,6 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </menu>
     
     <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido a nuestro sitio.</h1>
+    <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
 
     <main>
         <!-- Contenido personalizado para la página de bienvenida -->
