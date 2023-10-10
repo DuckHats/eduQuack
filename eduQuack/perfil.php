@@ -43,7 +43,7 @@
             <li><a href="teams.php">
                     <h3>Grups</h3>
                 </a></li>
-            <li><a href="news.html">
+            <li><a href="news.php">
                     <h3>Notícies</h3>
                 </a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
