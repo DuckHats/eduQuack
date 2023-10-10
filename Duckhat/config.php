@@ -1,14 +1,16 @@
 <?php
-define('DBSERVER', 'localhost'); // Cambia localhost si tu base de datos está en un servidor remoto
-define('DBUSERNAME', 'root'); // Cambia tu_usuario al nombre de usuario de tu base de datos
-define('DBPASSWORD', '1234'); // Cambia tu_contraseña a la contraseña de tu base de datos
-define('DBNAME', 'users'); // Cambia nombredelabasededatos al nombre de tu base de datos
+// Configuración de la base de datos
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$database = "users";
 
-/* COnectar a la base de dades */
-$db = mysqli_connect(DBSERVER, DBUSERNAME, DBPASSWORD, DBNAME);
- 
-// comprobar conexió
-if($db === false){
-    die("ERROR: connection error. " . mysqli_connect_error());
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    // Configurar PDO para manejar errores en el modo excepción
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // No necesitas imprimir "Conexión establecida correctamente" aquí
+} catch(PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
 }
 ?>
