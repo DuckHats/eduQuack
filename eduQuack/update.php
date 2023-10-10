@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE usuarios SET username = ?, full_name = ?, email = ? WHERE id = ?";
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("sssi", $username, $full_name, $email, $id);
-
+        echo "Pr if";
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
-            header("Location: perfil.php");
+            // header("Location: perfil.php");
             exit();
         } else {
             echo "Error al actualizar el registro: " . $stmt->error;
