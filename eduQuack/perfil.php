@@ -9,21 +9,28 @@
 </head>
 <body>
 <?php
-// Inicia la sesión
-session_start();
+    session_start();
+    include('config.php');
 
-// Comprueba si el usuario ha iniciado sesión
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.html");
-    exit;
-}
-// Suponiendo que tienes variables de sesión para los datos del usuario
-$username = $_SESSION['username'];
-$user_id = $_SESSION['id'];
-$nombreCompleto = $_SESSION['nombre_completo'];
-$numeroTelefonico = $_SESSION['numero_telefonico'];
-$email = $_SESSION['email'];
-?>
+    // Comprobar si el usuario ha iniciado sesión
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("location: login.html");
+        exit;
+    }
+
+    // Obtener datos del usuario desde la base de datos
+    $id = $_SESSION['id'];
+    $sql = "SELECT username, email, full_name FROM users WHERE id = '$id'";
+    $result = $mysqli->query($sql);
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        $username = $user['username'];
+        $email = $user['email'];
+        $full_name = $user['full_name'];
+    }
+    ?>
+    
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
@@ -46,34 +53,37 @@ $email = $_SESSION['email'];
         <div id="infoconf">
             <h2 id="perfil">Perfil</h2>
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
+            <form action="update.php" method="post">
             <ul>
                 <li>
                     <h3>Username</h3>
-                    <input type="text" value="<?= $username ?>" readonly>
-                    <p>ID de usuario: "<?= $user_id ?>"</p>
+                    <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
+                    <p>ID de usuario: "<?= $id ?>"</p>
                 </li>
                 <li>
                     <h3>Nom complet</h3>
-                    <input type="text" value="<?= $nombreCompleto ?>">
+                    <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
                 </li>
-                <li>
+                <!-- <li>
                     <h3>Número telefònic</h3>
-                    <input type="tel" value="<?= $numeroTelefonico ?>">
-                </li>
+                    <input type="tel" value="">
+                </li> -->
             </ul>
             <img src="images/avatar.png" alt="avatar">
 
             <h2 id="email">E-mail</h2>
-            <input type="email" value="<?= $email ?>">
-
+            <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
+<!-- 
             <h2 id="contrasenya">Contrasenya</h2>
             <input type="password" placeholder="Nova contrasenya">
-            <input type="password" placeholder="Confirma la nova contrasenya">
+            <input type="password" placeholder="Confirma la nova contrasenya"> -->
 
             <input type="submit" onclick="window.location.href = 'perfil.php';" value="Actualitzar">
             <input id="logout" type="submit" onclick="window.location.href = 'logout.php';" value="Logout">
             <img src="images/qr.png" alt="Qr">
+            </form>
         </div>
+        
     </main>
     
     <footer>

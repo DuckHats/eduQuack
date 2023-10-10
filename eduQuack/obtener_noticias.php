@@ -20,6 +20,7 @@ $result = $conn->query($sql);
 $noticias = array();
 
 if ($result->num_rows > 0) {
+    // $row = $result->fetch_assoc();
     while ($row = $result->fetch_assoc()) {
         $noticias[] = $row;
     }
