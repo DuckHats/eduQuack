@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuració | Duckhat</title>
+    <title>Configuració | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -78,7 +78,7 @@ $email = $_SESSION['email'];
     </main>
     
     <footer>
-        <a href="../Duckhat/Legal/License.pdf">Tots els drets reservats a Duckhat</a>
+        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
         <p>Contactens al correu <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
     </footer>
 </body>

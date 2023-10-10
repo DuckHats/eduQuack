@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido | Duckhat</title>
+    <title>Bienvenido | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -35,13 +35,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <!-- Contenido personalizado para la página de bienvenida -->
         <div class="welcome-message">
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
-            <p>¡Gracias por iniciar sesión en Duckhat! ¡Disfruta explorando nuestro sitio!</p>
+            <p>¡Gracias por iniciar sesión en eduQuack! ¡Disfruta explorando nuestro sitio!</p>
             <!-- Puedes agregar más contenido personalizado aquí según tus necesidades -->
         </div>
     </main>
     
     <footer>
-        <a href="../Duckhat/Legal/License.pdf">Todos los derechos reservados a Duckhat</a>
+        <a href="../eduQuack/Legal/License.pdf">Todos los derechos reservados a eduQuack</a>
         <p>Contáctenos en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
     </footer>
 

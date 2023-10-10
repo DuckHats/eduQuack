@@ -74,14 +74,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña | Duckhat</title>
+    <title>Recuperar Contraseña | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <main class="loginmain">
         <div class="ginebro">
-            <img id="logologin" src="../Duckhat/images/ginebro-logo-blanc-742059845.png">
+            <img id="logologin" src="../eduQuack/images/ginebro-logo-blanc-742059845.png">
         </div>
 
         <div class="info">
