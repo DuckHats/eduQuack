@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.html");
+    exit;
+}
 require_once('blog_database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,6 +60,7 @@ $result = $conn->query($sql);
         </form>
 
         <!-- Mostrar los posts del blog -->
+        <!-- Mostrar los posts del blog -->
         <?php while ($row = $result->fetch_assoc()) : ?>
             <div class="post">
                 <h2><?= $row["title"] ?></h2>
@@ -64,8 +69,12 @@ $result = $conn->query($sql);
                 <?php if ($row["image_path"]) : ?>
                     <img src="<?= $row["image_path"] ?>" alt="Imagen del post">
                 <?php endif; ?>
+
+                <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->
+                <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a>
             </div>
         <?php endwhile; ?>
+
     </div>
 </body>
 
