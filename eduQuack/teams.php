@@ -20,8 +20,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
-            <li><a href="index.html"><h3>Menú</h3></a></li>
-            <li><a href="teams.html"><h3 class="negrita">Grups</h3></a></li>
+            <li><a href="index.php"><h3>Menú</h3></a></li>
+            <li><a href="teams.php"><h3 class="negrita">Grups</h3></a></li>
             <li><a href="news.html"><h3>Notícies</h3></a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>

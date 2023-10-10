@@ -37,10 +37,10 @@
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
-            <li><a href="index.html">
+            <li><a href="index.php">
                     <h3>Menú</h3>
                 </a></li>
-            <li><a href="teams.html">
+            <li><a href="teams.php">
                     <h3>Grups</h3>
                 </a></li>
             <li><a href="news.html">
