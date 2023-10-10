@@ -20,7 +20,7 @@
 
     // Obtener datos del usuario desde la base de datos
     $id = $_SESSION['id'];
-    $sql = "SELECT username, email, full_name FROM users WHERE id = '$id'";
+    $sql = "SELECT username, email, full_name FROM usuarios WHERE id = '$id'";
     $result = $mysqli->query($sql);
 
     if ($result->num_rows > 0) {

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     // Consulta SQL para actualizar los valores
-    $sql = "UPDATE users SET username = ?, full_name = ?, email = ? WHERE id = ?";
+    $sql = "UPDATE usuarios SET username = ?, full_name = ?, email = ? WHERE id = ?";
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("sssi", $username, $full_name, $email, $id);
 
