@@ -6,6 +6,14 @@
     <title>Configuració | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function logoutFunction() {
+    // Envía el formulario manualmente
+        document.forms["logoutForm"].submit();
+    // Redirige al usuario después de enviar el formulario
+        window.location.href = 'logout.php';
+    }
+    </script>
 </head>
 <body>
 <?php
@@ -79,7 +87,8 @@
             <input type="password" placeholder="Confirma la nova contrasenya"> -->
 
             <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
-            <input id="logout" type="submit" onclick="window.location.href = 'logout.php';" value="Logout">
+            <!-- <input id="logout" type="submit" onclick="window.location.href = 'logout.php';" value="Logout"> -->
+            <input id="logout" type="button" onclick="logoutFunction()" value="Logout">
             <img src="images/qr.png" alt="Qr">
             </form>
         </div>

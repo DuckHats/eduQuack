@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // echo "Pr if";
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
-            // header("Location: perfil.php");
+            header("Location: perfil.php");
             exit();
         } else {
             echo "Error al actualizar el registro: " . $stmt->error;
