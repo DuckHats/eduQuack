@@ -37,6 +37,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
             <p>¡Gracias por iniciar sesión en Duckhat! ¡Disfruta explorando nuestro sitio!</p>
             <!-- Puedes agregar más contenido personalizado aquí según tus necesidades -->
+            <iframe width="445" height="229" src="https://w2.countingdownto.com/5039351" frameborder="0"></iframe>
+
+
         </div>
     </main>
     
