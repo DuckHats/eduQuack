@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
 
     if ($conn->query($sql) === TRUE) {
         // Redirigir de vuelta a la página del blog después de eliminar el post
-        header("Location: blog.php");
+        header("Location: Blog.php");
     } else {
         echo "Error al eliminar el post: " . $conn->error;
     }
