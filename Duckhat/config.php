@@ -1,14 +1,14 @@
 <?php
-define('DB_HOST', 'localhost'); // Cambia localhost si tu base de datos está en un servidor remoto
-define('DB_USER', 'root'); // Cambia tu_usuario al nombre de usuario de tu base de datos
-define('DB_PASS', '1234'); // Cambia tu_contraseña a la contraseña de tu base de datos
-define('DB_NAME', 'users'); // Cambia nombredelabasededatos al nombre de tu base de datos
+define('DBSERVER', 'localhost'); // Cambia localhost si tu base de datos está en un servidor remoto
+define('DBUSERNAME', 'root'); // Cambia tu_usuario al nombre de usuario de tu base de datos
+define('DBPASSWORD', '1234'); // Cambia tu_contraseña a la contraseña de tu base de datos
+define('DBNAME', 'users'); // Cambia nombredelabasededatos al nombre de tu base de datos
 
 /* COnectar a la base de dades */
-$link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$db = mysqli_connect(DBSERVER, DBUSERNAME, DBPASSWORD, DBNAME);
  
 // comprobar conexió
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+if($db === false){
+    die("ERROR: connection error. " . mysqli_connect_error());
 }
 ?>

@@ -6,35 +6,6 @@
     <title>Register | Duckhat</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
-    <script>
-        function validarFormulario() {
-            var password = document.forms["registroForm"]["password"].value;
-            var confirmarPassword = document.forms["registroForm"]["confirm_password"].value;
-
-            if (password !== confirmarPassword) {
-                alert("Las contraseñas no coinciden.");
-                return false;
-            }
-
-            return true;
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const params = new URLSearchParams(window.location.search);
-            const error = params.get('error');
-
-            if (error === 'incorrecto') {
-                mostrarMensajeError("Datos introducidos incorrectos. Por favor, inténtalo de nuevo.");
-            }
-
-            function mostrarMensajeError(mensaje) {
-                const alertDiv = document.createElement('div');
-                alertDiv.className = 'alerta-roja';
-                alertDiv.textContent = mensaje;
-                document.body.insertBefore(alertDiv, document.body.firstChild);
-            }
-        });
-    </script>
 </head>
 <body>
     <header id="headerregister">
@@ -43,7 +14,7 @@
     </header>
 
     <main class="registermain">
-        <form action="registro.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
+        <form action="register.php" method="post" onsubmit="return validarFormulario()" name="registroForm">
             <div class="form-group">
                 <input type="text" name="username" placeholder="Nombre de usuario" required>
             </div>
@@ -59,10 +30,10 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="text" name="name" placeholder="Nom Complet" required>
             </div>
             <div class="form-group">
-                <input type="date" name="fecha_nacimiento" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
             </div>
             <div class="form-group">
                 <input type="password" name="password" placeholder="Contraseña" required>
@@ -70,10 +41,14 @@
             <div class="form-group">
                 <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required>
             </div>
-            <input type="submit" value="Registrar-se">
+            <div class="form-group">
+                <input type="date" name="fecha_nacimiento" required>
+            </div>
+                        
+            <input type="submit" name="submit" value="Registrar-se">
+            <br>
+            <a href="login.php">Login</a>
         </form>
-        <br>
-        <a href="login.html">Login</a>
     </main>
 </body>
 </html>

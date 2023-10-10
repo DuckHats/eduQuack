@@ -1,16 +1,23 @@
 <?php
 // Include config file
 require_once "config.php";
+require_once "session.php";
+
 
 // Verifica si el formulario ha sido enviado con el método POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // Obtiene los datos del formulario
-    $username = $_POST['username'];
-    $cursoId = $_POST['curso_id'];
-    $email = $_POST['email'];
-    $fechaNacimiento = $_POST['fecha_nacimiento'];
-    $password = $_POST['password'];
-
+    $fullname = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+    $confirm_password = trim($_POST['confirm_password']);
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+    // $username = $_POST['username'];
+    // $cursoId = $_POST['curso_id'];
+    // $fechaNacimiento = $_POST['fecha_nacimiento'];
+    
+                    // A partir de aqui
+                    
     // Prepara la consulta SQL para verificar si el nombre de usuario ya está en uso
     $sql = "SELECT id FROM users WHERE username = ?";
     
