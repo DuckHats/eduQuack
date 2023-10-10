@@ -14,7 +14,7 @@ $content = $_POST['content'];
 // Insertar el nuevo hilo en la base de datos
 $sql = "INSERT INTO threads (title, content) VALUES ('$title', '$content')";
 if ($conn->query($sql) === TRUE) {
-    header("Location: index.html"); // Redirigir a la página principal
+    header("Location: index.php"); // Redirigir a la página principal
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
