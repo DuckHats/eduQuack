@@ -4,8 +4,8 @@ require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_SESSION['id']; // Obtener el ID del usuario de la sesión
-    echo $id;
-    exit();
+    // echo $id;
+    // exit();
     $username = $_POST["username"];
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
-            // header("Location: perfil.php");
+            header("Location: perfil.php");
             exit();
         } else {
             echo "Error al actualizar el registro: " . $stmt->error;
