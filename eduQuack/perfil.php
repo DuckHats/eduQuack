@@ -63,7 +63,7 @@
         </div>
 
         <div id="infoconf">
-            <h2 id="perfil">Perfil</h2>
+            <h2>Perfil</h2>
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
             <form action="update.php" method="post">
                 <ul>
