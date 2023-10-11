@@ -3,6 +3,8 @@ require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_SESSION['id']; // Obtener el ID del usuario de la sesión
+    echo $id;
+    exit();
     $username = $_POST["username"];
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];
