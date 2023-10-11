@@ -54,45 +54,51 @@
     </menu>
 
     <main>
-        <div id="sidebarconf">
+        <!-- <div id="sidebarconf">
             <ul>
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#email">E-mail</a></li>
                 <li><a href="#contrasenya">Contrasenya</a></li>
             </ul>
-        </div>
+        </div> -->
 
         <div id="infoconf">
-            <h2 id="perfil">Perfil</h2>
-            <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
+            <h2>Perfil</h2>
             <form action="update.php" method="post">
-                <ul>
-                    <li>
-                        <h3>Username</h3>
-                        <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
-                        <p>ID de usuario: "<?= $id ?>"</p>
-                    </li>
-                    <li>
-                        <h3>Nom complet</h3>
-                        <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
-                    </li>
-                    <!-- <li>
+            <table>
+        <tr>
+            <td><h3>Username</h3>
+                <input type="text" name="username" value="<?= htmlspecialchars($username); ?>"></td>
+            <td><h3>Nom complet</h3>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>"></td>
+        </tr>
+        <tr>
+            <td><p>ID de usuario: "<?= $id ?>"</p></td>
+            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p></td>
+        </tr>
+        <tr>
+            <td><!-- <li>
                     <h3>Número telefònic</h3>
                     <input type="tel" value="">
-                </li> -->
-                </ul>
-                <img src="images/avatar.png" alt="avatar">
-
-                <h2 id="email">E-mail</h2>
-                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
-                <!-- 
+                </li> --></td>
+            <td><img src="images/avatar.png" alt="avatar"></td>
+        </tr>
+        <tr>
+            <td><h2 id="email">E-mail</h2>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>"></td>
+            <td>Fila 4, Celda 2</td>
+        </tr>
+        <tr>
+            <td><!-- 
             <h2 id="contrasenya">Contrasenya</h2>
             <input type="password" placeholder="Nova contrasenya">
-            <input type="password" placeholder="Confirma la nova contrasenya"> -->
-
-                <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
-                <input id="logout" type="button" onclick="logout.php" value="Logout">
-                <img src="images/qr.png" alt="Qr">
+            <input type="password" placeholder="Confirma la nova contrasenya"> --></td>
+            <td><img src="images/qr.png" alt="Qr"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
+                <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
+    </table>
             </form>
         </div>
 

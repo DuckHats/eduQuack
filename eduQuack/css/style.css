@@ -302,8 +302,7 @@ menu > img {
     /* Estilos para un elemento con ID "conficon" */
     width: 25px; /* Ancho del elemento */
     height: 25px; /* Altura del elemento */
-    margin-bottom: 10vh;
-    margin-left: 55vw; /* Margen izquierdo (55% del ancho de la ventana) */
+    margin-left: 45vw; /* Margen izquierdo (55% del ancho de la ventana) */
 }
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
@@ -317,12 +316,6 @@ menu > img {
     height: 70vh; /* Altura del elemento */
     display: flex; /* Usa flexbox para organizar los elementos */
     float: left; /* Flotar a la izquierda */
-}
-
-#infoconf {
-    /* Estilos para un elemento con ID "infoconf" */
-    width: 99vw; /* Ancho del elemento */
-    height: 70vh; /* Altura del elemento */
 }
 
 #sidebarconf > ul {
@@ -353,14 +346,23 @@ menu > img {
     color: #3f9177; /* Cambia el color del texto al pasar el mouse */
 }
 
-#infoconfig, input {
+#infoconf {
+    /* Estilos para un elemento con ID "infoconf" */
+    display: flex;
+    float: left;
+    width: 70vw !important; /* Ancho del elemento */
+    height: 70vh; /* Altura del elemento */
+    border: solid 1px;
+}
+
+#infoconf, input {
     /* Estilos para elementos con ID "infoconfig" y campos de entrada */
-    width: 25vw; /* Ancho de los elementos */
+    width: 15vw; /* Ancho de los elementos */
 }
 
 #infoconf, input[type="submit"] {
     /* Estilos para elementos con ID "infoconf" y botones de envío */
-    width: 12vw; /* Ancho de los elementos */
+    width: 15vw; /* Ancho de los elementos */
 }
 
 #infoconf img {
