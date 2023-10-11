@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
             <li><a href="teams.php"><h3>Grupos</h3></a></li>
             <li><a href="news.php"><h3>Noticias</h3></a></li>
-            <li><a href="Blog.php"><h3>Forum</h3></a></li>
+            <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>  
     </menu>
