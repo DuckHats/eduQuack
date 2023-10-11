@@ -66,34 +66,41 @@
             <h2>Perfil</h2>
             <form action="update.php" method="post">
                 <table>
-                    <ul>
-                        <li>
+                    <tr>
+                        <td>
                             <h3>Username</h3>
                             <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
                             <p>ID de usuario: "<?= $id ?>"</p>
                             <p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
-                        </li>
-                        <li>
+                        </td>
+                        <td>
                             <h3>Nom complet</h3>
                             <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
-                        </li>
+                        </td>
                     <!-- <li>
                         <h3>Número telefònic</h3>
                         <input type="tel" value="">
                         </li> -->
-                    </ul>
-                    <img src="images/avatar.png" alt="avatar">
 
-                    <h2 id="email">E-mail</h2>
+                        <h2 id="email">E-mail</h2>
                     <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
                     <!-- 
                     <h2 id="contrasenya">Contrasenya</h2>
                     <input type="password" placeholder="Nova contrasenya">
                     <input type="password" placeholder="Confirma la nova contrasenya"> -->
+                    </tr>
+                    
+                    <td><img src="images/avatar.png" alt="avatar"></td>
+                    </tr>
 
-                    <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
-                    <input id="logout" type="submit" onclick="logout.php" value="Logout">
-                    <img src="images/qr.png" alt="Qr">
+                    
+                    <tr>
+                    <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
+                    <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
+                    </tr>
+                    <tr>
+                    <td><img src="images/qr.png" alt="Qr"></td>
+                    </tr>
                 </table>
             </form>
             
