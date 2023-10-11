@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE usuarios SET username = ?, full_name = ?, email = ? WHERE id = ?";
     if ($stmt = $mysqli->prepare($sql)) {
         // Especifica los tipos de datos de las variables en el primer argumento de bind_param
-        $stmt->bind_param($username, $full_name, $email, $id);
+        $stmt->bind_param("sssi", $username, $full_name, $email, $id);
         
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
