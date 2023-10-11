@@ -173,7 +173,7 @@ input[type="submit"]:hover {
 
 footer {
     /* Estilos para el pie de página */
-    position: absolute; /* Posición absoluta */
+    position: fixed; /* Posición absoluta */
     background-color: white; /* Color de fondo blanco */
     color: white; /* Color del texto blanco */
     padding: 5px; /* Relleno alrededor del pie de página */
