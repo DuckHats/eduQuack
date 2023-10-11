@@ -322,13 +322,13 @@ menu > img {
     /* Estilos para un elemento con ID "infoconf" */
     display: flex;
     float: left;
-    width: 75vw !important; /* Ancho del elemento */
+    width: 70vw !important; /* Ancho del elemento */
     height: 70vh; /* Altura del elemento */
     border: solid 1px;
 }
 
 #infoconf > input[type="submit"]{
-    width: 10vw;
+    width: 10vw !important;
     background-color: #ff0000;
 }
 
