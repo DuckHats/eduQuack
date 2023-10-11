@@ -34,21 +34,21 @@ $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Blog | eduQuack</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Mi Blog</h1>
+        <h1>eduQuack Blog</h1>
 
         <!-- Formulario para crear un nuevo post -->
-        <h2>Nuevo Post</h2>
+        <h2>New Post</h2>
         <form action="Blog.php" method="post" enctype="multipart/form-data">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required><br>
