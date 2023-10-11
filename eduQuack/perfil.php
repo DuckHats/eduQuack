@@ -69,36 +69,30 @@
         <tr>
             <td><h3>Username</h3>
                 <input type="text" name="username" value="<?= htmlspecialchars($username); ?>"></td>
-            <td><img src="images/avatar.png" alt="avatar"></td>
-        </tr>
-        <tr>
             <td><h3>Nom complet</h3>
                 <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>"></td>
-            <td rowspan="2"></td>
         </tr>
         <tr>
-            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
-            <p>ID de usuario: "<?= $id ?>"</p></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><h3 id="email">E-mail</h3>
-                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>"></td>
-            <td></td>
+            <td><p>ID de usuario: "<?= $id ?>"</p></td>
+            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p></td>
         </tr>
         <tr>
             <td><!-- <li>
                     <h3>Número telefònic</h3>
                     <input type="tel" value="">
                 </li> --></td>
-            <td><td><img src="images/qr.png" alt="Qr"></td></td>
+            <td><img src="images/avatar.png" alt="avatar"></td>
+        </tr>
+        <tr>
+            <td><h3 id="email">E-mail</h3>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>"></td>
         </tr>
         <tr>
             <td><!-- 
             <h2 id="contrasenya">Contrasenya</h2>
             <input type="password" placeholder="Nova contrasenya">
             <input type="password" placeholder="Confirma la nova contrasenya"> --></td>
-            <td rowspan="2"></td>
+            <td><img src="images/qr.png" alt="Qr"></td>
         </tr>
         <tr>
             <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
