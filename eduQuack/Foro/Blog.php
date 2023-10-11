@@ -74,13 +74,13 @@ $result = $conn->query($sql);
         <!-- Mostrar los posts del blog -->
         <?php while ($row = $result->fetch_assoc()) : ?>
             <div class="post">
-                <h2><?= $row["title"] ?></h2>
-                <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->
-                <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a>
+            <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->
+            <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a>
                 
                 <!-- Enlace para ver más detalles del post -->
                 <a href="thread.php?id=<?= $row["id"] ?>">Ver Más</a>
-
+                
+                <h2><?= $row["title"] ?></h2>
                 <p>Autor: <?= $row["author"] ?></p>
                 <p><?= $row["content"] ?></p>
                 <?php if ($row["image_path"]) : ?>
