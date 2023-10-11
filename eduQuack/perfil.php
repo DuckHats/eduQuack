@@ -54,46 +54,49 @@
     </menu>
 
     <main>
-        <div id="sidebarconf">
+        <!-- <div id="sidebarconf">
             <ul>
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#email">E-mail</a></li>
                 <li><a href="#contrasenya">Contrasenya</a></li>
             </ul>
-        </div>
+        </div> -->
 
         <div id="infoconf">
             <h2>Perfil</h2>
-            <p>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
             <form action="update.php" method="post">
-                <ul>
-                    <li>
-                        <h3>Username</h3>
-                        <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
-                        <p>ID de usuario: "<?= $id ?>"</p>
-                    </li>
-                    <li>
-                        <h3>Nom complet</h3>
-                        <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
-                    </li>
+                <table>
+                    <ul>
+                        <li>
+                            <h3>Username</h3>
+                            <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
+                            <p>ID de usuario: "<?= $id ?>"</p>
+                            <p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
+                        </li>
+                        <li>
+                            <h3>Nom complet</h3>
+                            <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
+                        </li>
                     <!-- <li>
-                    <h3>Número telefònic</h3>
-                    <input type="tel" value="">
-                </li> -->
-                </ul>
-                <img src="images/avatar.png" alt="avatar">
+                        <h3>Número telefònic</h3>
+                        <input type="tel" value="">
+                        </li> -->
+                    </ul>
+                    <img src="images/avatar.png" alt="avatar">
 
-                <h2 id="email">E-mail</h2>
-                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
-                <!-- 
-            <h2 id="contrasenya">Contrasenya</h2>
-            <input type="password" placeholder="Nova contrasenya">
-            <input type="password" placeholder="Confirma la nova contrasenya"> -->
+                    <h2 id="email">E-mail</h2>
+                    <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
+                    <!-- 
+                    <h2 id="contrasenya">Contrasenya</h2>
+                    <input type="password" placeholder="Nova contrasenya">
+                    <input type="password" placeholder="Confirma la nova contrasenya"> -->
 
-                <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
-                <input id="logout" type="submit" onclick="logout.php" value="Logout">
-                <img src="images/qr.png" alt="Qr">
+                    <input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
+                    <input id="logout" type="submit" onclick="logout.php" value="Logout">
+                    <img src="images/qr.png" alt="Qr">
+                </table>
             </form>
+            
         </div>
 
     </main>
