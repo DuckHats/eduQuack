@@ -322,7 +322,7 @@ menu > img {
     /* Estilos para un elemento con ID "infoconf" */
     display: flex;
     float: left;
-    width: 20vw; /* Ancho del elemento */
+    width: 50vw; /* Ancho del elemento */
     height: 70vh; /* Altura del elemento */
 }
 
