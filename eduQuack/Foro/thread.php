@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
             <p>No se encontró información del post.</p>
         <?php endif; ?>
         
-        <a href="blog.php">Volver al Blog</a>
+        <a href="Blog.php">Volver al Blog</a>
     </div>
 </body>
 

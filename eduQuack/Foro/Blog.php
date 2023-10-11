@@ -1,5 +1,11 @@
 <?php
+
 session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.html");
+    exit;
+}
+
 require_once('blog_database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO posts (title, content, image_path, author) VALUES ('$titulo', '$contenido', '$imagen_path', '$autor')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: blog.php");
+        header("Location: Blog.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -43,7 +49,7 @@ $result = $conn->query($sql);
 
         <!-- Formulario para crear un nuevo post -->
         <h2>Nuevo Post</h2>
-        <form action="blog.php" method="post" enctype="multipart/form-data">
+        <form action="Blog.php" method="post" enctype="multipart/form-data">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required><br>
             <label for="contenido">Contenido:</label><br>
