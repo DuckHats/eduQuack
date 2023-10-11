@@ -65,45 +65,41 @@
         <div id="infoconf">
             <h2>Perfil</h2>
             <form action="update.php" method="post">
-                <table>
-                    <tr>
-                        <td>
-                            <h3>Username</h3>
-                            <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
-                            <p>ID de usuario: "<?= $id ?>"</p>
-                            <p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
-                        </td>
-                        <td>
-                            <h3>Nom complet</h3>
-                            <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
-                        </td>
-                    <!-- <li>
-                        <h3>Número telefònic</h3>
-                        <input type="tel" value="">
-                        </li> -->
-
-                        <h2 id="email">E-mail</h2>
-                    <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
-                    <!-- 
-                    <h2 id="contrasenya">Contrasenya</h2>
-                    <input type="password" placeholder="Nova contrasenya">
-                    <input type="password" placeholder="Confirma la nova contrasenya"> -->
-                    </tr>
-                    
-                    <td><img src="images/avatar.png" alt="avatar"></td>
-                    </tr>
-
-                    
-                    <tr>
-                    <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
-                    <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
-                    </tr>
-                    <tr>
-                    <td><img src="images/qr.png" alt="Qr"></td>
-                    </tr>
-                </table>
+            <table>
+        <tr>
+            <td><h3>Username</h3>
+                <input type="text" name="username" value="<?= htmlspecialchars($username); ?>"></td>
+            <td><h3>Nom complet</h3>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>"></td>
+        </tr>
+        <tr>
+            <td><p>ID de usuario: "<?= $id ?>"</p></td>
+            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p></td>
+        </tr>
+        <tr>
+            <td><!-- <li>
+                    <h3>Número telefònic</h3>
+                    <input type="tel" value="">
+                </li> --></td>
+            <td><img src="images/avatar.png" alt="avatar"></td>
+        </tr>
+        <tr>
+            <td><h2 id="email">E-mail</h2>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>"></td>
+            <td>Fila 4, Celda 2</td>
+        </tr>
+        <tr>
+            <td><!-- 
+            <h2 id="contrasenya">Contrasenya</h2>
+            <input type="password" placeholder="Nova contrasenya">
+            <input type="password" placeholder="Confirma la nova contrasenya"> --></td>
+            <td><img src="images/qr.png" alt="Qr"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
+                <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
+    </table>
             </form>
-            
         </div>
 
     </main>
