@@ -324,6 +324,7 @@ menu > img {
     float: left;
     width: 50vw; /* Ancho del elemento */
     height: 70vh; /* Altura del elemento */
+    border: solid 1px;
 }
 
 #sidebarconf > ul {
