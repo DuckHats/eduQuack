@@ -69,24 +69,21 @@
         <tr>
             <td><h3>Username</h3>
                 <input type="text" name="username" value="<?= htmlspecialchars($username); ?>"></td>
-            <td><h3>Nom complet</h3>
-                <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>"></td>
+            <td><img src="images/avatar.png" alt="avatar"></td>
         </tr>
         <tr>
-            <td><p>ID de usuario: "<?= $id ?>"</p></td>
-            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p></td>
+            <td><h3>Nom complet</h3>
+                <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>"></td>
+            <td><p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
+            <p>ID de usuario: "<?= $id ?>"</p></td>
         </tr>
         <tr>
             <td><!-- <li>
                     <h3>Número telefònic</h3>
                     <input type="tel" value="">
                 </li> --></td>
-            <td><img src="images/avatar.png" alt="avatar"></td>
-        </tr>
-        <tr>
-            <td><h2 id="email">E-mail</h2>
+            <td><h3 id="email">E-mail</h3>
                 <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>"></td>
-            <td>Fila 4, Celda 2</td>
         </tr>
         <tr>
             <td><!-- 
