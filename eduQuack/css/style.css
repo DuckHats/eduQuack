@@ -320,6 +320,8 @@ menu > img {
 
 #infoconf {
     /* Estilos para un elemento con ID "infoconf" */
+    display: flex;
+    float: left;
     width: 20vw; /* Ancho del elemento */
     height: 70vh; /* Altura del elemento */
 }
