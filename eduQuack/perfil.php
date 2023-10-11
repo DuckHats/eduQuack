@@ -95,7 +95,7 @@
             <td><img src="images/qr.png" alt="Qr"></td>
         </tr>
         <tr>
-            <td><input type="submit" onclick="window.location.href = 'update.php';" value="Actualitzar">
+            <td><input type="submit" value="Actualitzar">
                 <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
     </table>
             </form>
