@@ -178,6 +178,7 @@ footer {
     color: white; /* Color del texto blanco */
     padding: 5px; /* Relleno alrededor del pie de página */
     padding-left: 5%; /* Relleno izquierdo */
+    margin-top: 5vh;
     bottom: 0px; /* Fijar al fondo de la ventana */
     width: 94.5vw; /* Ancho del pie de página */
     border-top: #1E473A solid 1px; /* Borde superior sólido */
