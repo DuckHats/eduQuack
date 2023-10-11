@@ -1,12 +1,41 @@
 <?php
-    session_start();
-    include('config.php');
+session_start();
+include('news_database.php');
 
-    // Comprobar si el usuario ha iniciado sesión
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("location: login.html");
-        exit;
+// Comprobar si el usuario ha iniciado sesión
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+
+// Establecer la conexión a la base de datos
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Comprobar la conexión
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Consulta SQL para obtener las noticias
+$sql = "SELECT titulo, contenido, fecha FROM noticias";
+$result = $conn->query($sql);
+
+// Crear un array para almacenar las noticias
+$noticias = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Agrega cada noticia como un array asociativo al array de noticias
+        $noticias[] = array(
+            'titulo' => htmlspecialchars($row["titulo"]),
+            'contenido' => htmlspecialchars($row["contenido"]),
+            'fecha' => htmlspecialchars($row["fecha"])
+        );
     }
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -22,38 +51,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Inclusión de jQuery para utilizar AJAX -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Script JavaScript para cargar dinámicamente las noticias usando AJAX -->
-    <script>
-        $(document).ready(function() {
-            // Función para cargar noticias usando AJAX
-            function cargarNoticias() {
-                $.ajax({
-                    url: 'obtener_noticias.php', // Archivo PHP que devuelve noticias basadas en curso_id
-                    method: 'POST',
-                    dataType: 'json',
-                    success: function(response) {
-                        // Llena dinámicamente las noticias en el contenedor
-                        var noticiasContainer = $('#noticias-container');
-                        noticiasContainer.empty(); // Limpia el contenedor
-                        $.each(response, function(index, noticia) {
-                            // Crea un elemento de noticia y agrega al contenedor
-                            var noticiaElement = $('<div class="noticia">');
-                            noticiaElement.append('<h2>' + noticia.titulo + '</h2>');
-                            noticiaElement.append('<p>' + noticia.descripcion + '</p>');
-                            noticiaElement.append('<a href="' + noticia.enlace + '">Leer más</a>');
-                            noticiasContainer.append(noticiaElement);
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error en la solicitud AJAX:", xhr.responseText);
-                    }
-                });
-            }
-
-            // Llama a la función para cargar noticias cuando la página se carga
-            cargarNoticias();
-        });
-    </script>
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -71,7 +68,29 @@
     <main>
         <!-- Contenedor para mostrar las noticias dinámicamente -->
         <div id="noticias-container"></div>
-        <p>ID de usuario: "<?php echo $user_id; ?>"</p>
+
+        <!-- Código JavaScript para cargar dinámicamente las noticias usando AJAX -->
+        <script>
+            $(document).ready(function() {
+                // Función para cargar noticias usando AJAX
+                function cargarNoticias() {
+                    // Llena dinámicamente las noticias en el contenedor
+                    var noticiasContainer = $('#noticias-container');
+                    noticiasContainer.empty(); // Limpia el contenedor
+                    <?php foreach ($noticias as $noticia): ?>
+                        // Crea un elemento de noticia y agrega al contenedor
+                        var noticiaElement = $('<div class="noticia">');
+                        noticiaElement.append('<h2><?php echo $noticia["titulo"]; ?></h2>');
+                        noticiaElement.append('<p><?php echo $noticia["contenido"]; ?></p>');
+                        noticiaElement.append('<p> <?php echo $noticia["fecha"]; ?>"</p>');
+                        noticiasContainer.append(noticiaElement);
+                    <?php endforeach; ?>
+                }
+
+                // Llama a la función para cargar noticias cuando la página se carga
+                cargarNoticias();
+            });
+        </script>
     </main>
     <!-- Pie de página -->
     <footer>
