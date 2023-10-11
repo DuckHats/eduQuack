@@ -44,6 +44,18 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+
+    <menu>
+        <img src="images/ginebro-logo (1).png">
+        <ul>
+            <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
+            <li><a href="teams.php"><h3>Grupos</h3></a></li>
+            <li><a href="news.php"><h3>Noticias</h3></a></li>
+            <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
+            <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
+        </ul>  
+    </menu>
+
     <div class="container">
         <h1>eduQuack Blog</h1>
 
@@ -77,6 +89,10 @@ $result = $conn->query($sql);
             </div>
         <?php endwhile; ?>
     </div>
+    <footer>
+        <a href="../eduQuack/Legal/License.pdf">Todos los derechos reservados a eduQuack</a>
+        <p>Contáctenos en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
+    </footer>
 </body>
 
 </html>
