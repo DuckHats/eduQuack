@@ -75,7 +75,7 @@ function ocultarPopup() {
 
         <div id="popup-container">
         <div id="popup">
-        <h2>Políticas de Privacidad y Condiciones de Uso</h2>
+        <h1>Políticas de Privacidad y Condiciones de Uso</h1>
         <a href="./Política_us.md">Politiques</a>
         <button id="accept-button">Aceptar</button>
         </div>
