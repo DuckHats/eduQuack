@@ -109,8 +109,10 @@
                 </table>
             </form>
             <form action="logout.php" method="post">
+                <input type="hidden" name="logout" value="true">
                 <input type="submit" value="logout">
             </form>
+
         </div>
 
     </main>
