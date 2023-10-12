@@ -1,0 +1,52 @@
+<!-- apt install npm
+npm install express socket.io http -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Chat en Tiempo Real</title>
+</head>
+<body>
+    <div id="messages"></div>
+    <input id="message-input" autocomplete="off">
+    <button onclick="sendMessage()">Enviar</button>
+
+    <!-- Biblioteca de Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Se crea una conexión de Socket.io entre el cliente y el servidor
+        const socket = io();
+
+        // El usuario introduce el nombre de la sala
+        let room = prompt('Introduce el nombre de la sala:');
+        // El cliente solicita unirse a la sala al servidor
+        socket.emit('joinRoom', room);
+
+        // Cuando el servidor envía el historial de chat de la sala
+        socket.on('chatHistory', (messages) => {
+            const messagesDiv = document.getElementById('messages');
+            // Se muestra el historial de chat en la interfaz del usuario
+            messages.forEach(message => {
+                messagesDiv.innerHTML += `<p>${new Date(message.timestamp).toLocaleTimeString()}: ${message.message}</p>`;
+            });
+        });
+
+        // Cuando el servidor envía un nuevo mensaje
+        socket.on('message', (message) => {
+            const messagesDiv = document.getElementById('messages');
+            // Se muestra el nuevo mensaje en la interfaz del usuario
+            messagesDiv.innerHTML += `<p>${new Date(message.timestamp).toLocaleTimeString()}: ${message.message}</p>`;
+        });
+
+        // Función para enviar mensajes
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const message = messageInput.value;
+            // El cliente envía el mensaje al servidor junto con el nombre de la sala
+            socket.emit('sendMessage', { room, message });
+            // Se limpia el campo de entrada de mensajes
+            messageInput.value = '';
+        }
+    </script>
+</body>
+</html>

@@ -82,7 +82,7 @@ function ocultarPopup() {
         <button id="accept-button">Aceptar</button>
         </div>
         </div>
-
+        <!-- Pop up js -->
     </main>
     
     <footer>
