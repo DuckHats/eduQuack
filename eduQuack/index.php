@@ -15,6 +15,37 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Bienvenido | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Script pop up -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el popup cada vez que un usuario inicia sesión
+    mostrarPopup();
+
+    // Agregar un evento al botón de Aceptar
+    document.getElementById('accept-button').addEventListener('click', function() {
+        // Ocultar el popup
+        ocultarPopup();
+
+        // Marcar como aceptado
+        localStorage.setItem('aceptado', 'true');
+    });
+});
+
+function mostrarPopup() {
+    // Verificar si se ha aceptado previamente
+    if (!localStorage.getItem('aceptado')) {
+        // Mostrar el popup
+        document.getElementById('popup-container').style.display = 'block';
+    }
+}
+
+function ocultarPopup() {
+    // Ocultar el popup
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+    </script>
+    <!-- Final script pop up -->
 </head>
 
 <body>
@@ -39,8 +70,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
             <p>¡Gracias por iniciar sesión en eduQuack! ¡Disfruta explorando nuestro sitio!</p>
             <!-- Puedes agregar más contenido personalizado aquí según tus necesidades -->
-
         </div>
+        <!-- Pop up js -->
+
+        <div id="popup-container">
+        <div id="popup">
+        <h2>Políticas de Privacidad y Condiciones de Uso</h2>
+        <a href="./Política_us.md">Politiques</a>
+        <button id="accept-button">Aceptar</button>
+        </div>
+        </div>
+
     </main>
     
     <footer>
