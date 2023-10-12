@@ -15,7 +15,9 @@ if (isset($_POST['logout']) && $_POST['logout'] === 'true') {
     exit;
 } else {
     // Si la solicitud no proviene del formulario, redirige a alguna otra página o muestra un mensaje de error.
-    header("location: error.php");
+    var_dump($_POST);
+
+    // header("location: error.php");
     exit;
 }
 ?>
