@@ -95,9 +95,11 @@
             <td><img src="images/qr.png" alt="Qr"></td>
         </tr>
         <tr>
-            <td><input type="submit" value="Actualitzar">
-                <input id="logout" type="submit" onclick="logout.php" value="true"></td>
+            <td><input type="submit" value="Actualitzar"></td>
     </table>
+            </form>
+            <form action="logout.php" method="post">
+                <input id="true" type="submit" onclick="logout.php" value="logout">
             </form>
         </div>
 
