@@ -54,7 +54,6 @@ function ocultarPopup() {
         <img src="images/ginebro-logo (1).png">
         <ul>
             <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
-            <!-- <li><a href="teams.php"><h3>Grupos</h3></a></li> -->
             <li><a href="http://192.168.56.105:3000/"><h3>Grupos</h3></a></li>
             <li><a href="news.php"><h3>Noticias</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>

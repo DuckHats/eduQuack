@@ -40,7 +40,7 @@
             <li><a href="index.php">
                     <h3>Menú</h3>
                 </a></li>
-            <li><a href="teams.php">
+            <li><a href="http://192.168.56.105:3000/">
                     <h3>Grups</h3>
                 </a></li>
             <li><a href="news.php">
