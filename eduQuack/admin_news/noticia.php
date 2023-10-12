@@ -5,7 +5,7 @@ session_start();
 //     exit;
 // }
 
-include('news_database.php'); // Inclou el fitxer de configuració de la base de dades
+require_once('news_database.php'); // Inclou el fitxer de configuració de la base de dades
 
 // Obté dades del formulari
 $titulo = $_POST['titulo'];
