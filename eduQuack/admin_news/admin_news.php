@@ -14,7 +14,7 @@
     ?>
 
     <h2>Añadir Noticia</h2>
-    <form action="procesar_noticia.php" method="post" enctype="multipart/form-data">
+    <form action="noticia.php" method="post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required><br>
 
