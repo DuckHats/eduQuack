@@ -1,0 +1,21 @@
+Visió jove
+Verificació correu ginebro
+Pàgina web d'administrador de news
+Grups:
+- Sub Menu Grups
+- Buscar per noms
+- no fotos
+- filtrar per url
+
+Formularis de valoració:
+- 1 trimestre
+- news sobre els resultats
+- 1 a 5 preguntes
+- 
+versió professors: 
+- fàcil
+- entrevistes personals
+
+Icones de descripció cada cosa
+
+Bloquejar

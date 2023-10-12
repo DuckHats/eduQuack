@@ -1,6 +1,3 @@
-<!-- apt install npm
-npm install express http socketIo -->
-
 <!doctype html>
 <html>
 <head>
@@ -14,37 +11,39 @@ npm install express http socketIo -->
     <!-- Biblioteca de Socket.io -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        // Se crea una conexión de Socket.io entre el cliente y el servidor
-        const socket = io();
+        // Obtiene el nombre de usuario almacenado en la sesión
+        const username = '<%= session.username %>';
+        let room;
 
-        // El usuario introduce el nombre de la sala
-        let room = prompt('Introduce el nombre de la sala:');
-        // El cliente solicita unirse a la sala al servidor
+        // Verifica si el nombre de la sala está presente en el enlace
+        const urlParams = new URLSearchParams(window.location.search);
+        const roomFromUrl = urlParams.get('room');
+        if (roomFromUrl) {
+            room = roomFromUrl;
+        } else {
+            // Si no hay nombre de sala en el enlace, solicita al usuario que lo ingrese
+            room = prompt('Introduce el nombre de la sala:');
+        }
+
+        const socket = io();
         socket.emit('joinRoom', room);
 
-        // Cuando el servidor envía el historial de chat de la sala
         socket.on('chatHistory', (messages) => {
             const messagesDiv = document.getElementById('messages');
-            // Se muestra el historial de chat en la interfaz del usuario
             messages.forEach(message => {
-                messagesDiv.innerHTML += `<p>${new Date(message.timestamp).toLocaleTimeString()}: ${message.message}</p>`;
+                messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
             });
         });
 
-        // Cuando el servidor envía un nuevo mensaje
         socket.on('message', (message) => {
             const messagesDiv = document.getElementById('messages');
-            // Se muestra el nuevo mensaje en la interfaz del usuario
-            messagesDiv.innerHTML += `<p>${new Date(message.timestamp).toLocaleTimeString()}: ${message.message}</p>`;
+            messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
         });
 
-        // Función para enviar mensajes
         function sendMessage() {
             const messageInput = document.getElementById('message-input');
             const message = messageInput.value;
-            // El cliente envía el mensaje al servidor junto con el nombre de la sala
-            socket.emit('sendMessage', { room, message });
-            // Se limpia el campo de entrada de mensajes
+            socket.emit('sendMessage', { room, message, username });
             messageInput.value = '';
         }
     </script>

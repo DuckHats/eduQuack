@@ -96,7 +96,7 @@
         </tr>
         <tr>
             <td><input type="submit" value="Actualitzar">
-                <input id="logout" type="submit" onclick="logout.php" value="Logout"></td>
+                <input id="logout" type="submit" onclick="logout.php" value="true"></td>
     </table>
             </form>
         </div>
