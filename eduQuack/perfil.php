@@ -105,14 +105,14 @@
                         <td><img src="images/qr.png" alt="Qr"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Actualitzar"></td>
-                </table>
+                        <td><input type="submit" value="Actualitzar">
+                
             </form>
             <form action="logout.php" method="post">
                 <input type="hidden" name="logout" value="true">
-                <input type="submit" value="logout">
+                <input type="submit" value="logout"></td>
             </form>
-
+            </table>
         </div>
 
     </main>
