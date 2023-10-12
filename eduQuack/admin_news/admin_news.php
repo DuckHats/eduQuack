@@ -14,7 +14,7 @@
     ?>
 
     <h2>Añadir Noticia</h2>
-    <form action="procesar_noticia.php" method="post" enctype="multipart/form-data">
+    <form action="procesar_noticia.php" method="post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required><br>
 
@@ -37,8 +37,7 @@
 
         <label for="imagen">Imagen:</label>
         <input type="file" id="imagen" name="imagen" accept="image/*" required><br>
-
-        <button type="submit">Guardar Noticia</button>
+        <input type="submit" value="Guardar Noticia">
     </form>
 </body>
 </html>
