@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: index.php");
-    exit;
-}
+// if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+//     header("location: index.php");
+//     exit;
+// }
 
 include('news_database.php'); // Inclou el fitxer de configuració de la base de dades
 
