@@ -40,23 +40,197 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <!-- taula per els enllaços i la informació dels formularis. -->
         <table>
         <tr>
-            <th>Título del Formulario</th>
-            <th>Fecha de Publicación</th>
-            <th>Completado</th>
-            <th>Enlace al Formulario</th>
+            <th>Titol</th>
+            <th>Data De publicació</th>
+            <th>Completat</th>
+            <th>Enllaç al formulari:</th>
         </tr>
         <tr>
-            <td>Formulario 1</td>
-            <td>10/10/2023</td>
-            <td><input type="checkbox" name="completado"></td>
-            <td><a href="URL_del_formulario_1">Enlace al Formulario 1</a></td>
+            <td>Valoració Maria Expósito</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/PZtutZYFvaGbdPSz6">Enllaç</a></td>
         </tr>
         <tr>
-            <td>Formulario 2</td>
-            <td>11/10/2023</td>
-            <td><input type="checkbox" name="completado"></td>
-            <td><a href="URL_del_formulario_2">Enlace al Formulario 2</a></td>
+            <td>Valoració Enric Matamala</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/LsNHNSnfnRBEVMde6">Enllaç</a></td>
         </tr>
+        <tr>
+            <td>Valoració Berta Tomàs</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/DXp2yXpvxyJc7vmv9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Mònica Llobera</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/C3hjq9jynPGYbh6u9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Blasco</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/nfzc7sWNSMFSFXJ76">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Gemma Pardell</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/vPqDLjKuCDTyQFxz8">Enllaç</a></td>
+        </tr>
+                              <!-- Nous -->
+        <tr>
+            <td>Valoració Cristina Vallcorba</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/M8NiiZRXQa3zsyoL9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Diego de la Torre</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/VqPP3XD8kTphSMpu5">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Gemma Querol</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/NrjMsPG6pBZpt9CN9">Enllaç</a></td>
+        </tr>
+        
+        <tr>
+            <td>Valoració Cristina Royo</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/jp9E9Cc7oFXenj6y6">Enllaç</a></td>
+        </tr>
+                            <!-- Checkpoint -->
+        <tr>
+            <td>Valoració Judit Molins</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/VpXz8BVKtpAyvnV28">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Txu Morillas</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/7YF6GcgkKnmXgyuW7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Jose Cendón</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/73GWQUKXnJmhWBCLA">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Dolors Morcillo</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/YaNAZD8AybbNVhbPA">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Manel Lladó</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/RpoEtuk8WxZeWdHUA">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Alicia Molina</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/kUgeJkpW2MTifiAPA">Enllaç</a></td>
+        </tr>
+
+        <tr>
+            <td>Valoració Patxi Perales</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/hFfotmLZsbCntPTK8">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Salvador Quadrades</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/Uihs26yUAzipKLFH7">Enllaç</a></td>
+        </tr>
+                                    <!-- checkpoint final -->
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Pilar Castellano</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/afBJnSXRyoakLajF7">Enllaç</a></td>
+        </tr>
+        <tr>
+            <td>Valoració Carles Lorente</td>
+            <td>Publicat: 13/10/2023</td>
+            <td><input type="checkbox" name="completat"></td>
+            <td><a href="https://forms.gle/64vamjYb6eCEiJUq9">Enllaç</a></td>
+        </tr>
+
         <!-- Agrega más filas según sea necesario para otros formularios -->
     </table>    
     </main>
