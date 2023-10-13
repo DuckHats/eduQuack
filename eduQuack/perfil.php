@@ -49,7 +49,7 @@
             <li><a href="./Foro/Blog.php">
                     <h3>Forum</h3>
                 </a></li>
-            <li><a href="../formularis.php">
+            <li><a href="./formularis.php">
                 <h3>Valoracións</h3>
             </a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
