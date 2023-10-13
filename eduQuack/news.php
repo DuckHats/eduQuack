@@ -60,6 +60,7 @@ $conn->close();
             <li><a href="http://192.168.56.105:3000/"><h3>Grups</h3></a></li>
             <li><a href="news.php"><h3 class="negrita">Notícies</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
+            <li><a href="./formularis.php"><h3>Valoracións</h3></a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>
     </menu>
