@@ -400,5 +400,14 @@ menu > img {
     padding: 10px 20px;
     cursor: pointer;
 }
+/* Configuracio pàgina formularis */
+.tabla-formularios {
+    max-height: 400px; /* Establece la altura máxima del contenedor */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es más alto que la altura máxima */
+}
 
+table {
+    width: 100%; /* Haz que la tabla ocupe el 100% del ancho del contenedor */
+    /* Estilos adicionales para la tabla si es necesario */
+}
 /* Final configuració de la pestanya config.html --------------------------------------------------- */

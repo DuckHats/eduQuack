@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <p>Com a estudiants del Ginebró, estem compromesos a millorar la nostra escola. Per aconseguir-ho, estem implementant formularis anònims amb menys de 5 preguntes per avaluació. Aquests formularis ens permetran valorar diversos espais i membres de la comunitat escolar. Les respostes seran totalment anònimes.</p>
         <p>Al final de cada trimestre, publicarem els resultats d'aquestes avaluacions a la secció de Notícies. D'aquesta manera, podreu veure com es puntuen diferents aspectes de l'escola i col·laborar en la creació d'un millor entorn educatiu per a tots.</p>
         <!-- taula per els enllaços i la informació dels formularis. -->
-        <table>
+        <table class="tabla-formularios">
         <tr>
             <th>Titol</th>
             <th>Data De publicació</th>
