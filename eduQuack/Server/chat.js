@@ -18,7 +18,8 @@ io.on('connection', (socket) => {
         if (!chatRooms[room]) {
             chatRooms[room] = [];
         }
-        io.to(room).emit('chatHistory', chatRooms[room]);
+        // Enviar només els missatges nous a l'usuari que s'acaba de connectar
+        socket.emit('chatHistory', chatRooms[room]);
     });
 
     socket.on('sendMessage', ({ room, message, username }) => {
@@ -29,5 +30,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(3000, () => {
-    console.log('Server is running on port 3000');
+    console.log('El servidor està funcionant al port 3000');
 });

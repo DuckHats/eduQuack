@@ -2,50 +2,67 @@
 <html>
 <head>
     <title>Chat en Tiempo Real</title>
+    <style>
+        #messages {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div id="messages"></div>
-    <input id="message-input" autocomplete="off">
-    <button onclick="sendMessage()">Enviar</button>
+    <form id="message-form">
+        <input id="message-input" autocomplete="off">
+        <button type="submit">Enviar</button>
+    </form>
 
     <!-- Biblioteca de Socket.io -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        // Obtiene el nombre de usuario almacenado en la sesión
         const username = '<%= session.username %>';
         let room;
 
-        // Verifica si el nombre de la sala está presente en el enlace
         const urlParams = new URLSearchParams(window.location.search);
         const roomFromUrl = urlParams.get('room');
         if (roomFromUrl) {
             room = roomFromUrl;
         } else {
-            // Si no hay nombre de sala en el enlace, solicita al usuario que lo ingrese
             room = prompt('Introduce el nombre de la sala:');
         }
 
         const socket = io();
         socket.emit('joinRoom', room);
 
+        const messagesDiv = document.getElementById('messages');
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+
         socket.on('chatHistory', (messages) => {
-            const messagesDiv = document.getElementById('messages');
+            messagesDiv.innerHTML = '';
             messages.forEach(message => {
-                messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
+                displayMessage(message);
             });
         });
 
         socket.on('message', (message) => {
-            const messagesDiv = document.getElementById('messages');
-            messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
+            displayMessage(message);
         });
 
-        function sendMessage() {
-            const messageInput = document.getElementById('message-input');
-            const message = messageInput.value;
-            socket.emit('sendMessage', { room, message, username });
-            messageInput.value = '';
+        function displayMessage(message) {
+            const messageElement = document.createElement('p');
+            messageElement.textContent = `${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}`;
+            messagesDiv.appendChild(messageElement);
         }
+
+        messageForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = messageInput.value.trim();
+            if (message !== '') {
+                socket.emit('sendMessage', { room, message, username });
+                messageInput.value = '';
+            } else {
+                alert('El mensaje no puede estar vacío.');
+            }
+        });
     </script>
 </body>
 </html>
