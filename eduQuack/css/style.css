@@ -402,7 +402,7 @@ menu > img {
 }
 /* Configuracio pàgina formularis */
 .tabla-formularios {
-    max-height: 400px; /* Establece la altura máxima del contenedor */
+    max-height: 100vh; /* Establece la altura máxima del contenedor */
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es más alto que la altura máxima */
 }
 
