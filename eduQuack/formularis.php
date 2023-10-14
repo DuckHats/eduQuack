@@ -119,7 +119,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <td><input type="checkbox" name="completat"></td>
             <td><a href="https://forms.gle/jp9E9Cc7oFXenj6y6">Enllaç</a></td>
         </tr>
-                            <!-- Checkpoint -->
         <tr>
             <td>Valoració Judit Molins</td>
             <td>Publicat: 13/10/2023</td>
@@ -283,15 +282,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <td><input type="checkbox" name="completat"></td>
             <td><a href="https://forms.gle/RZSV6uyzinTwz8sn9">Enllaç</a></td>
         </tr>
-                                                                            <!-- checkpoint final -->
         <tr>
             <td>Valoració Sofia Torrado</td>
             <td>Publicat: 13/10/2023</td>
             <td><input type="checkbox" name="completat"></td>
             <td><a href="https://forms.gle/Fx8or9LzwaeB4oZr5">Enllaç</a></td>
         </tr>
-
-        <!-- Agrega más filas según sea necesario para otros formularios -->
+        <!-- Final forms -->
     </table>    
     </main>
 

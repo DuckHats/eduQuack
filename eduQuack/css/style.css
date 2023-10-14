@@ -410,4 +410,28 @@ table {
     width: 100%; /* Haz que la tabla ocupe el 100% del ancho del contenedor */
     /* Estilos adicionales para la tabla si es necesario */
 }
+/* Probes de la taula de formularis */
+.tabla-formularios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-formularios th, .tabla-formularios td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabla-formularios th {
+    background-color: #f2f2f2;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/* Final probes de la taula de formularis */
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
