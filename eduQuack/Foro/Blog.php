@@ -1,10 +1,27 @@
 <?php
-
+// Inicia la sesión en cada página donde necesitas verificar el rol de administrador
 session_start();
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+
+// Verifica si el usuario ha iniciado sesión
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    // Verifica si el usuario tiene el rol de administrador
+    if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) {
+        // El usuario tiene el rol de administrador, muestra funciones extras para administradores
+        echo "¡Bienvenido, administrador! Aquí están las funciones extras:";
+        echo '<a href="borrar_post.php?id=' . $row["id"] . '">Eliminar</a>';
+        // Coloca aquí el código HTML o funciones adicionales para administradores
+    } else {
+        // El usuario no tiene el rol de administrador, muestra funciones estándar para usuarios normales
+        echo "¡Bienvenido! Aquí están las funciones estándar:";
+        // Coloca aquí el código HTML o funciones para usuarios normales
+    }
+} else {
+    // El usuario no ha iniciado sesión, redirige a la página de inicio de sesión
     header("location: login.html");
-    exit;
+    exit();
 }
+
+
 
 require_once('blog_database.php');
 
@@ -76,7 +93,7 @@ $result = $conn->query($sql);
         <?php while ($row = $result->fetch_assoc()) : ?>
             <div class="post">
             <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->
-            <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a>
+            <!-- <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a> -->
                 
                 <!-- Enlace para ver más detalles del post -->
                 <a href="thread.php?id=<?= $row["id"] ?>">Ver Más</a>
