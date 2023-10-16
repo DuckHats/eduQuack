@@ -173,7 +173,7 @@ input[type="submit"]:hover {
 
 footer {
     /* Estilos para el pie de página */
-    position: absolute; /* Posición absoluta */
+    position: fixed; /* Posición absoluta */
     background-color: white; /* Color de fondo blanco */
     color: white; /* Color del texto blanco */
     padding: 5px; /* Relleno alrededor del pie de página */
@@ -370,5 +370,68 @@ menu > img {
     width: 100px; /* Ancho de la imagen */
     height: 100px; /* Altura de la imagen */
 }
+/* Css del pop up de login i politiques  */
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#popup {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#accept-button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* Configuracio pàgina formularis */
+.tabla-formularios {
+    max-height: 100vh; /* Establece la altura máxima del contenedor */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es más alto que la altura máxima */
+}
+
+table {
+    width: 100%; /* Haz que la tabla ocupe el 100% del ancho del contenedor */
+    /* Estilos adicionales para la tabla si es necesario */
+}
+/* Probes de la taula de formularis */
+.tabla-formularios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-formularios th, .tabla-formularios td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabla-formularios th {
+    background-color: #f2f2f2;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/* Final probes de la taula de formularis */
 /* Final configuració de la pestanya config.html --------------------------------------------------- */

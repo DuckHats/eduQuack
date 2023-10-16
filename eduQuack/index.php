@@ -15,6 +15,37 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Bienvenido | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Script pop up -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar el popup cada vez que un usuario inicia sesión
+    mostrarPopup();
+
+    // Agregar un evento al botón de Aceptar
+    document.getElementById('accept-button').addEventListener('click', function() {
+        // Ocultar el popup
+        ocultarPopup();
+
+        // Marcar como aceptado
+        localStorage.setItem('aceptado', 'true');
+    });
+});
+
+function mostrarPopup() {
+    // Verificar si se ha aceptado previamente
+    if (!localStorage.getItem('aceptado')) {
+        // Mostrar el popup
+        document.getElementById('popup-container').style.display = 'block';
+    }
+}
+
+function ocultarPopup() {
+    // Ocultar el popup
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+    </script>
+    <!-- Final script pop up -->
 </head>
 
 <body>
@@ -23,9 +54,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <img src="images/ginebro-logo (1).png">
         <ul>
             <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
-            <li><a href="teams.php"><h3>Grupos</h3></a></li>
+            <li><a href="http://192.168.56.105:3000/"><h3>Grupos</h3></a></li>
             <li><a href="news.php"><h3>Noticias</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
+            <li><a href="./formularis.php"><h3>Valoracións</h3></a></li>
             <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>  
     </menu>
@@ -39,8 +71,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
             <p>¡Gracias por iniciar sesión en eduQuack! ¡Disfruta explorando nuestro sitio!</p>
             <!-- Puedes agregar más contenido personalizado aquí según tus necesidades -->
-
         </div>
+        <!-- Pop up js -->
+
+        <div id="popup-container">
+        <div id="popup">
+        <h1>Políticas de Privacidad y Condiciones de Uso</h1>
+        <p>Accepto les politiques de privacitat i em comprometo a seguir les normes d'us: </p>
+        <a href="./view/Política_us.md">Politiques d'us</a>
+        <a href="./view/Política_de_privacitat.md">Politiques de Privacitat</a>
+        <button id="accept-button">Aceptar</button>
+        </div>
+        </div>
+        <!-- Pop up js -->
     </main>
     
     <footer>

@@ -24,7 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
                         $_SESSION["username"] = $username;
-                        $_SESSION['curso'] = $curso_id;
+
+                        // Verifica si el correo electrónico es "root2@gmail.com" y establece la variable de sesión "admin"
+                        if ($email == "root2@gmail.com") {
+                            $_SESSION["admin"] = true;
+                        }
 
                         header("location: index.php");
                     } else {
