@@ -38,7 +38,7 @@
         <img src="images/ginebro-logo (1).png">
         <ul>
             <li><a href="index.php">
-                    <h3>Menú</h3>
+                    <h3>Home</h3>
                 </a></li>
             <li><a href="http://192.168.56.105:3000/">
                     <h3>Grups</h3>
@@ -57,13 +57,6 @@
     </menu>
 
     <main>
-        <!-- <div id="sidebarconf">
-            <ul>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#email">E-mail</a></li>
-                <li><a href="#contrasenya">Contrasenya</a></li>
-            </ul>
-        </div> -->
 
         <div id="infoconf">
             <h2>Perfil</h2>

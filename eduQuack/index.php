@@ -53,7 +53,7 @@ function ocultarPopup() {
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
-            <li><a href="index.php"><h3 class="negrita">Menú</h3></a></li>
+            <li><a href="index.php"><h3 class="negrita">Home</h3></a></li>
             <li><a href="http://192.168.56.105:3000/"><h3>Grupos</h3></a></li>
             <li><a href="news.php"><h3>Noticias</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
@@ -78,8 +78,8 @@ function ocultarPopup() {
         <div id="popup">
         <h1>Políticas de Privacidad y Condiciones de Uso</h1>
         <p>Accepto les politiques de privacitat i em comprometo a seguir les normes d'us: </p>
-        <a href="./view/Política_us.md">Politiques d'us</a>
-        <a href="./view/Política_de_privacitat.md">Politiques de Privacitat</a>
+        <a href="./view/Política_us.pdf">Politiques d'us</a>
+        <a href="./view/Política_de_privacitat.pdf">Politiques de Privacitat</a>
         <button id="accept-button">Aceptar</button>
         </div>
         </div>

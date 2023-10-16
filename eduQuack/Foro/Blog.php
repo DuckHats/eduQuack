@@ -65,7 +65,7 @@ $result = $conn->query($sql);
     <menu>
         <img src="../images/ginebro-logo (1).png">
         <ul>
-            <li><a href="../index.php"><h3>Menú</h3></a></li>
+            <li><a href="../index.php"><h3>Home</h3></a></li>
             <li><a href="../teams.php"><h3>Grupos</h3></a></li>
             <li><a href="../news.php"><h3>Noticias</h3></a></li>
             <li><a href="./Blog.php"><h3  class="negrita">Forum</h3></a></li>
@@ -93,12 +93,12 @@ $result = $conn->query($sql);
         <?php while ($row = $result->fetch_assoc()) : ?>
             <div class="post">
             <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->
-            <!-- <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a> -->
+            <a href="borrar_post.php?id=<?= $row["id"] ?>">Eliminar</a>
                 
                 <!-- Enlace para ver más detalles del post -->
                 <a href="thread.php?id=<?= $row["id"] ?>">Ver Más</a>
                 
-                <h2><?= $row["title"] ?></h2>
+                <h1><?= $row["title"] ?></h1>
                 <p>Autor: <?= $row["author"] ?></p>
                 <p><?= $row["content"] ?></p>
                 <?php if ($row["image_path"]) : ?>

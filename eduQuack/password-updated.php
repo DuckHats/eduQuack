@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña | eduQuack</title>
+    <title>Contrasenya Actualitzada | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -14,14 +14,9 @@
         </div>
 
         <div class="info">
-            <h1>Recuperar Contraseña</h1>
-            <br>
-            <form action="c-email.php" method="post">
-                <input type="email" placeholder="Introduce tu email" id="email" name="email">
-                <input type="submit" value="Siguiente">
-            </form>
+            <h1>Contrasenya Actualitzada</h1>
+            <p>La teva contrasenya s'ha actualitzat amb èxit. Ara pots <a href="login.php">iniciar sessió</a> amb la teva nova contrasenya.</p>
         </div>
-
     </main>
 </body>
 </html>
