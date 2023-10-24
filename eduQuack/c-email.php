@@ -1,8 +1,8 @@
 <?php
 require_once "config.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $email = $_GET["email"];
 
     // Comprovar si l'email existeix a la base de dades
     $sql = "SELECT id FROM users WHERE email = ?";
