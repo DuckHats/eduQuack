@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Comprovem si l'email existeix a la base de dades
     $consulta = $mysqli->query("SELECT * FROM usuaris WHERE correu = '$email'");
 
-    if ($consulta->num_rows > 0) {
+    if ($consulta->num_rows > 1) {
         // L'email existeix, permetem que l'usuari canviï la contrasenya
         header("Location: canviar-contrasenya.php");
         // Mostra un formulari perquè l'usuari introdueixi la nova contrasenya
