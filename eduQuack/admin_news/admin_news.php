@@ -35,8 +35,8 @@
             <option value="Bachillerato">Batchillerat</option>
         </select><br>
 
-        <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" accept="image/*" required><br>
+        <!-- <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*"><br> -->
         <input type="submit" value="Guardar Noticia">
     </form>
 </body>
