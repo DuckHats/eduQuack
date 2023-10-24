@@ -17,7 +17,7 @@
             <h1>Canviar Contrasenya</h1>
             <br>
             <form action="reset-password-process.php" method="post">
-                <input type="hidden" name="email" value="<?php echo htmlspecialchars($_GET['email']); ?>">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
                 <div class="form-group">
                     <label>Nova Contrasenya</label>
                     <input type="password" name="new_password" class="form-control" required>

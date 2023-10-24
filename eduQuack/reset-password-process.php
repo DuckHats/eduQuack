@@ -2,7 +2,7 @@
 require_once "config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_GET["email"];
+    $email = $_POST["email"];
     $new_password = $_POST["new_password"];
     $confirm_password = $_POST["confirm_password"];
 
