@@ -12,7 +12,7 @@ if($mysqli === false){
     $novaContrasenyaEncriptada = password_hash($novaContrasenya, PASSWORD_DEFAULT);
 
     // Actualitzem la contrasenya a la base de dades
-    $actualitzarContrasenya = $mysqli->query("UPDATE usuarios SET password = '$novaContrasenyaEncriptada' WHERE correu = '$email'");
+    $actualitzarContrasenya = $mysqli->query("UPDATE usuarios SET password = '$novaContrasenyaEncriptada' WHERE email = '$email'");
 
     if($actualitzarContrasenya) {
         echo "Contrasenya actualitzada amb èxit.";
