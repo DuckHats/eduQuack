@@ -23,7 +23,7 @@
 
     // Obtener datos del usuario desde la base de datos
     $id = $_SESSION['id'];
-    $sql = "SELECT username, email, full_name FROM usuarios WHERE id = '$id'";
+    $sql = "SELECT email, full_name, username FROM usuarios WHERE id = '$id'";
     $result = $mysqli->query($sql);
     //Guardar la informació en variables
     if ($result->num_rows > 0) {
@@ -90,7 +90,7 @@
                     <tr>
                         <td>
                             <h3 id="email">E-mail</h3>
-                            <input type="text" name="full_name" value="<?= htmlspecialchars($email); ?>">
+                            <input type="text" name="email" value="<?= htmlspecialchars($email); ?>">
                         </td>
                     </tr>
                     <tr>
