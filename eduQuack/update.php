@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo $id;
     // exit();
     // Consulta SQL para actualizar los valores
-    $sql = "UPDATE usuarios SET username = ?, full_name = ?, email = ? WHERE id = ?";
+    $sql = "UPDATE usuarios SET email = ?, full_name = ?, username = ?, WHERE id = ?";
     if ($stmt = $mysqli->prepare($sql)) {
         // Especifica los tipos de datos de las variables en el primer argumento de bind_param
-        $stmt->bind_param("sssi", $username, $full_name, $email, $id);
+        $stmt->bind_param("sssi", $email, $full_name, $username, $id);
         
         if ($stmt->execute()) {
             echo "Registro actualizado correctamente.";
