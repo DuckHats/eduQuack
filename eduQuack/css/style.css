@@ -302,7 +302,7 @@ menu > img {
     /* Estilos para un elemento con ID "conficon" */
     width: 25px; /* Ancho del elemento */
     height: 25px; /* Altura del elemento */
-    margin-left: 45vw; /* Margen izquierdo (55% del ancho de la ventana) */
+    margin-left: 25vw; /* Margen izquierdo (55% del ancho de la ventana) */
 }
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
