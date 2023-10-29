@@ -1,4 +1,14 @@
-   # Projecte: Desenvolupament d'una Aplicació
+<p align="center">
+  <img src="https://github.com/DuckHats.png" width="100" alt="Logo"/><br/>
+  Hi 👋, we are <a href="https://github.com/DuckHats">DuckHats</a>
+</p>
+<p align="center">
+    <a href="https://github.com/DuckHats/stargazers"><img src="https://img.shields.io/github/stars/DuckHats/eduQuack?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+    <a href="https://github.com/DuckHats/eduQuack/contributors"><img src="https://img.shields.io/github/contributors/DuckHats/eduQuack?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+
+</p>
+
+# Projecte: Desenvolupament d'una Aplicació
 
 ## Introducció
 
@@ -50,5 +60,13 @@ Aquest document detalla el nostre enfocament estructurat per al desenvolupament 
    - **Conclusions:** Analitzem l'aprenentatge, els reptes superats i les àrees de millora per a futurs projectes.
 
 Aquesta metodologia assegura una aplicació que no només compleix, sinó que supera les expectatives, proporcionant als usuaris una experiència excepcional i al client un producte de qualitat.
+
+### 🤝🏻 Connect with Us
+<p align="center">
+    <a href="https://DuckHats.github.io"><img alt="Website" src="https://img.shields.io/badge/Website-www.Duckhats.com-blue?style=flat-square&logo=google-chrome"></a>
+    <a href="mailto:duck4hats@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-duck4hats@gmail.com-blue?style=flat-square&logo=gmail"></a>
+</p>
+
+⭐️ From [DuckHats](https://github.com/DuckHats)
 
 
