@@ -75,9 +75,8 @@ $conn->close();
     </main>
     <!-- Pie de página -->
     <footer>
-        <!-- Enlace al archivo de licencia y dirección de correo electrónico de contacto -->
         <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens al correu <a>example@ginebro.cat</a></p>
+        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
     </footer>
 </body>
 </html>

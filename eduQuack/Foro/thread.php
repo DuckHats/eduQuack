@@ -47,5 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         <a href="Blog.php">Tornar a la pàgina de blogs:</a>
     </div>
 </body>
-
+<footer>
+        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
+    </footer>
 </html>
