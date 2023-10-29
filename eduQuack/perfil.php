@@ -50,8 +50,8 @@
                     <h3>Forum</h3>
                 </a></li>
             <li><a href="./formularis.php">
-                <h3>Valoracións</h3>
-            </a></li>
+                    <h3>Valoracións</h3>
+                </a></li>
             <li><a href="./perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
         </ul>
     </menu>
@@ -102,7 +102,7 @@
                     </tr>
                     <tr>
                         <td><input type="submit" value="Actualitzar">
-                
+
             </form>
             <form action="logout.php" method="post">
                 <input type="hidden" name="logout" value="true">

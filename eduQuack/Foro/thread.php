@@ -43,12 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         <?php else : ?>
             <p>No s'ha trobat informació del post.</p>
         <?php endif; ?>
-        
+
         <a href="Blog.php">Tornar a la pàgina de blogs:</a>
     </div>
 </body>
 <footer>
-        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
-    </footer>
+    <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+    <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
+</footer>
+
 </html>

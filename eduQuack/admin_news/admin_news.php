@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Afegir notícies</title>
 </head>
+
 <body>
     <?php
     session_start();
@@ -41,7 +43,8 @@
     </form>
 </body>
 <footer>
-        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
-    </footer>
+    <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+    <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
+</footer>
+
 </html>
