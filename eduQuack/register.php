@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $uploadOk = 0;
     }
 
-    // Verificar el tamaño del archivo (en este ejemplo, se limita a 2MB)
-    if ($_FILES["profile_picture"]["size"] > 2000000) {
+    // Verificar el tamaño del archivo (en este ejemplo, se limita a 9MB)
+    if ($_FILES["profile_picture"]["size"] > 9000000) {
         echo "El archivo es demasiado grande. Por favor, elige un archivo más pequeño.";
         $uploadOk = 0;
     }
