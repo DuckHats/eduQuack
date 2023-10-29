@@ -66,8 +66,8 @@ $result = $conn->query($sql);
         <img src="../images/ginebro-logo (1).png">
         <ul>
             <li><a href="../index.php"><h3>Home</h3></a></li>
-            <li><a href="../teams.php"><h3>Grupos</h3></a></li>
-            <li><a href="../news.php"><h3>Noticias</h3></a></li>
+            <li><a href="../dev-teams.php"><h3>Grups</h3></a></li>
+            <li><a href="../news.php"><h3>Notícies</h3></a></li>
             <li><a href="./Blog.php"><h3  class="negrita">Forum</h3></a></li>
             <li><a href="../formularis.php"><h3>Valoracións</h3></a></li>
             <li><a href="../perfil.php"><img id="conficon" src="../images/user.png"></a></li>
@@ -80,11 +80,11 @@ $result = $conn->query($sql);
         <!-- Formulario para crear un nuevo post -->
         <h2>New Post</h2>
         <form action="Blog.php" method="post" enctype="multipart/form-data">
-            <label for="titulo">Título:</label>
+            <label for="titulo">Títol:</label>
             <input type="text" id="titulo" name="titulo" required><br>
-            <label for="contenido">Contenido:</label><br>
+            <label for="contenido">Contingut del post:</label><br>
             <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br>
-            <label for="imagen">Imagen:</label>
+            <label for="imagen">Imatge:</label>
             <input type="file" id="imagen" name="imagen"><br>
             <input type="submit" value="Publicar">
         </form>
@@ -111,8 +111,8 @@ $result = $conn->query($sql);
     </div>
     </main>
     <footer>
-        <a href="../eduQuack/Legal/License.pdf">Todos los derechos reservados a eduQuack</a>
-        <p>Contáctenos en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
+        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+        <p>Contáctens per correu a <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
     </footer>
 </body>
 

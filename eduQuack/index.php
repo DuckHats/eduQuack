@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido | eduQuack</title>
+    <title>Benvingut | eduQuack</title>
     <link rel="icon" href="images/ginebro-logo (1).png">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Script pop up -->
@@ -53,12 +53,12 @@ function ocultarPopup() {
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
-            <li><a href="index.php"><h3 class="negrita">Home</h3></a></li>
-            <li><a href="http://192.168.56.105:3000/"><h3>Grupos</h3></a></li>
-            <li><a href="news.php"><h3>Noticias</h3></a></li>
+            <li><a href="./index.php"><h3 class="negrita">Home</h3></a></li>
+            <li><a href="./dev-teams.php"><h3>Grups</h3></a></li>
+            <li><a href="./news.php"><h3>Notícies</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
             <li><a href="./formularis.php"><h3>Valoracións</h3></a></li>
-            <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
+            <li><a href="./perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>  
     </menu>
     
@@ -76,7 +76,7 @@ function ocultarPopup() {
 
         <div id="popup-container">
         <div id="popup">
-        <h1>Políticas de Privacidad y Condiciones de Uso</h1>
+        <h1>Polítiques de privacitat i condicions d'ús</h1>
         <p>Accepto les politiques de privacitat i em comprometo a seguir les normes d'us: </p>
         <a href="./view/Política_us.pdf">Politiques d'us</a>
         <a href="./view/Política_de_privacitat.pdf">Politiques de Privacitat</a>
@@ -87,8 +87,8 @@ function ocultarPopup() {
     </main>
     
     <footer>
-        <a href="../eduQuack/Legal/License.pdf">Todos los derechos reservados a eduQuack</a>
-        <p>Contáctenos en el correo <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
+        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+        <p>Contactens per correu a: <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
     </footer>
 
 </body>

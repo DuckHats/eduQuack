@@ -25,22 +25,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <img src="images/ginebro-logo (1).png">
         <ul>
             <!-- Enlaces a otras páginas del sitio web -->
-            <li><a href="index.php"><h3>Home</h3></a></li>
-            <li><a href="http://192.168.56.105:3000/"><h3>Grups</h3></a></li>
-            <li><a href="news.php"><h3>Notícies</h3></a></li>
+            <li><a href="./index.php"><h3>Home</h3></a></li>
+            <li><a href="./dev-teams.php"><h3>Grups</h3></a></li>
+            <li><a href="./news.php"><h3>Notícies</h3></a></li>
             <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
             <li><a href="./formularis.php" class="negrita"><h3>Valoracións</h3></a></li>
-            <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
+            <li><a href="./perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>
     </menu>
     <main>
-        <h1>Valoracions a l'escola Ginebró</h1>
-        <p>Com a estudiants del Ginebró, estem compromesos a millorar la nostra escola. Per aconseguir-ho, estem implementant formularis anònims amb menys de 5 preguntes per avaluació. Aquests formularis ens permetran valorar diversos espais i membres de la comunitat escolar. Les respostes seran totalment anònimes.</p>
+        <h1>Valoracións a l'escola Ginebró</h1>
+        <p>Com a estudiants del Ginebró, estem compromesos a millorar la nostra escola. Per aconseguir-ho, estem implementant formularis anònims amb menys de 5 preguntes per valorar diversos espais i membres de la comunitat escolar.</p>
         <p>Al final de cada trimestre, publicarem els resultats d'aquestes avaluacions a la secció de Notícies. D'aquesta manera, podreu veure com es puntuen diferents aspectes de l'escola i col·laborar en la creació d'un millor entorn educatiu per a tots.</p>
         <!-- taula per els enllaços i la informació dels formularis. -->
         <table class="tabla-formularios">
         <tr>
-            <th>Titol</th>
+            <th>Títol</th>
             <th>Data De publicació</th>
             <th>Completat</th>
             <th>Enllaç al formulari:</th>
@@ -296,7 +296,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <footer>
         <!-- Enlace al archivo de licencia y dirección de correo electrónico de contacto -->
         <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens al correu <a>example@ginebro.cat</a></p>
+        <p>Contactens al correu <a>duck4hats@gmail.com</a></p>
     </footer>
 </body>
 </html>
