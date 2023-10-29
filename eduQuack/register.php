@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     // Manejar el archivo de imagen
-    $targetDirectory = "./uploads/";
+    $targetDirectory = "uploads/";
     $targetFile = $targetDirectory . uniqid() . "_" . basename($_FILES["profile_picture"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
