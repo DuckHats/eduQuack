@@ -65,7 +65,7 @@ $conn->close();
         <div id="noticias-container"></div>
         <?php foreach ($noticias as $noticia): ?>
         <div class="noticia">
-            <h2><?php echo htmlspecialchars($noticia['titulo']); ?></h2>
+            <h1><?php echo htmlspecialchars($noticia['titulo']); ?></h1>
             <p><?php echo htmlspecialchars($noticia['contenido']); ?></p>
             <p>Fecha: <?php echo htmlspecialchars($noticia['fecha']); ?></p>
         </div>
