@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["username"] = $username;
 
                         // Verifica si el correo electrónico es "root2@gmail.com" y establece la variable de sesión "admin"
-                        if ($email == "root2@gmail.com") {
+                        if ($email == "root-admin@gmail.com") {
                             $_SESSION["admin"] = true;
                         }
 
@@ -47,4 +47,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mysqli->close();
 }
-?>

@@ -10,4 +10,3 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     // Por ejemplo, mostrar un mensaje de bienvenida o cargar datos del usuario
     // Puedes colocar tu código adicional aquí
 }
-?>

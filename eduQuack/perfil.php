@@ -37,22 +37,22 @@
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
-            <li><a href="index.php">
+            <li><a href="./index.php">
                     <h3>Home</h3>
                 </a></li>
-            <li><a href="http://192.168.56.105:3000/">
+            <li><a href="./dev-teams.php">
                     <h3>Grups</h3>
                 </a></li>
-            <li><a href="news.php">
+            <li><a href="./news.php">
                     <h3>Notícies</h3>
                 </a></li>
             <li><a href="./Foro/Blog.php">
                     <h3>Forum</h3>
                 </a></li>
             <li><a href="./formularis.php">
-                <h3>Valoracións</h3>
-            </a></li>
-            <li><a href="perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
+                    <h3>Valoracións</h3>
+                </a></li>
+            <li><a href="./perfil.php"><img id="conficon" src="images/userselec.png"></a></li>
         </ul>
     </menu>
 
@@ -64,17 +64,17 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Username</h3>
+                            <h3>Nom Usuari:</h3>
                             <input type="text" name="username" value="<?= htmlspecialchars($username); ?>">
                         </td>
                         <td>
-                            <h3>Nom complet</h3>
+                            <h3>Nom complet:</h3>
                             <input type="text" name="full_name" value="<?= htmlspecialchars($full_name); ?>">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>ID de usuario: "<?= $id ?>"</p>
+                            <p>ID d'usuari:: "<?= $id ?>"</p>
                         </td>
                         <td>
                             <p>Bienvenido session, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</p>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <h3 id="email">E-mail</h3>
+                            <h3 id="email">Email:</h3>
                             <input type="text" name="email" value="<?= htmlspecialchars($email); ?>">
                         </td>
                     </tr>
@@ -102,7 +102,7 @@
                     </tr>
                     <tr>
                         <td><input type="submit" value="Actualitzar">
-                
+
             </form>
             <form action="logout.php" method="post">
                 <input type="hidden" name="logout" value="true">
@@ -115,7 +115,7 @@
 
     <footer>
         <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens al correu <a href="mailto:example@ginebro.cat">example@ginebro.cat</a></p>
+        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
     </footer>
 </body>
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.html");
     exit;
 }
@@ -36,6 +36,7 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- Configuración de la codificación de caracteres y el tamaño de la ventana de visualización -->
     <meta charset="UTF-8">
@@ -46,38 +47,49 @@ $conn->close();
     <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <!-- Menú de navegación -->
     <menu>
         <img src="images/ginebro-logo (1).png">
         <ul>
             <!-- Enlaces a otras páginas del sitio web -->
-            <li><a href="index.php"><h3>Home</h3></a></li>
-            <li><a href="http://192.168.56.105:3000/"><h3>Grups</h3></a></li>
-            <li><a href="news.php"><h3 class="negrita">Notícies</h3></a></li>
-            <li><a href="./Foro/Blog.php"><h3>Forum</h3></a></li>
-            <li><a href="./formularis.php"><h3>Valoracións</h3></a></li>
-            <li><a href="perfil.php"><img id="conficon" src="images/user.png"></a></li>
+            <li><a href="./index.php">
+                    <h3>Home</h3>
+                </a></li>
+            <li><a href="./dev-teams.php">
+                    <h3>Grups</h3>
+                </a></li>
+            <li><a href="./news.php">
+                    <h3 class="negrita">Notícies</h3>
+                </a></li>
+            <li><a href="./Foro/Blog.php">
+                    <h3>Forum</h3>
+                </a></li>
+            <li><a href="./formularis.php">
+                    <h3>Valoracións</h3>
+                </a></li>
+            <li><a href="./perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>
     </menu>
     <main>
         <!-- Contenedor para mostrar las noticias dinámicamente -->
         <div id="noticias-container"></div>
-        <?php foreach ($noticias as $noticia): ?>
-        <div class="noticia">
-            <h1><?php echo htmlspecialchars($noticia['titulo']); ?></h1>
-            <p><?php echo htmlspecialchars($noticia['contenido']); ?></p>
-            <p>Fecha: <?php echo htmlspecialchars($noticia['fecha']); ?></p>
-        </div>
-    <?php endforeach; ?>
+        <?php foreach ($noticias as $noticia) : ?>
+            <div class="noticia">
+                <h1><?php echo htmlspecialchars($noticia['titulo']); ?></h1>
+                <p><?php echo htmlspecialchars($noticia['contenido']); ?></p>
+                <p>Fecha: <?php echo htmlspecialchars($noticia['fecha']); ?></p>
+            </div>
+        <?php endforeach; ?>
 
         <!-- Código JavaScript para cargar dinámicamente las noticias usando AJAX -->
     </main>
     <!-- Pie de página -->
     <footer>
-        <!-- Enlace al archivo de licencia y dirección de correo electrónico de contacto -->
         <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
-        <p>Contactens al correu <a>example@ginebro.cat</a></p>
+        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
     </footer>
 </body>
+
 </html>

@@ -13,4 +13,3 @@ if ($_POST["contrasena"] === $contrasena_permisiva) {
 } else {
     header("location: news_admin_login.html");
 }
-?>

@@ -33,4 +33,3 @@ if ($stmt = $conn->prepare($sql)) {
 
 // Cierra la conexión a la base de datos
 $conn->close();
-?>

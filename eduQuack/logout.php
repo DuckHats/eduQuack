@@ -20,4 +20,3 @@ if (isset($_POST['logout']) && $_POST['logout'] === 'true') {
     // header("location: error.php");
     exit;
 }
-?>
