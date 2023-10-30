@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Código | eduQuack</title>
+    <link rel="icon" href="images/ginebro-logo (1).png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header id="headerregister">
+        <h1>Verificar Código</h1>
+    </header>
+
+    <main class="registermain">
+        <form action="verificar_codigo.php" method="post">
+            <div class="form-group">
+                <label>Por favor, ingrese el código de 6 dígitos que recibió por correo electrónico:</label>
+                <input type="text" name="codigo" maxlength="6" required>
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($_GET['email']); ?>">
+            </div>
+            <input type="submit" name="submit" value="Verificar Código">
+        </form>
+    </main>
+</body>
+
+</html>
