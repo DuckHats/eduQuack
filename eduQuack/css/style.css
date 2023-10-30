@@ -221,7 +221,7 @@ input[type="submit"]:hover {
 
 .info>input {
     /* Estilos para campos de entrada dentro de un elemento con clase "info" */
-    width: 50vw !important;
+    width: 50vw;
     /* Ancho del campo de entrada */
 }
 
