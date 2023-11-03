@@ -31,14 +31,6 @@ CREATE TABLE blog (
   PRIMARY KEY (id)
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
--- CREATE TABLE codigos (
---   id INTEGER NOT NULL AUTO_INCREMENT, 
---   email VARCHAR(255) NOT NULL,
---   codigo VARCHAR(6),
---   creado_en TIMESTAMP NOT NULL DEFAULT current_timestamp(),
---   PRIMARY KEY (id)
--- ) ENGINE=innodb DEFAULT CHARSET=utf8;
-3
 CREATE TABLE noticia (
   id_noticia INTEGER NOT NULL AUTO_INCREMENT, 
   id_curso INTEGER NOT NULL,
@@ -48,5 +40,4 @@ CREATE TABLE noticia (
   PRIMARY KEY (id_noticia)
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
--- Inserta datos
 INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
