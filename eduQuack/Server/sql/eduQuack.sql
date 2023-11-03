@@ -47,6 +47,7 @@ CREATE TABLE noticia (
   contenido TEXT,
   fecha DATE NOT NULL,
   PRIMARY KEY (id_noticia)
+  ADD FOREIGN KEY (id_curso) REFERENCES cursos(id_curso),
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
 INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
