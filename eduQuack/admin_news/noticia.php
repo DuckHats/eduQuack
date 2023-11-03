@@ -5,7 +5,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-require_once('news_database.php');
+require_once('../config.php');
 
 // Obtén datos del formulario
 $titulo = $_POST['titulo'];
@@ -14,8 +14,8 @@ $fecha = $_POST['fecha'];
 $curso = $_POST['curso'];
 
 // Consulta preparada para insertar datos en la tabla noticias
-$sql = "INSERT INTO noticias (titulo, contenido, fecha, curso) VALUES (?, ?, ?, ?)";
-if ($stmt = $conn->prepare($sql)) {
+$sql = "INSERT INTO noticia (titulo, contenido, fecha, curso) VALUES (?, ?, ?, ?)";
+if ($stmt = $mysqli->prepare($sql)) {
     $stmt->bind_param("ssss", $titulo, $contenido, $fecha, $curso);
 
     // Ejecuta la consulta
@@ -28,8 +28,8 @@ if ($stmt = $conn->prepare($sql)) {
     // Cierra la declaración
     $stmt->close();
 } else {
-    echo "Error en la preparación de la consulta: " . $conn->error;
+    echo "Error en la preparación de la consulta: " . $mysqli->error;
 }
 
 // Cierra la conexión a la base de datos
-$conn->close();
+$mysqli->close();

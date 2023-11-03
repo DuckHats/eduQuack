@@ -38,7 +38,8 @@ CREATE TABLE blog (
 --   creado_en TIMESTAMP NOT NULL DEFAULT current_timestamp(),
 --   PRIMARY KEY (id)
 -- ) ENGINE=innodb DEFAULT CHARSET=utf8;
-3
+
+
 CREATE TABLE noticia (
   id_noticia INTEGER NOT NULL AUTO_INCREMENT, 
   id_curso INTEGER NOT NULL,
