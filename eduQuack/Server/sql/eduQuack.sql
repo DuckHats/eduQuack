@@ -31,6 +31,15 @@ CREATE TABLE blog (
   PRIMARY KEY (id)
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
+-- CREATE TABLE codigos (
+--   id INTEGER NOT NULL AUTO_INCREMENT, 
+--   email VARCHAR(255) NOT NULL,
+--   codigo VARCHAR(6),
+--   creado_en TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+--   PRIMARY KEY (id)
+-- ) ENGINE=innodb DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE noticia (
   id_noticia INTEGER NOT NULL AUTO_INCREMENT, 
   id_curso INTEGER NOT NULL,
@@ -41,3 +50,10 @@ CREATE TABLE noticia (
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
 INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
+INSERT INTO cursos (nombre_curso) VALUES ('1ESO');
+INSERT INTO cursos (nombre_curso) VALUES ('2ESO');
+INSERT INTO cursos (nombre_curso) VALUES ('3ESO');
+INSERT INTO cursos (nombre_curso) VALUES ('4ESO');
+INSERT INTO cursos (nombre_curso) VALUES ('CicloMedio');
+INSERT INTO cursos (nombre_curso) VALUES ('CicloSuperior');
+INSERT INTO cursos (nombre_curso) VALUES ('Bachillerato');
