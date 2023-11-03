@@ -1,15 +1,15 @@
 <?php
-require_once('blog_database.php');
+require_once('../config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $post_id = $_GET["id"];
 
-    $sql = "DELETE FROM posts WHERE id = $post_id";
+    $sql = "DELETE FROM blog WHERE id = $post_id";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         header("Location: Blog.php");
     } else {
-        echo "Error al eliminar el post: " . $conn->error;
+        echo "Error al eliminar el post: " . $mysqli->error;
     }
 } else {
     echo "Solicitud inválida";

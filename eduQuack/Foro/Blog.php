@@ -23,7 +23,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 
 
-require_once('blog_database.php');
+require_once('../config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = $_POST["titulo"];
@@ -37,17 +37,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $imagen_path = "";
     }
 
-    $sql = "INSERT INTO posts (title, content, image_path, author) VALUES ('$titulo', '$contenido', '$imagen_path', '$autor')";
+    $sql = "INSERT INTO blog (title, content, image_path, author) VALUES ('$titulo', '$contenido', '$imagen_path', '$autor')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         header("Location: Blog.php");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
 }
 
-$sql = "SELECT * FROM posts ORDER BY created_at DESC";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM blog ORDER BY created_at DESC";
+$result = $mysqli->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ $result = $conn->query($sql);
                 <input type="submit" value="Publicar">
             </form>
 
-            <!-- Mostrar los posts del blog -->
+            <!-- Mostrar los blog del blog -->
             <?php while ($row = $result->fetch_assoc()) : ?>
                 <div class="post">
                     <!-- Botón para eliminar el post (envía el ID del post a través de la URL) -->

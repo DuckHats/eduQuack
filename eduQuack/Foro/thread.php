@@ -1,11 +1,11 @@
 <?php
-require_once('blog_database.php');
+require_once('../config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $post_id = $_GET["id"];
 
-    $sql = "SELECT * FROM posts WHERE id = $post_id";
-    $result = $conn->query($sql);
+    $sql = "SELECT * FROM blog WHERE id = $post_id";
+    $result = $mysqli->query($sql);
 
     if ($result->num_rows > 0) {
         $post = $result->fetch_assoc();

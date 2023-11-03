@@ -6,10 +6,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
-require_once('news_database.php');
+require_once('config.php');
 
 // Crea la conexión
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 // Verifica la conexión
 if ($conn->connect_error) {
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obtener todas las noticias
-$sql = "SELECT titulo, contenido, fecha FROM noticias";
+$sql = "SELECT titulo, contenido, fecha FROM noticia";
 $result = $conn->query($sql);
 
 // Array para almacenar las noticias

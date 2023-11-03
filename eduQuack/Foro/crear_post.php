@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('blog_database.php');
+require_once('../config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = $_POST["titulo"];
@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insertar el post en la base de datos
-    $sql = "INSERT INTO posts (title, content, image_path, author) VALUES ('$titulo', '$contenido', '$imagen_path', '$autor')";
+    $sql = "INSERT INTO blog (title, content, image_path, author) VALUES ('$titulo', '$contenido', '$imagen_path', '$autor')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         header("Location: Blog.php");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
 }

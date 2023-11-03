@@ -96,9 +96,41 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </main>
 
     <footer>
-        <a href="../eduQuack/Legal/License.pdf">Tots els drets reservats a eduQuack</a>
+        <section>
+            <div>
+            <h5>Section</h5>
+            <ul>
+                <li ><a href="#" >Home</a></li>
+                <li ><a href="#" >Features</a></li>
+                <li ><a href="#" >Pricing</a></li>
+                <li ><a href="#" >FAQs</a></li>
+                <li ><a href="#" >About</a></li>
+            </ul>
+            </div>
+            <div>
+            <h5>Section</h5>
+            <ul>
+                <li ><a href="#" >Home</a></li>
+                <li ><a href="#" >Features</a></li>
+                <li ><a href="#" >Pricing</a></li>
+                <li ><a href="#" >FAQs</a></li>
+                <li ><a href="#" >About</a></li>
+            </ul>
+            </div>
+            <div>
+                <h4>Subscribe to our newsletter</h4>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <label>Email address</label>
+                <input  type="text" placeholder="Email address">
+                <button type="button">Subscribe</button>
+            </div>
+        </section>
+        <div>
+        <p>&copy; 2023 DuckHats. All rights reserved.</p>
         <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
+        </div>
     </footer>
+
 
 </body>
 

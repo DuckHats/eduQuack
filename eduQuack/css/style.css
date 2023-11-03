@@ -232,31 +232,25 @@ input[type="submit"]:hover {
 }
 
 footer {
-    /* Estilos para el pie de página */
-    position: fixed;
-    /* Posición absoluta */
-    background-color: white;
-    /* Color de fondo blanco */
-    color: white;
-    /* Color del texto blanco */
-    padding: 5px;
-    /* Relleno alrededor del pie de página */
-    padding-left: 5%;
-    /* Relleno izquierdo */
-    bottom: 0px;
-    /* Fijar al fondo de la ventana */
-    width: 94.5vw;
-    /* Ancho del pie de página */
-    border-top: #1E473A solid 1px;
-    /* Borde superior sólido */
+    padding: 2vh 2vw 2vh 2vw;
 }
 
-footer>p {
-    /* Estilos para párrafos dentro del pie de página */
-    display: inline-block;
-    /* Mostrar como bloque en línea */
-    margin-left: 50vw;
-    /* Margen izquierdo (50% del ancho de la ventana) */
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px;
+}
+
+footer > section {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px;
+
+}
+
+footer > section > div {
+    border: solid 1px;
+    width: 20vw;
 }
 
 /* Final configuració login.html ---------------------------------------------------------------- */
@@ -614,3 +608,4 @@ table {
 /* Final probes de la taula de formularis ---------------------------------------------------------- */
 
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
+
