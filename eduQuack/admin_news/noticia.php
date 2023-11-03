@@ -11,12 +11,12 @@ require_once('../config.php');
 $titulo = $_POST['titulo'];
 $contenido = $_POST['contenido'];
 $fecha = $_POST['fecha'];
-$curso_id = $_POST['curso']; // Cambia el nombre de la variable para evitar confusiones
+$curso = $_POST['curso'];
 
-// Consulta preparada para insertar datos en la tabla noticia
+// Consulta preparada para insertar datos en la tabla noticias
 $sql = "INSERT INTO noticia (titulo, contenido, fecha, id_curso) VALUES (?, ?, ?, ?)";
 if ($stmt = $mysqli->prepare($sql)) {
-    $stmt->bind_param("sssi", $titulo, $contenido, $fecha, $curso_id);
+    $stmt->bind_param("ssss", $titulo, $contenido, $fecha, $curso);
 
     // Ejecuta la consulta
     if ($stmt->execute()) {

@@ -42,12 +42,11 @@ CREATE TABLE blog (
 
 CREATE TABLE noticia (
   id_noticia INTEGER NOT NULL AUTO_INCREMENT, 
-  id_curso INTEGER NOT NULL,
+  id_curso VARCHAR(255) NOT NULL,
   titulo VARCHAR(255),
   contenido TEXT,
   fecha DATE NOT NULL,
   PRIMARY KEY (id_noticia)
-  ADD FOREIGN KEY (id_curso) REFERENCES cursos(id_curso),
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
 INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
