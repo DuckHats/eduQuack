@@ -51,3 +51,4 @@ CREATE TABLE noticia (
 
 -- Inserta datos
 INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
+INSERT INTO cursos (nombre_curso) VALUES ('1ESO', '2ESO', '3ESO', '4ESO', 'CicloMedio', 'CicloSuperior', 'Bachillerato');
