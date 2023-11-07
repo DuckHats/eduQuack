@@ -87,9 +87,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div id="popup">
                 <h1>Polítiques de privacitat i condicions d'ús</h1>
                 <p>Accepto les politiques de privacitat i em comprometo a seguir les normes d'us: </p>
-                <a href="./view/Política_us.pdf">Politiques d'us</a>
-                <a href="./view/Política_de_privacitat.pdf">Politiques de Privacitat</a>
-                <button id="accept-button">Aceptar</button>
+                <ul>
+                <li><a href="./view/Política_us.pdf">Politiques d'us</a></li>
+                <li><a href="./view/Política_de_privacitat.pdf">Politiques de Privacitat</a></li>
+                <li><button id="accept-button">Aceptar</button></li>
+                </ul>
             </div>
         </div>
         <!-- Pop up js -->
@@ -98,7 +100,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <footer>
         <section>
             <div>
-            <h5>Section</h5>
+            <h2>Links</h2>
+            <ul>
+                <li ><a href="./index.php" >Home</a></li>
+                <li ><a href="./dev-teams.php" >Grups</a></li>
+                <li ><a href="./news.php" >Notícies</a></li>
+                <li ><a href="./Foro/Blog.php" >Forum</a></li>
+                <li ><a href="./formularis.php" >Valoracións</a></li>
+            </ul>
+            </div>
+            <div>
+            <h2>Section</h2>
             <ul>
                 <li ><a href="#" >Home</a></li>
                 <li ><a href="#" >Features</a></li>
@@ -107,31 +119,24 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li ><a href="#" >About</a></li>
             </ul>
             </div>
-            <div>
-            <h5>Section</h5>
-            <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
-            </ul>
-            </div>
-            <div>
-                <h4>Subscribe to our newsletter</h4>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <label>Email address</label>
+            <div id="newsletter">
+                <h2>Subscriute al nostre newsletter</h2>
+                <h4>Tota la informació sobre millores i actualitzacions del nostre sistema.</h4>
                 <input  type="text" placeholder="Email address">
-                <button type="button">Subscribe</button>
+                <button type="submit">Subscribe</button>
+                <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
             </div>
         </section>
-        <div>
+        <div id="copyright">
         <p>&copy; 2023 DuckHats. All rights reserved.</p>
-        <p>Contactens per correu a: <a href="mailto:duck4hats@gmail.com">duck4hats@gmail.com</a></p>
+        <ul>
+            <li><a href="https://twitter.com/Hats4Ducks"><img src="./images/twitter (1).png" alt="Twitter"></a></li>
+            <li><a href=""><img src="./images/instagram (1).png" alt="Instagram"></a></li>
+            <li><a href="https://duckhats.github.io/"><img src="./images/github (1).png" alt="Github"></a></li>
+        </ul>
         </div>
     </footer>
 
 
 </body>
-
 </html>

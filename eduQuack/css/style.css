@@ -1,6 +1,11 @@
 /* Css general per a totes les pagines html del projecte Github */
 /* Estilos generales para todas las páginas HTML del proyecto GitHub */
 
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    font-family: 'Ubuntu', sans-serif;
+}
+
 /* Css pels errors */
 /* Estilos para mensajes de error */
 .mensaje-error {
@@ -19,6 +24,11 @@
 body {
     margin: 0;
     /* Elimina el margen predeterminado del cuerpo del documento */
+}
+
+main {
+    height: 100%;
+    margin-bottom: 5vh;
 }
 
 /* Configuració dels tituls */
@@ -66,6 +76,7 @@ a {
 
 a:hover {
     cursor: pointer;
+    color: #3f9177;
     /* Cambia el cursor del mouse a una mano cuando se pasa sobre los enlaces */
 }
 
@@ -233,26 +244,96 @@ input[type="submit"]:hover {
 
 footer {
     padding: 2vh 2vw 2vh 2vw;
+    background-color: #1a3c32;
+}
+
+footer p{
+    color: white;
 }
 
 footer > div {
     display: flex;
     justify-content: space-between;
-    border: solid 1px;
+    /* border: solid 1px; */
 }
 
 footer > section {
     display: flex;
-    justify-content: space-between;
-    border: solid 1px;
+    justify-content: space-evenly;
+    /* border: solid 1px; */
+    border-bottom: 1px solid;
 
 }
 
 footer > section > div {
-    border: solid 1px;
+    /* border: solid 1px; */
     width: 20vw;
 }
 
+footer > section > div > ul > li {
+    padding-bottom: 2vh;
+    color: #9AC135;
+}
+
+footer > section > div > ul {
+    margin-left: -3vw;
+}
+
+#newsletter{
+    width: 30vw;
+    padding-left: 15vw;
+}
+
+#newsletter > input{
+    height: 5vh;
+    margin-left: 0.5vw;
+    border: none;
+    color: white;
+    border-bottom: solid 1px black;
+    background-color: inherit;
+}
+
+#newsletter > input:focus{
+    border: none;
+}
+
+#newsletter > button{
+    border-radius: 5px;
+    height: 7vh;
+    width: 10vw;
+    border: none;
+    background-color: #9AC135;
+    box-shadow: #153028 3px 3px;
+
+}
+
+#newsletter > button:hover{
+    background-color: #3f9177;
+    cursor: pointer;
+}
+
+#newsletter > p{
+    font-size: small;
+}
+
+#copyright{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#copyright > ul > li {
+    display: inline-flex;
+}
+
+#copyright > ul > li > a > img {
+    width: 25px;
+    height: 25px;
+    margin-left: 1vw;
+}
+
+#copyright > ul > li > a > img:hover {
+    cursor: pointer;
+}
 /* Final configuració login.html ---------------------------------------------------------------- */
 
 /* Configuració css per a la pestanya register.html */
@@ -356,13 +437,13 @@ menu>ul>li {
     /* Margen izquierdo (5% del ancho de la ventana) */
 }
 
-menu>ul>li>a {
+menu > ul > li > a {
     /* Estilos para enlaces dentro de elementos de lista */
     color: #1E473A;
     /* Color del texto */
 }
 
-menu>ul>li>a>h3 {
+menu > ul > li > a > h3 {
     /* Estilos para encabezados h3 dentro de enlaces */
     margin-top: -10vh;
     /* Margen superior negativo */
@@ -370,13 +451,13 @@ menu>ul>li>a>h3 {
     /* Relleno superior negativo (esto no tiene efecto) */
 }
 
-menu>ul>li>a>h3:hover {
+menu > ul > li > a > h3:hover {
     /* Estilos para encabezados h3 dentro de enlaces cuando se pasa el mouse sobre ellos */
     color: #3f9177;
     /* Cambia el color del texto al pasar el mouse */
 }
 
-menu>img {
+menu > img {
     /* Estilos para imágenes dentro del menú */
     width: 60px;
     /* Ancho de la imagen */
@@ -404,92 +485,36 @@ menu>img {
 
 /* Final configuració de la pestanya index.html ---------------------------------------------------- */
 
-/* Inici configuració de la pestanya config.html */
-/* Estilos CSS para la página config.html */
+/* Inici configuració de la pestanya perfi.php */
 
-#sidebarconf {
-    /* Estilos para un elemento con ID "sidebarconf" */
-    width: 25vw;
-    /* Ancho del elemento */
-    height: 70vh;
-    /* Altura del elemento */
-    display: flex;
-    /* Usa flexbox para organizar los elementos */
-    float: left;
-    /* Flotar a la izquierda */
+#avatar {
+    width: 20vw; /* Establece el ancho del elemento con el id "avatar" al 20% del ancho de la ventana */
+    height: 40vh; /* Establece la altura del elemento con el id "avatar" al 40% de la altura de la ventana */
 }
 
-#sidebarconf>ul {
-    /* Estilos para una lista no ordenada dentro de "sidebarconf" */
-    width: 17vw;
-    /* Ancho de la lista no ordenada */
-    margin-left: 2vw;
-    /* Margen izquierdo (2% del ancho de la ventana) */
-    text-align: center;
-    /* Alineación del texto al centro */
-    border-right: #1E473A solid 2px;
-    /* Borde derecho sólido de 2px */
+#qr {
+    width: 20vw; /* Establece el ancho del elemento con el id "qr" al 20% del ancho de la ventana */
+    height: 40vh; /* Establece la altura del elemento con el id "qr" al 40% de la altura de la ventana */
 }
 
-#sidebarconf>ul>li {
-    /* Estilos para elementos de lista dentro de la lista no ordenada */
-    padding: 25% 10%;
-    /* Relleno arriba y abajo, margen izquierdo y derecho */
-    border-bottom: #1E473A solid 1px;
-    /* Borde inferior sólido de 1px */
-    border-top: #1E473A solid 1px;
-    /* Borde superior sólido de 1px */
-    width: 15vw;
-    /* Ancho del elemento de la lista */
-    margin-left: -2.3vw;
-    /* Margen izquierdo negativo (ajuste visual) */
-    font-size: large;
-    /* Tamaño de fuente grande */
+#perfil {
+    display: flex; /* Utiliza flexbox para controlar el diseño de los elementos dentro del elemento con el id "perfil" */
+    justify-content: center; /* Centra horizontalmente los elementos hijos dentro de "perfil" */
 }
 
-#sidebarconf>ul>li>a {
-    /* Estilos para enlaces dentro de elementos de lista */
-    color: #1E473A;
-    /* Color del texto */
+#perfil input[type="submit"] {
+    width: 15vw; /* Establece el ancho de los botones de tipo "submit" dentro de "perfil" al 15% del ancho de la ventana */
+    margin: 0px; /* Elimina el margen en todas las direcciones */
+    margin-top: 5vh; /* Establece un margen superior del 5% de la altura de la ventana */
 }
 
-#sidebarconf>ul>li>a:hover {
-    /* Estilos para enlaces dentro de elementos de lista cuando se pasa el mouse sobre ellos */
-    color: #3f9177;
-    /* Cambia el color del texto al pasar el mouse */
+#perfil input {
+    width: 25vw; /* Establece el ancho de los elementos <input> dentro de "perfil" al 25% del ancho de la ventana */
+    margin-right: 20vw; /* Establece un margen derecho del 20% del ancho de la ventana para los elementos <input> dentro de "perfil" */
 }
 
-#infoconf {
-    /* Estilos para un elemento con ID "infoconf" */
-    display: flex;
-    float: left;
-    width: 70vw !important;
-    /* Ancho del elemento */
-    height: 70vh;
-    /* Altura del elemento */
-    border: solid 1px;
-}
-
-#infoconf,
-input {
-    /* Estilos para elementos con ID "infoconfig" y campos de entrada */
-    width: 15vw;
-    /* Ancho de los elementos */
-}
-
-#infoconf,
-input[type="submit"] {
-    /* Estilos para elementos con ID "infoconf" y botones de envío */
-    width: 15vw;
-    /* Ancho de los elementos */
-}
-
-#infoconf img {
-    /* Estilos para imágenes dentro de "infoconf" */
-    width: 100px;
-    /* Ancho de la imagen */
-    height: 100px;
-    /* Altura de la imagen */
+#popup-logout-content {
+    background-color: #153028; /* Establece el color de fondo del elemento con el id "popup-logout-content" a un tono de verde oscuro (#153028) */
 }
 
 /* Css del pop up de login i politiques */
@@ -518,13 +543,14 @@ input[type="submit"] {
     /* Centrar horizontalmente */
     align-items: center;
     /* Centrar verticalmente */
+
 }
 
 /* Estilo para el contenido del pop-up */
-#popup {
+#popup-container > div {
     background: #fff;
     /* Fondo blanco */
-    padding: 20px;
+    padding: 2vw;
     /* Relleno de 20 píxeles */
     border: 1px solid #ccc;
     /* Borde sólido con color gris */
@@ -532,20 +558,31 @@ input[type="submit"] {
     /* Sombra ligera */
     text-align: center;
     /* Texto centrado */
+    border-radius: 10px;
+}
+
+#popup-container > div > ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7vh;
 }
 
 /* Estilo para el botón de aceptar */
-#accept-button {
-    background: #007BFF;
-    /* Fondo azul */
-    color: #fff;
-    /* Texto blanco */
+#popup-container > div > ul > li > button {
+    background-color: #9AC135;
+    /* Fondo verde */
     border: none;
     /* Sin borde */
     padding: 10px 20px;
     /* Relleno del botón */
     cursor: pointer;
     /* Cambio de cursor al pasar el mouse */
+    border-radius: 5px;
+    margin-top: -2.5vh;
+}
+
+#popup-container > div > ul > li > button:hover {
+    background-color: #3f9177;
 }
 
 /* Configuracio pàgina formularis */
