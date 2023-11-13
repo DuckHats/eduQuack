@@ -1,116 +1,88 @@
--- DROP DATABASE IF EXISTS eduQuack;
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Versión del servidor:         8.0.30 - MySQL Community Server - GPL
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             12.1.0.6537
+-- --------------------------------------------------------
 
-CREATE DATABASE IF NOT EXISTS eduQuack;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-USE eduQuack;
+-- Volcando datos para la tabla eduquack.blog: ~1 rows (aproximadamente)
+REPLACE INTO `blog` (`id`, `title`, `content`, `image_path`, `created_at`, `author`) VALUES
+	(11, 'Quack', 'Quack, Quack, Quack, Quack', 'uploads/images/OIG.jpg', '2023-11-08 08:25:58', 'root');
 
-CREATE TABLE IF NOT EXISTS usuarios (
-  id INTEGER NOT NULL AUTO_INCREMENT, 
-  email VARCHAR(255) NOT NULL,
-  full_name VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL, 
-  username VARCHAR(80) NOT NULL, 
-  curso VARCHAR(80) NOT NULL,
-  edad INT NOT NULL, 
-  PRIMARY KEY (id)
-) ENGINE=innodb DEFAULT CHARSET=utf8;
+-- Volcando datos para la tabla eduquack.cursos: ~7 rows (aproximadamente)
+REPLACE INTO `cursos` (`id_curso`, `nombre_curso`) VALUES
+	(1, '1ESO'),
+	(2, '2ESO'),
+	(3, '3ESO'),
+	(4, '4ESO'),
+	(5, 'CicloMedio'),
+	(6, 'CicloSuperior'),
+	(7, 'Bachillerato');
 
-CREATE TABLE IF NOT EXISTS cursos(
-  id_curso INTEGER NOT NULL AUTO_INCREMENT, 
-  nombre_curso VARCHAR(80) NOT NULL,
-  PRIMARY KEY (id_curso)
-) ENGINE=innodb DEFAULT CHARSET=utf8;
+-- Volcando datos para la tabla eduquack.faq: ~0 rows (aproximadamente)
+REPLACE INTO `faq` (`id`, `titulo`, `contenido`, `respuesta`, `fecha_creacion`, `fecha_modificacion`) VALUES
+	(1, 'caca?', '', NULL, '2023-11-07 13:50:56', NULL);
 
-CREATE TABLE IF NOT EXISTS blog (
-  id INTEGER NOT NULL AUTO_INCREMENT, 
-  title VARCHAR(255) NOT NULL,
-  content TEXT,
-  image_path VARCHAR(255),
-  created_at TIMESTAMP NOT NULL DEFAULT current_timestamp(),
-  author VARCHAR(255) NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=innodb DEFAULT CHARSET=utf8;
+-- Volcando datos para la tabla eduquack.noticia: ~0 rows (aproximadamente)
 
--- CREATE TABLE IF NOT EXISTS codigos (
---   id INTEGER NOT NULL AUTO_INCREMENT, 
---   email VARCHAR(255) NOT NULL,
---   codigo VARCHAR(6),
---   creado_en TIMESTAMP NOT NULL DEFAULT current_timestamp(),
---   PRIMARY KEY (id)
--- ) ENGINE=innodb DEFAULT CHARSET=utf8;
+-- Volcando datos para la tabla eduquack.usuarios: ~1 rows (aproximadamente)
+REPLACE INTO `usuarios` (`id`, `email`, `full_name`, `password`, `username`, `curso`, `edad`) VALUES
+	(2, 'root@ginebro.cat', 'root', '$2y$10$c7MZpfXgazmkQxB3c.TbHuR5y6OHuEU1S/3nW7erQQ36VaB4ODEsa', 'root', 'CicloSuperior', 2000);
 
+-- Volcando datos para la tabla eduquack.valoracio: ~40 rows (aproximadamente)
+REPLACE INTO `valoracio` (`id`, `titol`, `data_publicacio`, `completat`, `enllac_formulari`) VALUES
+	(1, 'Maria Expósito', '2023-10-13', NULL, 'https://forms.gle/PZtutZYFvaGbdPSz6'),
+	(2, 'Enric Matamala', '2023-10-13', NULL, 'https://forms.gle/LsNHNSnfnRBEVMde6'),
+	(3, 'Berta Tomàs', '2023-10-13', NULL, 'https://forms.gle/DXp2yXpvxyJc7vmv9'),
+	(4, 'Mònica Llobera', '2023-10-13', NULL, 'https://forms.gle/C3hjq9jynPGYbh6u9'),
+	(5, 'Carles Blasco', '2023-10-13', NULL, 'https://forms.gle/nfzc7sWNSMFSFXJ76'),
+	(6, 'Pilar Castellano', '2023-10-13', NULL, 'https://forms.gle/afBJnSXRyoakLajF7'),
+	(7, 'Carles Lorente', '2023-10-13', NULL, 'https://forms.gle/64vamjYb6eCEiJUq9'),
+	(8, 'Gemma Pardell', '2023-10-13', NULL, 'https://forms.gle/vPqDLj1KuCDTyQFxz8'),
+	(9, 'Cristina Vallcorba', '2023-10-13', NULL, 'https://forms.gle/M8NiiZRXQa3zsyoL9'),
+	(10, 'Diego de la Torre', '2023-10-13', NULL, 'https://forms.gle/VqPP3XD8kTphSMpu5'),
+	(11, 'Gemma Querol', '2023-10-13', NULL, 'https://forms.gle/NrjMsPG6pBZpt9CN9'),
+	(12, 'Cristina Royo', '2023-10-13', NULL, 'https://forms.gle/jp9E9Cc7oFXenj6y6'),
+	(13, 'Judit Molins', '2023-10-13', NULL, 'https://forms.gle/VpXz8BVKtpAyvnV28'),
+	(14, 'Txu Morillas', '2023-10-13', NULL, 'https://forms.gle/7YF6GcgkKnmXgyuW7'),
+	(15, 'Jose Cendón', '2023-10-13', NULL, 'https://forms.gle/73GWQUKXnJmhWBCLA'),
+	(16, 'Dolors Morcillo', '2023-10-13', NULL, 'https://forms.gle/YaNAZD8AybbNVhbPA'),
+	(17, 'Manel Lladó', '2023-10-13', NULL, 'https://forms.gle/RpoEtuk8WxZeWdHUA'),
+	(18, 'Alicia Molina', '2023-10-13', NULL, 'https://forms.gle/kUgeJkpW2MTifiAPA'),
+	(19, 'Patxi Perales', '2023-10-13', NULL, 'https://forms.gle/hFfotmLZsbCntPTK8'),
+	(20, 'Salvador Quadrades', '2023-10-13', NULL, 'https://forms.gle/Uihs26yUAzipKLFH7'),
+	(21, 'Pilar Ors', '2023-10-13', NULL, 'https://forms.gle/VQgiQxTbEP8Vc1Do7'),
+	(22, 'Isabel Ligero', '2023-10-13', NULL, 'https://forms.gle/7gtBFcYSzQucHGdw7'),
+	(23, 'Albert Macià', '2023-10-13', NULL, 'https://forms.gle/LCg4y2nZZJu2bcpb7'),
+	(24, 'Èrica Dotor', '2023-10-13', NULL, 'https://forms.gle/wQTFWYCALPHP28Tr8'),
+	(25, 'Pau Farell', '2023-10-13', NULL, 'https://forms.gle/i9duDqCSpY54o3YEA'),
+	(26, 'Núria Sellés', '2023-10-13', NULL, 'https://forms.gle/mmm9Q5FoWumGGUan8'),
+	(27, 'Eduard Gutiérrez', '2023-10-13', NULL, 'https://forms.gle/neVLcHTBqJWn2LTdA'),
+	(28, 'Xavi Sala', '2023-10-13', NULL, 'https://forms.gle/H1ouaJTSEFTcV8478'),
+	(29, 'Marc Lurbe', '2023-10-13', NULL, 'https://forms.gle/aqXCaPH6oaLthUVu8'),
+	(30, 'Eugeni Soy', '2023-10-13', NULL, 'https://forms.gle/VMqoNoEz3tVd5YEH6'),
+	(31, 'Àlex Funes', '2023-10-13', NULL, 'https://forms.gle/kTqNfj6raHHbPHU48'),
+	(32, 'Ivan Nieto', '2023-10-13', NULL, 'https://forms.gle/8neo8GmiWrzRpdM3A'),
+	(33, 'Vladimir Bellavista', '2023-10-13', NULL, 'https://forms.gle/EptVu1rq9jQEmxYcA'),
+	(34, 'Joan Pardo', '2023-10-13', NULL, 'https://forms.gle/ashwqwUksXoXb7sS9'),
+	(35, 'Virgínia Carmona', '2023-10-13', NULL, 'https://forms.gle/7Z1erUBcxdVSAdEq5'),
+	(36, 'Carles Margenat', '2023-10-13', NULL, 'https://forms.gle/68biEKA21fuPcErX6'),
+	(37, 'Maria Ramírez', '2023-10-13', NULL, 'https://forms.gle/URbMpY3Ej944NYuFA'),
+	(38, 'Angela Palacios', '2023-10-13', NULL, 'https://forms.gle/A81iAyn9jneYFK5V7'),
+	(39, 'Imanol Valle', '2023-10-13', NULL, 'https://forms.gle/RZSV6uyzinTwz8sn9'),
+	(40, 'Sofia Torrado', '2023-10-13', NULL, 'https://forms.gle/Fx8or9LzwaeB4oZr5');
 
-CREATE TABLE IF NOT EXISTS noticia (
-  id_noticia INTEGER NOT NULL AUTO_INCREMENT, 
-  id_curso INTEGER NOT NULL,
-  titulo VARCHAR(255),
-  contenido TEXT,
-  fecha DATE NOT NULL,
-  PRIMARY KEY (id_noticia)
-) ENGINE=innodb DEFAULT CHARSET=utf8;
-
--- Crear la tabla "preguntas"
-CREATE TABLE IF NOT EXISTS faq (
-    id INT AUTO_INCREMENT PRIMARY KEY, -- Campo de identificación único autoincremental
-    titulo VARCHAR(255) NOT NULL, -- Título de la pregunta, no puede ser nulo
-    contenido TEXT NOT NULL, -- Contenido de la pregunta, no puede ser nulo
-    respuesta TEXT, -- Respuesta a la pregunta
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Fecha de creación con valor predeterminado
-    fecha_modificacion TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Fecha de modificación con valor predeterminado en actualización
-);
-
-
--- Crear la tabla "valoracio"
-CREATE TABLE IF NOT EXISTS valoracio (
-    id INT AUTO_INCREMENT PRIMARY KEY, -- Campo de identificación único autoincremental
-    titol VARCHAR(255) NOT NULL, -- Título de la pregunta, no puede ser nulo
-    data_publicacio DATE NOT NULL, -- Fecha de creación con valor predeterminado
-    completat BOOLEAN, -- Valoracion completada si o no
-    enllac_formulari VARCHAR(255) NOT NULL
-    );
-
--- Inserta datos
--- INSERT INTO usuarios (email, full_name, password, username, curso, edad) VALUES ('root@ginebro.cat', 'root', '1234', 'root', 'root', 0);
--- INSERT INTO cursos (nombre_curso) VALUES ('1ESO', '2ESO', '3ESO', '4ESO', 'CicloMedio', 'CicloSuperior', 'Bachillerato');
-INSERT INTO valoracio (titol, data_publicacio, completat, enllac_formulari)
-VALUES
-('Maria Expósito', '2023-10-13', NULL, 'https://forms.gle/PZtutZYFvaGbdPSz6'),
-('Enric Matamala', '2023-10-13', NULL, 'https://forms.gle/LsNHNSnfnRBEVMde6'),
-('Berta Tomàs', '2023-10-13', NULL, 'https://forms.gle/DXp2yXpvxyJc7vmv9'),
-('Mònica Llobera', '2023-10-13', NULL, 'https://forms.gle/C3hjq9jynPGYbh6u9'),
-('Carles Blasco', '2023-10-13', NULL, 'https://forms.gle/nfzc7sWNSMFSFXJ76'),
-('Pilar Castellano', '2023-10-13', NULL, 'https://forms.gle/afBJnSXRyoakLajF7'),
-('Carles Lorente', '2023-10-13', NULL, 'https://forms.gle/64vamjYb6eCEiJUq9'),
-('Gemma Pardell', '2023-10-13', NULL, 'https://forms.gle/vPqDLj1KuCDTyQFxz8'),
-('Cristina Vallcorba', '2023-10-13', NULL, 'https://forms.gle/M8NiiZRXQa3zsyoL9'),
-('Diego de la Torre', '2023-10-13', NULL, 'https://forms.gle/VqPP3XD8kTphSMpu5'),
-('Gemma Querol', '2023-10-13', NULL, 'https://forms.gle/NrjMsPG6pBZpt9CN9'),
-('Cristina Royo', '2023-10-13', NULL, 'https://forms.gle/jp9E9Cc7oFXenj6y6'),
-('Judit Molins', '2023-10-13', NULL, 'https://forms.gle/VpXz8BVKtpAyvnV28'),
-('Txu Morillas', '2023-10-13', NULL, 'https://forms.gle/7YF6GcgkKnmXgyuW7'),
-('Jose Cendón', '2023-10-13', NULL, 'https://forms.gle/73GWQUKXnJmhWBCLA'),
-('Dolors Morcillo', '2023-10-13', NULL, 'https://forms.gle/YaNAZD8AybbNVhbPA'),
-('Manel Lladó', '2023-10-13', NULL, 'https://forms.gle/RpoEtuk8WxZeWdHUA'),
-('Alicia Molina', '2023-10-13', NULL, 'https://forms.gle/kUgeJkpW2MTifiAPA'),
-('Patxi Perales', '2023-10-13', NULL, 'https://forms.gle/hFfotmLZsbCntPTK8'),
-('Salvador Quadrades', '2023-10-13', NULL, 'https://forms.gle/Uihs26yUAzipKLFH7'),
-('Pilar Ors', '2023-10-13', NULL, 'https://forms.gle/VQgiQxTbEP8Vc1Do7'),
-('Isabel Ligero', '2023-10-13', NULL, 'https://forms.gle/7gtBFcYSzQucHGdw7'),
-('Albert Macià', '2023-10-13', NULL, 'https://forms.gle/LCg4y2nZZJu2bcpb7'),
-('Èrica Dotor', '2023-10-13', NULL, 'https://forms.gle/wQTFWYCALPHP28Tr8'),
-('Pau Farell', '2023-10-13', NULL, 'https://forms.gle/i9duDqCSpY54o3YEA'),
-('Núria Sellés', '2023-10-13', NULL, 'https://forms.gle/mmm9Q5FoWumGGUan8'),
-('Eduard Gutiérrez', '2023-10-13', NULL, 'https://forms.gle/neVLcHTBqJWn2LTdA'),
-('Xavi Sala', '2023-10-13', NULL, 'https://forms.gle/H1ouaJTSEFTcV8478'),
-('Marc Lurbe', '2023-10-13', NULL, 'https://forms.gle/aqXCaPH6oaLthUVu8'),
-('Eugeni Soy', '2023-10-13', NULL, 'https://forms.gle/VMqoNoEz3tVd5YEH6'),
-('Àlex Funes', '2023-10-13', NULL, 'https://forms.gle/kTqNfj6raHHbPHU48'),
-('Ivan Nieto', '2023-10-13', NULL, 'https://forms.gle/8neo8GmiWrzRpdM3A'),
-('Vladimir Bellavista', '2023-10-13', NULL, 'https://forms.gle/EptVu1rq9jQEmxYcA'),
-('Joan Pardo', '2023-10-13', NULL, 'https://forms.gle/ashwqwUksXoXb7sS9'),
-('Virgínia Carmona', '2023-10-13', NULL, 'https://forms.gle/7Z1erUBcxdVSAdEq5'),
-('Carles Margenat', '2023-10-13', NULL, 'https://forms.gle/68biEKA21fuPcErX6'),
-('Maria Ramírez', '2023-10-13', NULL, 'https://forms.gle/URbMpY3Ej944NYuFA'),
-('Angela Palacios', '2023-10-13', NULL, 'https://forms.gle/A81iAyn9jneYFK5V7'),
-('Imanol Valle', '2023-10-13', NULL, 'https://forms.gle/RZSV6uyzinTwz8sn9'),
-('Sofia Torrado', '2023-10-13', NULL, 'https://forms.gle/Fx8or9LzwaeB4oZr5');
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
