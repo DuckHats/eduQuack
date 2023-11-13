@@ -29,6 +29,9 @@ body {
 main {
     height: 100%;
     margin-bottom: 5vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 /* Configuració dels tituls */
@@ -242,98 +245,116 @@ input[type="submit"]:hover {
     /* Ancho del botón de envío */
 }
 
+/* Estilo para el elemento 'footer' */
 footer {
-    padding: 2vh 2vw 2vh 2vw;
-    background-color: #1a3c32;
+    padding: 2vh 2vw 2vh 2vw; /* Padding con valores en unidades de altura y ancho de la ventana */
+    background-color: #1a3c32; /* Color de fondo */
 }
 
+/* Estilo para los elementos 'p' dentro de 'footer' */
 footer p{
-    color: white;
+    color: white; /* Color del texto */
 }
 
+/* Estilo para los elementos 'div' directamente dentro de 'footer' */
 footer > div {
-    display: flex;
-    justify-content: space-between;
-    /* border: solid 1px; */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribución del espacio entre elementos flexibles */
+    /* border: solid 1px; */ /* Borde sólido (comentado) */
 }
 
+/* Estilo para los elementos 'section' directamente dentro de 'footer' */
 footer > section {
-    display: flex;
-    justify-content: space-evenly;
-    /* border: solid 1px; */
-    border-bottom: 1px solid;
-
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-evenly; /* Distribución del espacio entre elementos flexibles */
+    /* border: solid 1px; */ /* Borde sólido (comentado) */
+    border-bottom: 1px solid; /* Borde inferior sólido de 1 píxel */
 }
 
+/* Estilo para los elementos 'div' directamente dentro de 'section' dentro de 'footer' */
 footer > section > div {
-    /* border: solid 1px; */
-    width: 20vw;
+    /* border: solid 1px; */ /* Borde sólido (comentado) */
+    width: 20vw; /* Ancho con unidades de ancho de ventana */
 }
 
+/* Estilo para los elementos 'li' dentro de 'ul' dentro de 'div' dentro de 'section' dentro de 'footer' */
 footer > section > div > ul > li {
-    padding-bottom: 2vh;
-    color: #9AC135;
+    padding-bottom: 2vh; /* Padding inferior con unidades de altura de ventana */
+    color: #9AC135; /* Color del texto */
 }
 
+/* Estilo para los elementos 'ul' dentro de 'div' dentro de 'section' dentro de 'footer' */
 footer > section > div > ul {
-    margin-left: -3vw;
+    margin-left: -3vw; /* Margen izquierdo negativo con unidades de ancho de ventana */
 }
 
+/* Estilo para el elemento con el id 'newsletter' */
 #newsletter{
-    width: 30vw;
-    padding-left: 15vw;
+    width:40vw; /* Ancho con unidades de ancho de ventana */
+    padding-left: 15vw; /* Padding izquierdo con unidades de ancho de ventana */
+    text-align: center;
 }
 
+/* Estilo para los elementos 'input' dentro de '#newsletter' */
 #newsletter > input{
-    height: 5vh;
-    margin-left: 0.5vw;
-    border: none;
-    color: white;
-    border-bottom: solid 1px black;
-    background-color: inherit;
+    height: 5vh; /* Altura con unidades de altura de ventana */
+    margin-left: 0.5vw; /* Margen izquierdo con unidades de ancho de ventana */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    border-bottom: solid 1px black; /* Borde inferior sólido de 1 píxel en color negro */
+    background-color: inherit; /* Color de fondo heredado */
+    width: 20vw; /* Ancho con unidades de ancho de ventana */
 }
 
+/* Estilo para los elementos 'input' dentro de '#newsletter' cuando están enfocados */
 #newsletter > input:focus{
-    border: none;
+    border: none; /* Sin borde cuando el elemento está enfocado */
 }
 
+/* Estilo para el elemento 'button' dentro de '#newsletter' */
 #newsletter > button{
-    border-radius: 5px;
-    height: 7vh;
-    width: 10vw;
-    border: none;
-    background-color: #9AC135;
-    box-shadow: #153028 3px 3px;
-
+    border-radius: 5px; /* Radio de borde de 5 píxeles */
+    height: 7vh; /* Altura con unidades de altura de ventana */
+    width: 10vw; /* Ancho con unidades de ancho de ventana */
+    border: none; /* Sin borde */
+    background-color: #9AC135; /* Color de fondo */
+    box-shadow: #153028 3px 3px; /* Sombra con desplazamiento en color especificado */
 }
 
+/* Estilo para el elemento 'button' dentro de '#newsletter' cuando se encuentra en estado de 'hover' */
 #newsletter > button:hover{
-    background-color: #3f9177;
-    cursor: pointer;
+    background-color: #3f9177; /* Cambio de color de fondo al pasar el cursor sobre el botón */
+    cursor: pointer; /* Cambio de cursor al puntero */
 }
 
+/* Estilo para el elemento 'p' dentro de '#newsletter' */
 #newsletter > p{
-    font-size: small;
+    font-size: small; /* Tamaño de fuente pequeño */
 }
 
+/* Estilo para el elemento con el id 'copyright' */
 #copyright{
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5vw; /* Padding izquierdo con unidades de ancho de ventana */
+    padding-right: 5vw; /* Padding derecho con unidades de ancho de ventana */
 }
 
+/* Estilo para los elementos 'li' dentro de 'ul' dentro de '#copyright' */
 #copyright > ul > li {
-    display: inline-flex;
+    display: inline-flex; /* Mostrar como flexbox en línea */
 }
 
+/* Estilo para los elementos 'img' dentro de 'a' dentro de 'li' dentro de 'ul' dentro de '#copyright' */
 #copyright > ul > li > a > img {
-    width: 25px;
-    height: 25px;
-    margin-left: 1vw;
+    width: 25px; /* Ancho de 25 píxeles */
+    height: 25px; /* Altura de 25 píxeles */
+    margin-left: 1vw; /* Margen izquierdo con unidades de ancho de ventana */
 }
 
+/* Estilo para los elementos 'img' dentro de 'a' dentro de 'li' dentro de 'ul' dentro de '#copyright' cuando se encuentran en estado de 'hover' */
 #copyright > ul > li > a > img:hover {
-    cursor: pointer;
+    cursor: pointer; /* Cambio de cursor al puntero al pasar el cursor sobre la imagen */
 }
+
 /* Final configuració login.html ---------------------------------------------------------------- */
 
 /* Configuració css per a la pestanya register.html */
@@ -488,7 +509,7 @@ menu > img {
 /* Inici configuració de la pestanya perfi.php */
 
 #avatar {
-    width: 20vw; /* Establece el ancho del elemento con el id "avatar" al 20% del ancho de la ventana */
+    width: 19vw; /* Establece el ancho del elemento con el id "avatar" al 20% del ancho de la ventana */
     height: 40vh; /* Establece la altura del elemento con el id "avatar" al 40% de la altura de la ventana */
 }
 
@@ -642,7 +663,118 @@ table {
     /* Margen superior de 20 píxeles */
 }
 
+#formularis{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
 /* Final probes de la taula de formularis ---------------------------------------------------------- */
 
 /* Final configuració de la pestanya config.html --------------------------------------------------- */
 
+
+
+/* Estilo para elementos con la clase 'blog_post' */
+.blog_post {
+    background: #fff; /* Color de fondo */
+    width: 40vw; /* Ancho con unidades de ancho de ventana */
+    border-radius: 10px; /* Radio de borde de 10 píxeles */
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3); /* Sombra con desplazamiento y transparencia */
+    position: relative; /* Posición relativa */
+    margin: 3vw; /* Margen */
+    padding: 2vw; /* Padding */
+    padding-left: 6vw; /* Padding izquierdo */
+}
+
+/* Estilo para elementos 'input' dentro de elementos con la clase 'blog_post' */
+.blog_post input{
+    width: 31vw; /* Ancho con unidades de ancho de ventana */
+}
+
+/* Estilo para elementos 'input' con el atributo 'type' igual a "file" dentro de elementos con la clase 'blog_post' */
+.blog_post input[type="file"]{
+    width: 29.7vw; /* Ancho con unidades de ancho de ventana */
+}
+
+/* Estilo para elementos 'input' con el atributo 'type' igual a "submit" dentro de elementos con la clase 'blog_post' */
+.blog_post input[type="submit"]{
+    width: 10vw; /* Ancho con unidades de ancho de ventana */
+    margin-top: 2vh; /* Margen superior con unidades de altura de ventana */
+}
+
+/* Estilo para elementos 'textarea' dentro de elementos con la clase 'blog_post' */
+.blog_post textarea {
+    width: 35vw; /* Ancho con unidades de ancho de ventana */
+    resize: none; /* No permitir redimensionamiento del textarea */
+}
+
+/* Estilo para elementos con la clase 'posted' */
+.posted {
+    background: #fff; /* Color de fondo */
+    max-width: 50vw; /* Ancho máximo con unidades de ancho de ventana */
+    border-radius: 10px; /* Radio de borde de 10 píxeles */
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3); /* Sombra con desplazamiento y transparencia */
+    position: relative; /* Posición relativa */
+    margin: 3vw; /* Margen */
+    padding: 2vw; /* Padding */
+}
+
+/* Estilo para elementos con la clase 'jump' */
+.jump {
+    max-width: 50vw; /* Ancho máximo con unidades de ancho de ventana */
+    word-wrap: break-word; /* Romper palabras largas */
+}
+
+/* Estilo para elementos 'div' dentro de elementos con la clase 'posted' */
+.posted > div {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: flex-end; /* Justificar contenido hacia el extremo derecho */
+}
+
+/* Estilo para elementos 'a' dentro de elementos 'div' dentro de elementos con la clase 'posted' */
+.posted > div > a {
+    margin-right: 2vw; /* Margen derecho */
+}
+
+/* Estilo para elementos 'img' dentro de elementos con la clase 'posted' */
+.posted img {
+    max-width: 50vw; /* Ancho máximo con unidades de ancho de ventana */
+    height: 15vw; /* Altura con unidades de ancho de ventana */
+    margin-bottom: 5vh; /* Margen inferior con unidades de altura de ventana */
+}
+
+/* Estilo para el elemento con el id 'return_blog' */
+#return_blog {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: flex-end; /* Justificar contenido hacia el extremo derecho */
+    margin-right: 2vw; /* Margen derecho */
+    margin-top: 2vw; /* Margen superior */
+}
+
+/* Estilo para el elemento con el id 'see_more_post' */
+#see_more_post {
+    margin: 2.5vw; /* Margen */
+    padding: 1.5vw; /* Padding */
+    /* border: 1px solid; */ /* Borde (comentado) */
+}
+
+/* Estilo para elementos 'h4' dentro de elementos con el id 'see_more_post' */
+#see_more_post h4 {
+    margin-left: 0.5vw; /* Margen izquierdo */
+    margin-top: -1vw; /* Margen superior negativo */
+}
+
+/* Estilo para elementos 'p' dentro de elementos con el id 'see_more_post' */
+#see_more_post p {
+    margin-left: 2vw; /* Margen izquierdo */
+    /* border: 1px solid; */ /* Borde (comentado) */
+}
+
+/* Estilo para elementos 'img' dentro de elementos con el id 'see_more_post' */
+#see_more_post img {
+    max-width: 50vw; /* Ancho máximo con unidades de ancho de ventana */
+    max-height: 25vw; /* Altura máxima con unidades de ancho de ventana */
+    margin: 5vh; /* Margen superior e inferior con unidades de altura de ventana */
+}
+
+/* Final configuració pestanya de thread.php de la carpeta Foro ----------------------------------- */

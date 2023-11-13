@@ -8,13 +8,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 require_once('../config.php');
 
 // Obtén datos del formulario
+if (empty($_POST) == false) {
 $titulo = $_POST['titulo'];
 $contenido = $_POST['contenido'];
 $fecha = $_POST['fecha'];
 $curso = $_POST['curso'];
 
 // Consulta preparada para insertar datos en la tabla noticias
-$sql = "INSERT INTO noticia (titulo, contenido, fecha, id_curso) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO noticia (titulo, contenido, fecha, curso) VALUES (?, ?, ?, ?)";
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->bind_param("ssss", $titulo, $contenido, $fecha, $curso);
 
@@ -29,6 +30,10 @@ if ($stmt = $mysqli->prepare($sql)) {
     $stmt->close();
 } else {
     echo "Error en la preparación de la consulta: " . $mysqli->error;
+}
+
+} else {
+    echo "Actualment no hi ha cap noticia";
 }
 
 // Cierra la conexión a la base de datos

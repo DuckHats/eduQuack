@@ -97,6 +97,7 @@
                    <td><input type="submit" value="Actualitzar">
 
             </form>
+            <form action="logout.php" method="post">
                     <td>
                     <input type="hidden" name="logout" value="true">
                     <input id="logout" type="submit" value="logout">
@@ -106,13 +107,13 @@
             </table>
     </main>
 
-<!-- Popup para confirmar logout -->
+<!-- Popup para confirmar logout
 <div id="popup-logout-content" style="display: none;">
     <form action="logout.php" method="post">
         <h2>¿Estás seguro que deseas cerrar la sesión?</h2>
         <input type="button" value="Yes">
         <input id="close-button" type="button" value="No">
-    </div>
+    </div> -->
 
     <footer>
         <section>
@@ -126,14 +127,14 @@
                 <li ><a href="./formularis.php" >Valoracións</a></li>
             </ul>
             </div>
-            <div>
-            <h2>Section</h2>
+               <div>
+            <h2>Politics</h2>
             <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
+                <li ><a href="./view/Política_de_privacitat.md" >Política de privacitat</a></li>
+                <li ><a href="./view/Política_us.md" >Politiques d'ús</a></li>
+                <li ><a href="./view/Reglamento_General_de_Protección_de_Datos(RGPD).md" >RGPD</a></li>
+                <li ><a href="./view/LICENSE" >Llicencia</a></li>
+                <li ><a href="./faq.php" >FAQ</a></li>
             </ul>
             </div>
             <div id="newsletter">

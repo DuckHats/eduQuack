@@ -26,8 +26,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <li><a href="./index.php">
                     <h3>Home</h3>
                 </a></li>
-            <li><a href="./dev-teams.php" class="negrita">
-                    <h3>Grups</h3>
+            <li><a href="./dev-teams.php">
+                    <h3  class="negrita">Grups</h3>
                 </a></li>
             <li><a href="./news.php">
                     <h3>Notícies</h3>
@@ -41,20 +41,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <li><a href="./perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>
     </menu>
-    <main class="loginmain">
-        <div class="ginebro">
-            <img id="logologin" src="../eduQuack/images/ginebro-logo-blanc-742059845.png">
-        </div>
-
-        <div class="info">
-            <h1>Notetats!!!</h1>
-            <div>
-                <p>En aquesta pàgina podreu tobar una plataforma per crear grups i xats privats amb la resta d'usuaris de la plataforma i de l'escola.
-                    Estarà tot disponible a partir de la pròxima actualització.
-                </p>
-                <a href="./index.php">HOME</a>
-            </div>
-        </div>
+    <main>
+        
     </main>
     
     <footer>
@@ -69,14 +57,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li ><a href="./formularis.php" >Valoracións</a></li>
             </ul>
             </div>
-            <div>
-            <h2>Section</h2>
+               <div>
+            <h2>Politics</h2>
             <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
+                <li ><a href="./view/Política_de_privacitat.md" >Política de privacitat</a></li>
+                <li ><a href="./view/Política_us.md" >Politiques d'ús</a></li>
+                <li ><a href="./view/Reglamento_General_de_Protección_de_Datos(RGPD).md" >RGPD</a></li>
+                <li ><a href="./view/LICENSE" >Llicencia</a></li>
+                <li ><a href="./faq.php" >FAQ</a></li>
             </ul>
             </div>
             <div id="newsletter">

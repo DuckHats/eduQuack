@@ -69,13 +69,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </a></li>
             <li><a href="./perfil.php"><img id="conficon" src="images/user.png"></a></li>
         </ul>
-    </menu>
-
-    <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido a nuestro sitio.</h1>
-    <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
+    </menu>    
 
     <main>
         <!-- Contenido personalizado para la página de bienvenida -->
+        <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido a nuestro sitio.</h1>
+        <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["id"]); ?>!</h1>
         <div class="welcome-message">
             <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
             <p>¡Gracias por iniciar sesión en eduQuack! ¡Disfruta explorando nuestro sitio!</p>
@@ -109,14 +108,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li ><a href="./formularis.php" >Valoracións</a></li>
             </ul>
             </div>
-            <div>
-            <h2>Section</h2>
+               <div>
+            <h2>Politics</h2>
             <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
+                <li ><a href="./view/Política_de_privacitat.md" >Política de privacitat</a></li>
+                <li ><a href="./view/Política_us.md" >Politiques d'ús</a></li>
+                <li ><a href="./view/Reglamento_General_de_Protección_de_Datos(RGPD).md" >RGPD</a></li>
+                <li ><a href="./view/LICENSE" >Llicencia</a></li>
+                <li ><a href="./faq.php" >FAQ</a></li>
             </ul>
             </div>
             <div id="newsletter">

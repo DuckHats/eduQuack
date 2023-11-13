@@ -2,8 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Afegir notícies</title>
+<meta charset="UTF-8">
+    <title>Creador de news | eduQuack</title>
+    <link rel="icon" href="../images/ginebro-logo (1).png">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -14,7 +16,7 @@
         exit;
     }
     ?>
-
+    <div class="blog_post">
     <h2>Afegir notícies</h2>
     <form action="noticia.php" method="post">
         <label for="titulo">Títol:</label>
@@ -41,27 +43,28 @@
         <input type="file" id="imagen" name="imagen" accept="image/*"><br> -->
         <input type="submit" value="Guardar Noticia">
     </form>
+    </div>
 </body>
 <footer>
         <section>
             <div>
             <h2>Links</h2>
             <ul>
-                <li ><a href="./index.php" >Home</a></li>
-                <li ><a href="./dev-teams.php" >Grups</a></li>
-                <li ><a href="./news.php" >Notícies</a></li>
-                <li ><a href="./Foro/Blog.php" >Forum</a></li>
-                <li ><a href="./formularis.php" >Valoracións</a></li>
+                <li ><a href="../index.php" >Home</a></li>
+                <li ><a href="../dev-teams.php" >Grups</a></li>
+                <li ><a href="../news.php" >Notícies</a></li>
+                <li ><a href="../Foro/Blog.php" >Forum</a></li>
+                <li ><a href="../formularis.php" >Valoracións</a></li>
             </ul>
             </div>
-            <div>
-            <h2>Section</h2>
+               <div>
+            <h2>Politics</h2>
             <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
+                <li ><a href="../view/Política_de_privacitat.md" >Política de privacitat</a></li>
+                <li ><a href="../view/Política_us.md" >Politiques d'ús</a></li>
+                <li ><a href="../view/Reglamento_General_de_Protección_de_Datos(RGPD).md" >RGPD</a></li>
+                <li ><a href="../view/LICENSE" >Llicencia</a></li>
+                <li ><a href="../faq.php" >FAQ</a></li>
             </ul>
             </div>
             <div id="newsletter">
@@ -75,9 +78,9 @@
         <div id="copyright">
         <p>&copy; 2023 DuckHats. All rights reserved.</p>
         <ul>
-            <li><a href=""><img src="./images/twitter (1).png" alt="Twitter"></a></li>
-            <li><a href=""><img src="./images/instagram (1).png" alt="Instagram"></a></li>
-            <li><a href="https://duckhats.github.io/"><img src="./images/github (1).png" alt="Github"></a></li>
+            <li><a href=""><img src="../images/twitter (1).png" alt="Twitter"></a></li>
+            <li><a href=""><img src="../images/instagram (1).png" alt="Instagram"></a></li>
+            <li><a href="https://duckhats.github.io/"><img src="../images/github (1).png" alt="Github"></a></li>
         </ul>
         </div>
     </footer>

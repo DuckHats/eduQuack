@@ -28,14 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalls del Post</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="container">
+<a id="return_blog" href="Blog.php">Tornar a la pàgina de blogs</a>
+    <div id="see_more_post">
         <?php if (isset($titulo)) : ?>
             <h1><?= $titulo ?></h1>
-            <p>Autor: <?= $autor ?></p>
+            <h4>Autor: <?= $autor ?></h4>
             <p><?= $contenido ?></p>
             <?php if ($imagen_path) : ?>
                 <img src="<?= $imagen_path ?>" alt="Imagen del post">
@@ -43,30 +44,28 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         <?php else : ?>
             <p>No s'ha trobat informació del post.</p>
         <?php endif; ?>
-
-        <a href="Blog.php">Tornar a la pàgina de blogs:</a>
     </div>
-</body>
+
 <footer>
         <section>
             <div>
             <h2>Links</h2>
             <ul>
-                <li ><a href="./index.php" >Home</a></li>
-                <li ><a href="./dev-teams.php" >Grups</a></li>
-                <li ><a href="./news.php" >Notícies</a></li>
-                <li ><a href="./Foro/Blog.php" >Forum</a></li>
-                <li ><a href="./formularis.php" >Valoracións</a></li>
+                <li ><a href="../index.php" >Home</a></li>
+                <li ><a href="../dev-teams.php" >Grups</a></li>
+                <li ><a href="../news.php" >Notícies</a></li>
+                <li ><a href="../Foro/Blog.php" >Forum</a></li>
+                <li ><a href="../formularis.php" >Valoracións</a></li>
             </ul>
             </div>
-            <div>
-            <h2>Section</h2>
+               <div>
+            <h2>Politics</h2>
             <ul>
-                <li ><a href="#" >Home</a></li>
-                <li ><a href="#" >Features</a></li>
-                <li ><a href="#" >Pricing</a></li>
-                <li ><a href="#" >FAQs</a></li>
-                <li ><a href="#" >About</a></li>
+                <li ><a href="../view/Política_de_privacitat.md" >Política de privacitat</a></li>
+                <li ><a href="../view/Política_us.md" >Politiques d'ús</a></li>
+                <li ><a href="../view/Reglamento_General_de_Protección_de_Datos(RGPD).md" >RGPD</a></li>
+                <li ><a href="../view/LICENSE" >Llicencia</a></li>
+                <li ><a href="../faq.php" >FAQ</a></li>
             </ul>
             </div>
             <div id="newsletter">
@@ -80,11 +79,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         <div id="copyright">
         <p>&copy; 2023 DuckHats. All rights reserved.</p>
         <ul>
-            <li><a href=""><img src="./images/twitter (1).png" alt="Twitter"></a></li>
-            <li><a href=""><img src="./images/instagram (1).png" alt="Instagram"></a></li>
-            <li><a href="https://duckhats.github.io/"><img src="./images/github (1).png" alt="Github"></a></li>
+            <li><a href=""><img src="../images/twitter (1).png" alt="Twitter"></a></li>
+            <li><a href=""><img src="../images/instagram (1).png" alt="Instagram"></a></li>
+            <li><a href="https://duckhats.github.io/"><img src="../images/github (1).png" alt="Github"></a></li>
         </ul>
         </div>
     </footer>
-
+    </body>
 </html>
