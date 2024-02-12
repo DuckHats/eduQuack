@@ -1,0 +1,16 @@
+Visió jove
+Verificació correu ginebro
+Pàgina web d'administrador de news
+Grups:
+- Sub Menu Grups
+- Buscar per noms
+- no fotos
+- filtrar per url
+
+versió professors: 
+- fàcil
+- entrevistes personals
+
+Icones de descripció cada cosa
+
+Bloquejar

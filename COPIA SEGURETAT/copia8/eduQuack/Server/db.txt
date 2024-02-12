@@ -1,0 +1,19 @@
+USE users;
+
+INSERT INTO noticias (id_noticia, id_curso, titulo, contenido, fecha)
+SELECT id_noticia, id_curso, titulo, contenido, fecha
+FROM noticias_db.noticias;
+
+
+INSERT INTO cursos (id_curso, nombre_curso)
+SELECT id_noticia, id_curso
+FROM noticias_db.cursos;
+
+-- Conéctate a la base de datos users_db
+
+INSERT INTO posts (id, title, content, image_path, created_at, author)
+SELECT id, title, content, image_path, created_at, author
+FROM blog.posts;
+
+
+-- DROP DATABASE blogs_db;

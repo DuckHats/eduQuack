@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | eduQuack</title>
+    <link rel="icon" href="images/ginebro-logo (1).png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const error = params.get('error');
+
+            if (error === 'incorrecto') {
+                const mensajeError = document.createElement('div');
+                mensajeError.className = 'mensaje-error';
+                mensajeError.textContent = '¡Datos de inicio de sesión incorrectos! Por favor, inténtalo de nuevo.';
+                document.body.insertBefore(mensajeError, document.body.firstChild);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <main class="loginmain">
+        <div class="ginebro">
+            <img id="logologin" src="../eduQuack/images/ginebro-logo-blanc-742059845.png">
+        </div>
+
+        <div class="info">
+            <h1>Login</h1>
+            <form action="login.php" method="post">
+                <input type="email" name="email" placeholder="Introduce tu email" required><br>
+                <input type="password" name="password" placeholder="Introduce tu contraseña" required><br>
+                <a id="forgot" href="rpassword.html">¿Olvidaste tu contraseña?</a><br>
+                <input type="submit" value="Iniciar sesión">
+            </form>
+            <a href="register.html">Crear cuenta</a>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | eduQuack</title>
+    <link rel="icon" href="images/ginebro-logo (1).png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header id="headerregister">
+        <img src="../eduQuack/images/ginebro-logo-blanc-742059845.png">
+        <h1>Crear un compte nou</h1>
+    </header>
+
+    <main class="registermain">
+        <form action="register.php" method="post">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Nom d'usuari:" required>
+            </div>
+            <div class="form-group">
+                <select id="nivel_educativo" name="curso" required>
+                    <option value="1ESO">1r_ESO</option>
+                    <option value="2ESO">2n_ESO</option>
+                    <option value="3ESO">3r_ESO</option>
+                    <option value="4ESO">4t_ESO</option>
+                    <option value="CicloMedio">Cicle_Mitjà</option>
+                    <option value="CicloSuperior">Cicle_Superior</option>
+                    <option value="Bachillerato">Batchillerat</option>
+                    <!-- Agrega las opciones para otros cursos aquí -->
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" name="full_name" placeholder="Nom complet:" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Contrasenya" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" placeholder="Confirmar contrasenya" required>
+            </div>
+            <div class="form-group">
+                <input type="date" name="edad" required>
+            </div>
+
+            <!-- <div>
+                <label for="profile_picture">Foto de Perfil (JPG, JPEG, PNG - Max. 9MB):</label>
+                <input type="file" name="profile_picture" id="profile_picture" accept=".jpg, .jpeg, .png" required><br>
+            </div> -->
+
+            <input type="submit" name="submit" value="Registrar">
+            <br>
+            <a href="login.html">Login</a>
+        </form>
+    </main>
+</body>
+
+</html>

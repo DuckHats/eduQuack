@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat en Tiempo Real</title>
+</head>
+<body>
+    <div id="messages"></div>
+    <input id="message-input" autocomplete="off">
+    <button onclick="sendMessage()">Enviar</button>
+
+    <!-- Biblioteca de Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Obtiene el nombre de usuario almacenado en la sesión
+        const username = '<%= session.username %>';
+        let room;
+
+        // Verifica si el nombre de la sala está presente en el enlace
+        const urlParams = new URLSearchParams(window.location.search);
+        const roomFromUrl = urlParams.get('room');
+        if (roomFromUrl) {
+            room = roomFromUrl;
+        } else {
+            // Si no hay nombre de sala en el enlace, solicita al usuario que lo ingrese
+            room = prompt('Introduce el nombre de la sala:');
+        }
+
+        const socket = io();
+        socket.emit('joinRoom', room);
+
+        socket.on('chatHistory', (messages) => {
+            const messagesDiv = document.getElementById('messages');
+            messages.forEach(message => {
+                messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
+            });
+        });
+
+        socket.on('message', (message) => {
+            const messagesDiv = document.getElementById('messages');
+            messagesDiv.innerHTML += `<p>${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}</p>`;
+        });
+
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const message = messageInput.value;
+            socket.emit('sendMessage', { room, message, username });
+            messageInput.value = '';
+        }
+    </script>
+</body>
+</html>

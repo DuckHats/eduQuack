@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat en Tiempo Real</title>
+    <style>
+        #messages {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages"></div>
+    <form id="message-form">
+        <input id="message-input" autocomplete="off">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Biblioteca de Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const username = '<%= session.username %>';
+        let room;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const roomFromUrl = urlParams.get('room');
+        if (roomFromUrl) {
+            room = roomFromUrl;
+        } else {
+            room = prompt('Introduce el nombre de la sala:');
+        }
+
+        const socket = io();
+        socket.emit('joinRoom', room);
+
+        const messagesDiv = document.getElementById('messages');
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+
+        socket.on('chatHistory', (messages) => {
+            messagesDiv.innerHTML = '';
+            messages.forEach(message => {
+                displayMessage(message);
+            });
+        });
+
+        socket.on('message', (message) => {
+            displayMessage(message);
+        });
+
+        function displayMessage(message) {
+            const messageElement = document.createElement('p');
+            messageElement.textContent = `${message.username} (${new Date(message.timestamp).toLocaleTimeString()}): ${message.message}`;
+            messagesDiv.appendChild(messageElement);
+        }
+
+        messageForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = messageInput.value.trim();
+            if (message !== '') {
+                socket.emit('sendMessage', { room, message, username });
+                messageInput.value = '';
+            } else {
+                alert('El mensaje no puede estar vacío.');
+            }
+        });
+    </script>
+</body>
+</html>
